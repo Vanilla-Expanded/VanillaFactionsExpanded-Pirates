@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ======= Drinks based thoughts ========= -->
+
+
+
+	
+	<ThoughtDef>	
+		<defName>VFEP_RumAsIngredient</defName>
+		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<hediff>VFEP_RumAsIngredient</hediff>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>Drank rum-based cocktail</label>
+				<description>Yummy.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>	
+		
+	</ThoughtDef>
+	
+	
+
+</Defs>

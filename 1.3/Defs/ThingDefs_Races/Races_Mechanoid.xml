@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Wardrone -->
+
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>VFEP_Mech_Wardrone</defName>
+    <label>wardrone</label>
+    <description>Semi-autonomous flying combat drone with limited combat functionality. Equipped with a lightweight semi-automatic miniturret due to limited recoil absorption and an onboard self-destruction module to both prevent enemy capture and defense against melee attackers.</description>
+    <tools>
+      <li>
+        <label>turret</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>1</chanceFactor>
+      </li>
+    </tools>
+    <statBases>
+      <MoveSpeed>4.7</MoveSpeed>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <deathActionWorkerClass>DeathActionWorker_SmallExplosion</deathActionWorkerClass>
+      <body>VFEP_Wardrone</body>
+      <baseHealthScale>0.22</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>VFEP_WarDrone</thinkTreeMain>
+      <baseBodySize>0.25</baseBodySize>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+    </race>
+	<comps>
+      <li Class="CompProperties_DestroyAfterDelay">
+        <delayTicks>3600</delayTicks>
+        <countdownLabel>Explodes in</countdownLabel>
+        <destroyMode>KillFinalize</destroyMode>
+		<compClass>VFEPirates.CompKillAfterDelay</compClass>
+      </li>
+	</comps>
+	<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+			<destroyCorpse>true</destroyCorpse>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+  <PawnKindDef>
+    <defName>VFEP_Mech_Wardrone</defName>
+    <label>wardrone</label>
+    <race>VFEP_Mech_Wardrone</race>
+    <combatPower>15</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/WarcasketCombatDrone</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.0</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>9999~9999</weaponMoney>
+    <aiAvoidCover>true</aiAvoidCover>
+    <destroyGearOnDrop>true</destroyGearOnDrop>
+    <weaponTags>
+      <li>VFEP_GunWardrone</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+  <ThingDef ParentName="BaseMechanoid">
+    <defName>VFEP_Mech_Spidermine</defName>
+    <label>spidermine</label>
+    <description>Semi-autonomous combat drone with onboard pathfinding capability. Equipped with a self-destruction module and tracking system, designed to be launched as a payload and then seek out enemy targets. If no nearby targets can be acquired, it will immediately detonate in order to prevent future accidents.</description>
+    <tools>
+      <li>
+        <label>frame</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>1</chanceFactor>
+      </li>
+    </tools>
+    <statBases>
+      <MoveSpeed>4.7</MoveSpeed>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <deathActionWorkerClass>VFEPirates.DeathActionWorker_SpidermineExplosion</deathActionWorkerClass>
+      <body>VFEP_Spidermine</body>
+      <baseHealthScale>0.22</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>VFEP_SpiderMine</thinkTreeMain>
+      <baseBodySize>0.25</baseBodySize>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+    </race>
+	<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+			<destroyCorpse>true</destroyCorpse>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+  <PawnKindDef>
+    <defName>VFEP_Mech_Spidermine</defName>
+    <label>spidermine</label>
+    <race>VFEP_Mech_Spidermine</race>
+    <combatPower>15</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/WarcasketSpidermine</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.0</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <!-- <weaponMoney>9999~9999</weaponMoney> -->
+    <aiAvoidCover>true</aiAvoidCover>
+    <destroyGearOnDrop>true</destroyGearOnDrop>
+    <!-- <weaponTags>
+      <li>VFEP_None</li>
+    </weaponTags> -->
+  </PawnKindDef>
+ 
+</Defs>

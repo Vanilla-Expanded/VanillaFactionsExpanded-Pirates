@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{212A004B-FF6D-4C17-8010-58B61F85CA07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VFEPirates</RootNamespace>
+    <AssemblyName>VFEPirates</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BadHygiene">
+      <HintPath>..\..\..\..\..\..\..\..\workshop\content\294100\836308268\1.3\Assemblies\BadHygiene.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HeavyWeapons">
+      <HintPath>..\..\..\..\..\VanillaExpandedFramework\1.3\Assemblies\HeavyWeapons.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VanillaWeaponsExpandedLaser">
+      <HintPath>..\..\..\..\..\VanillaExpandedFramework\1.3\Assemblies\VanillaWeaponsExpandedLaser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VFECore">
+      <HintPath>..\..\..\..\..\VanillaExpandedFramework\1.3\Assemblies\VFECore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abilities\Ability_BlastOff.cs" />
+    <Compile Include="Abilities\Ability_PowerJump.cs" />
+    <Compile Include="Abilities\Ability_GrapplingHook.cs" />
+    <Compile Include="Abilities\Ability_SiegeMode.cs" />
+    <Compile Include="Apparels\Apparel_GuardianShoulders.cs" />
+    <Compile Include="Apparels\Apparel_Warcasket.cs" />
+    <Compile Include="Comps\CompWeaponBox.cs" />
+    <Compile Include="Buildings\Chunks\FilthSpawner.cs" />
+    <Compile Include="Buildings\Chunks\Fueled.cs" />
+    <Compile Include="Buildings\Chunks\VolatileEngine.cs" />
+    <Compile Include="Buildings\Dialog_WarcasketCustomization.cs" />
+    <Compile Include="Comps\CompRumSuit.cs" />
+    <Compile Include="HarmonyPatches\MechKindSuitableForCluster_Patch.cs" />
+    <Compile Include="HarmonyPatches\PawnRenderer_DrawEquipment_Patch.cs" />
+    <Compile Include="Misc\DeathActionWorker_SpidermineExplosion.cs" />
+    <Compile Include="Misc\Hediff_KillItself.cs" />
+    <Compile Include="Jobs\JobDriver_GotoAndExplode.cs" />
+    <Compile Include="Jobs\JobGiver_GoToNearestEnemyAndExplode.cs" />
+    <Compile Include="Projectiles\Projectile_LaserEradicator.cs" />
+    <Compile Include="Utilities\ModCompatibility.cs" />
+    <Compile Include="Projectiles\Projectile_Spidermine.cs" />
+    <Compile Include="Comps\Properties\CompProperties_RumSuit.cs" />
+    <Compile Include="Curses\CurseDef.cs" />
+    <Compile Include="Curses\CurseOfTheBeaten.cs" />
+    <Compile Include="Curses\CurseOfTheStabbed.cs" />
+    <Compile Include="Curses\CurseOfTheEyePatch.cs" />
+    <Compile Include="Curses\CurseOfBlind.cs" />
+    <Compile Include="Curses\CurseOfInstaKill.cs" />
+    <Compile Include="Curses\CurseOfInfestation.cs" />
+    <Compile Include="Curses\CurseOfBandana.cs" />
+    <Compile Include="Curses\CurseOfAging.cs" />
+    <Compile Include="Curses\CurseOfTheArmored.cs" />
+    <Compile Include="Curses\CurseOfTheBoomalopes.cs" />
+    <Compile Include="Curses\CurseOfDarkness.cs" />
+    <Compile Include="Curses\CurseOfConfetti.cs" />
+    <Compile Include="Curses\CurseOfGreed.cs" />
+    <Compile Include="Curses\CurseOfMind.cs" />
+    <Compile Include="Curses\CurseOfFire.cs" />
+    <Compile Include="Curses\CurseOfSteel.cs" />
+    <Compile Include="Curses\CurseWorker.cs" />
+    <Compile Include="Curses\Page_ChooseCurses.cs" />
+    <Compile Include="Curses\GameComponent_CurseManager.cs" />
+    <Compile Include="Curses\StorytellerComp_Cursed.cs" />
+    <Compile Include="Defs\Defs.cs" />
+    <Compile Include="Buildings\Building_WarcasketFoundry.cs" />
+    <Compile Include="HarmonyPatches\Building_TurretGun_DrawExtraSelectionOverlays_Patch.cs" />
+    <Compile Include="HarmonyPatches\Building_TurretGun_DrawExtraSelectionOverlays_Transpiler.cs" />
+    <Compile Include="HarmonyPatches\Building_TurretGun_IsValidTarget_Patch.cs" />
+    <Compile Include="HarmonyPatches\CompPowerBattery_AmountCanAccept_Patch.cs" />
+    <Compile Include="HarmonyPatches\CompReloadable_CreateVerbTargetCommand_Patch.cs" />
+    <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
+    <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow_Transpiler.cs" />
+    <Compile Include="HarmonyPatches\JobGiver_OptimizeApparel_TryGiveJob_Patch.cs" />
+    <Compile Include="HarmonyPatches\MentalStateHandler_TryStartMentalState_Patch.cs" />
+    <Compile Include="HarmonyPatches\Page_SelectStorytellerInGame_PreClose_Patch.cs" />
+    <Compile Include="HarmonyPatches\Page_SelectStoryteller_CanDoNext_Patch.cs" />
+    <Compile Include="HarmonyPatches\PawnApparelGenerator_GenerateStartingApparelFor_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_ApparelTracker_Unlock_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_AnythingToStrip_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_ButcherProducts_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_GetDisabledWorkTypes_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_JobTracker_StartJob_Patch.cs" />
+    <Compile Include="HarmonyPatches\StorytellerComp_RandomMain_ChooseRandomCategory_Transpiler.cs" />
+    <Compile Include="HarmonyPatches\StorytellerUtilityPopulation_CalculatePopulationIntent_Patch.cs" />
+    <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
+    <Compile Include="HarmonyPatches\Trait_AllowsWorkType_Patch.cs" />
+    <Compile Include="HarmonyPatches\TurretTop_get_CurRotation_Patch.cs" />
+    <Compile Include="Jobs\JobDriver_EquipFromWeaponBox.cs" />
+    <Compile Include="Projectiles\CryptoProjectile.cs" />
+    <Compile Include="RaidStrategy\Building_CrashedShip.cs" />
+    <Compile Include="Misc\ScenPart_LowOrbitCrash.cs" />
+    <Compile Include="Stats\StatPart_CurseOfGluttony.cs" />
+    <Compile Include="Stats\StatPart_CurseOfPestilence.cs" />
+    <Compile Include="Stats\StatPart_CurseOfTheEyePatch.cs" />
+    <Compile Include="Thoughts\ThoughtWorker_RumSuit.cs" />
+    <Compile Include="Utilities\CachedData.cs" />
+    <Compile Include="Jobs\JobDriver_DoWelding.cs" />
+    <Compile Include="Jobs\JobDriver_EntombIn.cs" />
+    <Compile Include="Jobs\RecipeWorker_WarcasketRemoval.cs" />
+    <Compile Include="Utilities\CursesUtility.cs" />
+    <Compile Include="Utilities\PawnUtility.cs" />
+    <Compile Include="Utilities\WeldingUtility.cs" />
+    <Compile Include="Jobs\WorkGiver_DoWelding.cs" />
+    <Compile Include="MapComponents and GameComponents\GameComponent_LostCrewmenChecker.cs" />
+    <Compile Include="RaidStrategy\IncomingSmoker.cs" />
+    <Compile Include="RaidStrategy\PawnsArrivalModeWorker_Gauntlet.cs" />
+    <Compile Include="RaidStrategy\RaidStrategyWorker_Gauntlet.cs" />
+    <Compile Include="Rituals\RitualBehaviorWorker_SingingShanties.cs" />
+    <Compile Include="Rituals\RitualOutcomeEffectWorker_SingingShanties.cs" />
+    <Compile Include="StaticCollectionsClass\StaticCollectionsClass.cs" />
+    <Compile Include="Utilities\StaticStartup.cs" />
+    <Compile Include="Thoughts\Thought_Precept_Camaraderie_Exalted.cs" />
+    <Compile Include="Comps\CompKillAfterDelay.cs" />
+    <Compile Include="Verbs\Verb_ShieldDetonation.cs" />
+    <Compile Include="Verbs\Verb_DroneDeployment.cs" />
+    <Compile Include="Verbs\Verb_LaunchProjectileStaticMultiple.cs" />
+    <Compile Include="Verbs\Verb_ShootCone.cs" />
+    <Compile Include="Verbs\Verb_Spidermine.cs" />
+    <Compile Include="VFEPiratesMod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DefOfs\VFEP_DefOf.cs" />
+    <Compile Include="Apparels\WarcasketProject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref">
+      <Version>1.3.3326</Version>
+    </PackageReference>
+    <PackageReference Include="Lib.Harmony">
+      <Version>2.2.1</Version>
+      <ExcludeAssets>runtime</ExcludeAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

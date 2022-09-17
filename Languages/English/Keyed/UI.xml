@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    <VFEP.ChooseCurses>Select Your Curses</VFEP.ChooseCurses>
+    <VFEP.ChooseCurses.Desc>The more curses you select, the more pawns your storyteller will allow you to have, and the rarer big threat events will be.</VFEP.ChooseCurses.Desc>
+    <VFEP.DesiredPopMax>Desired population max: {0}</VFEP.DesiredPopMax>
+    <VFEP.DaysBigThreats>Days between Big Threats: {0}</VFEP.DaysBigThreats>
+    <VFEP.WarcasketCustom>Warcasket Customization</VFEP.WarcasketCustom>
+    <VFEP.WarcasketText>When you press Accept, a crafter you’ve chosen will bring the resources onto the frame and begin
+assembling a warcasket. The speed of the assembly depends on the crafting skill of your crafter.
+Once the process is completed, a warcasket will leave the platform. Be careful, as the pawn
+on the platform can still die of hunger when on the platform - you should prioritize the warcasket
+assembly over other tasks.</VFEP.WarcasketText>
+    <VFEP.WorkAmount>Work Amount:</VFEP.WorkAmount>
+    <VFEP.Crafter>Crafter:</VFEP.Crafter>
+    <VFEP.Helmet>Helmet:</VFEP.Helmet>
+    <VFEP.Shoulderpads>Shoulderpads:</VFEP.Shoulderpads>
+    <VFEP.ArmorFrame>Armor frame:</VFEP.ArmorFrame>
+    <VFEP.TotalCost>Total Cost:</VFEP.TotalCost>
+    <VFEP.ResourceCost>Resource Cost:</VFEP.ResourceCost>
+    <VFEP.ResearchText>Research more warcasket technology to unlock more armor pieces.</VFEP.ResearchText>
+    <VFEP.NoWarcaskets>Research warcaskets to learn how to use the foundry.</VFEP.NoWarcaskets>
+	<VFEP.NotEnoughFuel>Not enough chemfuel for power jump.</VFEP.NotEnoughFuel>
+	<VFEP.SiegeModeOff>Siege mode off</VFEP.SiegeModeOff>
+	<VFEP.SiegeModeOn>Siege mode on</VFEP.SiegeModeOn>
+	<VFEPirates.CannotEntomb>Cannot entomb in warcasket: {0}</VFEPirates.CannotEntomb>
+	<VFEPirates.EntombInWarcasket>Entomb in warcasket</VFEPirates.EntombInWarcasket>
+	<VFEP.EntombInIncapableOfViolenceWarning> (Warning: {PAWN_nameDef} is not capable of violence, it will make {PAWN_objective} useless.)</VFEP.EntombInIncapableOfViolenceWarning>
+	<VFEP.ActivateShield>Activate shield field</VFEP.ActivateShield>
+	<VFEP.ActivateShieldDesc>Click to activate the shield field. It has 10 seconds of active mode and then 90 seconds cooldown.</VFEP.ActivateShieldDesc>
+	<VFEP.DeployWarDrone>Deploy small, combat-ready drones from the docking port in the back. These drones can be controlled to provide firing support, but will self-detonate after 60 seconds.</VFEP.DeployWarDrone>
+	<VFEP.DeploySpidermineDesc>Fire a long range spidermine that will automatically run towards the nearest enemy, detonating as soon as it reaches them.</VFEP.DeploySpidermineDesc>
+	<VFEP.Cancel>Cancel</VFEP.Cancel>
+</LanguageData>

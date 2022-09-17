@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase">
+    <defName>VFEP_Junkers</defName>
+    <label>junkers</label>
+    <description>A loose confederation of pirate gangs who've agreed to mostly fight outsiders instead of fighting each other.
+Pirates don't sow, they don't build, and they rarely trade. Driven by a blood-and-honor culture that values personal strength and ruthlessness, they enrich themselves by raiding and robbing their more productive neighbors.
+Junkers utilise warcasket technology and seal themselves in metal tombs in which they raid, steal, plunder and inevitably die. They rarely use melee weapons and prefer to keep at distance to the enemy to fully utilise the powerful warcasket weaponry.</description>
+    <pawnSingular>junker</pawnSingular>
+    <pawnsPlural>junkers</pawnsPlural>
+    <listOrderPriority>11</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>khan</leaderTitle>
+    <factionIconPath>UI/FactionIcons/JunkersOutpost</factionIconPath>
+    <factionNameMaker>NamerFactionPirate</factionNameMaker>
+    <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+    <colorSpectrum>
+      <li>(0.74, 0.33, 0.33)</li>
+      <li>(0.95, 0.46, 0.46)</li>
+    </colorSpectrum>
+    <permanentEnemy>true</permanentEnemy>
+    <techLevel>Industrial</techLevel>
+    <allowedCultures><li>VFEP_Khanate</li></allowedCultures>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+    </requiredMemes>
+    <allowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+    </allowedMemes>
+    <structureMemeWeights>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+    </structureMemeWeights>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Pirate</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <geneticVariance>0.8</geneticVariance>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <raidLootMaker>VFEP_JunkersRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, weak mix -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <options>
+          <VFEP_Scrapper>10</VFEP_Scrapper>
+          <VFEP_Footsoldier>8</VFEP_Footsoldier>
+          <VFEP_Veteran>1</VFEP_Veteran>
+		  <VFEP_Veteran_Melee>1</VFEP_Veteran_Melee>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, melee only -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <VFEP_Hussar>10</VFEP_Hussar>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <options>
+          <VFEP_Scrapper>2</VFEP_Scrapper>
+          <VFEP_Footsoldier>6</VFEP_Footsoldier>
+          <VFEP_Veteran>3</VFEP_Veteran>
+		  <VFEP_Veteran_Melee>1</VFEP_Veteran_Melee>
+          <VFEP_HeavyWeaponsPlatform>2</VFEP_HeavyWeaponsPlatform>
+          <VFEP_Hussar>3</VFEP_Hussar>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, strong mix -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <VFEP_Veteran>7</VFEP_Veteran>
+		  <VFEP_Veteran_Melee>3</VFEP_Veteran_Melee>
+          <VFEP_HeavyWeaponsPlatform>5</VFEP_HeavyWeaponsPlatform>
+          <VFEP_Hussar>8</VFEP_Hussar>
+          <VFEP_Pyro>4</VFEP_Pyro>
+          <VFEP_Artillery>2</VFEP_Artillery>
+        </options>
+      </li>
+      <li>
+        <!-- Base defense -->
+        <kindDef>Settlement</kindDef>
+        <options>
+          <VFEP_Scrapper>10</VFEP_Scrapper>
+          <VFEP_Footsoldier>8</VFEP_Footsoldier>
+          <VFEP_Veteran>4</VFEP_Veteran>
+		  <VFEP_Veteran_Melee>2</VFEP_Veteran_Melee>
+          <VFEP_HeavyWeaponsPlatform>5</VFEP_HeavyWeaponsPlatform>
+          <VFEP_Hussar>5</VFEP_Hussar>
+          <VFEP_Pyro>2</VFEP_Pyro>
+          <VFEP_Artillery>2</VFEP_Artillery>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>UI/FactionIcons/JunkersOutpost</settlementTexturePath>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>30</configurationListOrderPriority>
+  </FactionDef>
+
+  <ThingSetMakerDef>
+    <defName>VFEP_JunkersRaidLootMaker</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+            <li>MedicineIndustrial</li>
+            <li>MealSurvivalPack</li>
+            <li>Flake</li>
+            <li>Yayo</li>
+            <li>GoJuice</li>
+            <li>WakeUp</li>
+            <li>SmokeleafJoint</li>
+            <li>Luciferium</li>
+          </thingDefs>
+        </filter>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
+  
+  <FactionDef ParentName="FactionBase">
+    <defName>VFEP_Mercenaries</defName>
+    <label>mercenaries</label>
+    <description>A paramilitary organisation sanctioned and governed by political figures and megacorporations.
+Mercenaries don't sow, they don't build, and they rarely trade. Driven by a blood-and-honor culture that values personal strength and ruthlessness, they enrich themselves by raiding and robbing their more productive neighbors.
+Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of their corporate overlords. Unlike other pirate factions, mercenaries can be communicated with and befriended, but they rarely have much to offer in regards to trade and research.</description>
+    <pawnSingular>mercenary</pawnSingular>
+    <pawnsPlural>mercenaries</pawnsPlural>
+    <listOrderPriority>12</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>general</leaderTitle>
+    <factionIconPath>UI/FactionIcons/MercsOutpost</factionIconPath>
+    <factionNameMaker>NamerFactionPirate</factionNameMaker>
+    <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+    <fixedLeaderKinds>
+      <li>VFEP_General</li>
+    </fixedLeaderKinds>
+    <colorSpectrum>
+      <li>(0.51, 0.58, 0.26)</li>
+      <li>(0.89, 1.0, 0.45)</li>
+    </colorSpectrum>
+    <permanentEnemy>false</permanentEnemy>
+    <techLevel>Spacer</techLevel>
+    <allowedCultures><li>Kriminul</li></allowedCultures>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+    </requiredMemes>
+    <allowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+    </allowedMemes>
+    <structureMemeWeights>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+    </structureMemeWeights>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Pirate</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <geneticVariance>0.8</geneticVariance>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <raidLootMaker>VFEP_JunkersRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, weak mix -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <options>
+          <VFEP_Private>10</VFEP_Private>
+          <VFEP_Corporal>6</VFEP_Corporal>
+          <VFEP_Sergeant>2</VFEP_Sergeant>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <VFEP_Private>2</VFEP_Private>
+          <VFEP_Corporal>6</VFEP_Corporal>
+          <VFEP_Sergeant>4</VFEP_Sergeant>
+          <VFEP_SergeantMajor>3</VFEP_SergeantMajor>
+          <VFEP_Lieutenant>2</VFEP_Lieutenant>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, strong mix -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+		  <VFEP_SergeantMajor>3</VFEP_SergeantMajor>
+          <VFEP_Lieutenant>6</VFEP_Lieutenant>
+          <VFEP_Captain>4</VFEP_Captain>
+          <VFEP_Major>2</VFEP_Major>
+          <VFEP_General>1</VFEP_General>
+		  <VFEP_General_Melee>1</VFEP_General_Melee>
+        </options>
+      </li>
+      <li>
+        <!-- Base defense -->
+        <kindDef>Settlement</kindDef>
+        <options>
+          <VFEP_Private>10</VFEP_Private>
+          <VFEP_Corporal>6</VFEP_Corporal>
+          <VFEP_Sergeant>2</VFEP_Sergeant>
+		  <VFEP_SergeantMajor>3</VFEP_SergeantMajor>
+          <VFEP_Lieutenant>6</VFEP_Lieutenant>
+          <VFEP_Captain>4</VFEP_Captain>
+          <VFEP_Major>2</VFEP_Major>
+          <VFEP_General>1</VFEP_General>
+		  <VFEP_General_Melee>1</VFEP_General_Melee>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>UI/FactionIcons/MercsOutpost</settlementTexturePath>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>30</configurationListOrderPriority>
+  </FactionDef>
+
+</Defs>

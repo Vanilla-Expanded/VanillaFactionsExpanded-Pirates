@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase" Name="VFEP_CrashedShip" Abstract="True">
+    <label>crashed ship</label>
+    <description>The Gauntlet combat-grade spacecraft is a ship-launched fighter cleared for low atmosphere operations. It was designed to strafe targets and take out enemy air units, however it fell out of favour due to numerous shortcomings and can frequently be found as part of military surplus.\n\nIt was not intended to land planetside as it doesn’t even have landing gear, but some enterprising individuals have decided to do just that. The mounted charge cannon works perfectly well against armored targets and the interior has been retrofitted to accommodate raid parties and supplies. The extra weight all but guarantees that the ship will be non-recoverable and create massive chaos when it flops onto the surface.</description>
+    <thingClass>VFEPirates.Building_CrashedShip</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <size>(5,3)</size>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(7,5)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+    </comps>
+    <passability>Impassable</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <combatPower>80</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>VFEP_GauntletChargeCanon</turretGunDef>
+      <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
+      <claimable>false</claimable>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <killedLeavings>
+      <Steel>120</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <ChunkSlagSteel>4</ChunkSlagSteel>
+    </killedLeavings>
+    <canOverlapZones>true</canOverlapZones>
+    <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>VFEP_Bullet_GauntletChargeCanon</defName>
+    <label>gauntlet charge cannon bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <armorPenetrationBase>0.45</armorPenetrationBase>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>VFEP_GauntletChargeCanon</defName>
+    <label>gauntlet charge cannon</label>
+    <description>Ship mounted anti-armor charge cannon, often utilised in ship-to-ship combat in low atmosphere.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/GauntletTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.77</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.24</AccuracyLong>
+      <RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>VFEP_Bullet_GauntletChargeCanon</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>34.9</range>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>VFEP_Shot_GauntletCannon</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_CrashedShip">
+    <defName>VFEP_CrashedShip_Black</defName>
+    <graphicData>
+      <texPath>Things/Building/Gauntlet/GauntletShipBlack_TurretBase</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_CrashedShip">
+    <defName>VFEP_CrashedShip_Green</defName>
+    <graphicData>
+      <texPath>Things/Building/Gauntlet/GauntletShipGreen_TurretBase</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_CrashedShip">
+    <defName>VFEP_CrashedShip_Orange</defName>
+    <graphicData>
+      <texPath>Things/Building/Gauntlet/GauntletShipOrange_TurretBase</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_CrashedShip">
+    <defName>VFEP_CrashedShip_Red</defName>
+    <graphicData>
+      <texPath>Things/Building/Gauntlet/GauntletShipRed_TurretBase</texPath>
+    </graphicData>
+  </ThingDef>
+</Defs>

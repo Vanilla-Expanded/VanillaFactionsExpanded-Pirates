@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <SoundDef>
+    <defName>VFEP_Shot_GauntletCannon</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipPath>Shots/Shot_GauntletCannon</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>VFEP_Shot_Cannon</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Shots/Cannon_Fire</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>35~35</volumeRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>VFEP_Shot_FieldCannon</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Shots/FieldCannon_Fire</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>35~35</volumeRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>VFEP_Shot_Slugthrower</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Shots/Shot_Slugthrower</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>35~35</volumeRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>VFEP_Shot_HeavyFlamer</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Shots/Shot_WarcasketFlamethrower</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>35~35</volumeRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>VFEP_Shot_GrenadeLauncher</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Shots/Shot_WarcasketGrenadeLauncher</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>35~35</volumeRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>VFEP_Shot_Minigun</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Shots/Shot_WarcasketMinigun</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>35~35</volumeRange>      
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+</Defs>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ResearchProjectDef>
+    <defName>VFEP_Warcaskets</defName>
+    <label>warcaskets</label>
+    <description>Build warcasket foundries to manufacture basic warcasket parts and outfit pawns to utilise said warcaskets.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Machining</li>
+    </prerequisites>
+    <researchViewX>7.0</researchViewX>
+    <researchViewY>3.65</researchViewY>
+	<tab>VanillaExpanded</tab>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>VFEP_AdvancedWarcaskets</defName>
+    <label>advanced warcaskets</label>
+    <description>Construct improved variations of warcaskets which lean towards speed, protection or a balanced approach.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Industrial</techLevel>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <prerequisites>
+      <li>VFEP_Warcaskets</li>
+    </prerequisites>
+    <researchViewX>8.0</researchViewX>
+    <researchViewY>3.65</researchViewY>
+	<tab>VanillaExpanded</tab>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>VFEP_SpecialisedWarcaskets</defName>
+    <label>specialised warcaskets</label>
+    <description>Manufacture warcaskets designed to fit specialized roles.</description>
+    <baseCost>5000</baseCost>
+    <techLevel>Industrial</techLevel>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <prerequisites>
+      <li>VFEP_AdvancedWarcaskets</li>
+    </prerequisites>
+    <researchViewX>9.0</researchViewX>
+    <researchViewY>3.65</researchViewY>
+	<tab>VanillaExpanded</tab>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>VFEP_SpacerWarcaskets</defName>
+    <label>spacer warcaskets</label>
+    <description>Manufacture Spacer-era warcaskets - a pinacle of war technology.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <prerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </prerequisites>
+    <researchViewX>9.0</researchViewX>
+    <researchViewY>4.25</researchViewY>
+	<tab>VanillaExpanded</tab>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>VFEP_WarcasketRemoval</defName>
+    <label>warcasket removal</label>
+    <description>Unlocks the operation “remove warcasket” to remove a pawn from a warcasket, losing both their arms and legs, and reducing the warcasket to slag.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Industrial</techLevel>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <prerequisites>
+      <li>VFEP_SpecialisedWarcaskets</li>
+    </prerequisites>
+    <researchViewX>10.0</researchViewX>
+    <researchViewY>3.65</researchViewY>
+	<tab>VanillaExpanded</tab>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>VFEP_WarcasketWeaponry</defName>
+    <label>warcasket weaponry</label>
+    <description>Build upscaled weapons designed to be mounted on warcaskets.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <prerequisites>
+      <li>MultibarrelWeapons</li>
+    </prerequisites>
+    <researchViewX>8.0</researchViewX>
+    <researchViewY>3.05</researchViewY>
+	<tab>VanillaExpanded</tab>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>VFEP_SpacerWarcasketWeaponry</defName>
+    <label>spacer warcasket weaponry</label>
+    <description>Utilise new spacer technologies to create upscaled weapons designed to be mounted on warcaskets.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <prerequisites>
+      <li>VFEP_WarcasketWeaponry</li>
+    </prerequisites>
+    <researchViewX>9.0</researchViewX>
+    <researchViewY>3.05</researchViewY>
+	<tab>VanillaExpanded</tab>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>VFEP_SweatFermentation</defName>
+    <label>sweat fermentation</label>
+    <description>Craft suits which combine alcohol distillation and nutrient paste synthesis to produce rum from recycled human waste.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>DrugProduction</li>
+	  <li>NutrientPaste</li>
+    </prerequisites>
+    <researchViewX>10.0</researchViewX>
+    <researchViewY>3.05</researchViewY>
+	<tab>VanillaExpanded</tab>
+  </ResearchProjectDef>
+
+</Defs>

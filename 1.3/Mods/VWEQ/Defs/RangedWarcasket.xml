@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+   <ThingDef ParentName="VFEP_BaseWarcasketGun">
+      <defName>VFEP_WarcasketGun_FoldingGun</defName>
+      <label>warcasket folding gun</label>
+      <description>A weapon designed to give Warcaskets rapid ranged response in an urban environment, able to be collapsed for ease of storage and transportation. The mediocre damage and accuracy is an acceptable trade-off for this convenience, with an increase in rate of fire and minimal aiming to improve its ‘spray and pray’ functionality.</description>
+      <graphicData>
+         <texPath>Things/Item/Weapons/WarcasketFoldingGun</texPath>
+      </graphicData>
+      <soundInteract>Interact_Rifle</soundInteract>
+      <statBases>
+         <MarketValue>1650</MarketValue>
+         <WorkToMake>45000</WorkToMake>
+         <Mass>15</Mass>
+         <AccuracyTouch>0.65</AccuracyTouch>
+         <AccuracyShort>0.68</AccuracyShort>
+         <AccuracyMedium>0.70</AccuracyMedium>
+         <AccuracyLong>0.60</AccuracyLong>
+         <RangedWeapon_Cooldown>2.4</RangedWeapon_Cooldown>
+      </statBases>
+      <weaponTags>
+         <li>WarcasketBasic</li>
+         <li>WarcasketVeteran</li>
+      </weaponTags>
+      <verbs>
+         <li>
+            <verbClass>Verb_Shoot</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>VFEP_Bullet_WarcasketFoldingGun</defaultProjectile>
+            <warmupTime>0.05</warmupTime>
+            <range>19.9</range>
+            <ticksBetweenBurstShots>24</ticksBetweenBurstShots>
+            <burstShotCount>6</burstShotCount>
+            <soundCast>VWE_Shot_MarksmanRifle</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+         </li>
+      </verbs>
+      <tools>
+         <li>
+            <label>stock</label>
+            <capacities>
+               <li>Blunt</li>
+            </capacities>
+            <power>11</power>
+            <cooldownTime>3</cooldownTime>
+         </li>
+         <li>
+            <label>barrel</label>
+            <capacities>
+               <li>Blunt</li>
+               <li>Poke</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>3</cooldownTime>
+         </li>
+      </tools>
+      <modExtensions>
+         <li Class="VFECore.FloorGraphicExtension">
+            <graphicData>
+               <graphicClass>Graphic_Single</graphicClass>
+               <texPath>Things/Item/WeaponsBoxed/WarcasketFoldingGun_OnFloor</texPath>
+               <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+               <drawSize>1</drawSize>
+            </graphicData>
+         </li>
+      </modExtensions>
+   </ThingDef>
+   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+      <defName>VFEP_Box_FoldingGun</defName>
+      <label>warcasket folding gun</label>
+      <description>A weapon designed to give Warcaskets rapid ranged response in an urban environment, able to be collapsed for ease of storage and transportation. The mediocre damage and accuracy is an acceptable trade-off for this convenience, with an increase in rate of fire and minimal aiming to improve its ‘spray and pray’ functionality.</description>
+      <graphicData>
+         <texPath>Things/Item/WeaponsBoxed/WarcasketFoldingGun_OnFloor</texPath>
+      </graphicData>
+      <costList>
+         <Steel>160</Steel>
+         <ComponentIndustrial>6</ComponentIndustrial>
+      </costList>
+      <statBases>
+         <MarketValue>1650</MarketValue>
+         <Mass>15</Mass>
+         <WorkToBuild>45000</WorkToBuild>
+      </statBases>
+      <researchPrerequisites>
+         <li>VWE_Quickdraw</li>
+      </researchPrerequisites>
+      <comps>
+         <li Class="VFEPirates.CompProperties_WeaponBox">
+            <weaponToEquip>VFEP_WarcasketGun_FoldingGun</weaponToEquip>
+         </li>
+      </comps>
+   </ThingDef>
+   <ThingDef ParentName="BaseBullet">
+      <defName>VFEP_Bullet_WarcasketFoldingGun</defName>
+      <label>warcasket folding gun bullet</label>
+      <projectile>
+         <damageDef>Bullet</damageDef>
+         <damageAmountBase>18</damageAmountBase>
+         <stoppingPower>0</stoppingPower>
+         <armorPenetrationBase>0.25</armorPenetrationBase>
+         <speed>80</speed>
+      </projectile>
+      <graphicData>
+         <texPath>Things/Projectile/Bullet_big</texPath>
+         <graphicClass>Graphic_Single</graphicClass>
+      </graphicData>
+   </ThingDef>
+</Defs>

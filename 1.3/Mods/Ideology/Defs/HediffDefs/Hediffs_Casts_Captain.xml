@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+	<!-- Captain -->
+
+	<HediffDef ParentName="RoleStatBuff">
+		<defName>VFEP_FiringFrenzy</defName>
+		<label>firing frenzy</label>
+		<description>This person is using a special ability to inspire everyone nearby. Everyone within an effect radius gains 50% decreased Shooting Aiming time and 50% increased Pain Shock Threshold.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_GiveHediffsInRange">
+				<range>9.9</range>
+				<mote>Mote_CombatCommand</mote>
+				<hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetColonists>true</onlyTargetColonists>
+				</targetingParameters>
+				<hediff>VFEP_FiringFrenzyBuff</hediff>
+			</li>
+		</comps>
+		<isBad>false</isBad>
+	</HediffDef>
+
+	<HediffDef ParentName="CombatRoleAuraBuffHediffBase">
+		<defName>VFEP_FiringFrenzyBuff</defName>
+		<label>firing frenzy</label>
+		<description>Someone is using the firing frenzy ability nearby, inspiring this person to shoot faster and withstand greater amounts of physical pain.</description>
+		<stages>
+			<li>
+				<painFactor>0.5</painFactor>
+				<statOffsets>
+					<AimingDelayFactor>-0.5</AimingDelayFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+
+</Defs>

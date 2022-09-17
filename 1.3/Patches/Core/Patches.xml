@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Human"]/recipes</xpath>
+				<value>
+					<li>VFEP_RemoveWarcasket</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/StatDef[defName = "ImmunityGainSpeed"]/parts</xpath>
+				<value>
+					<li Class="VFEPirates.StatPart_CurseOfPestilence"></li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/StatDef[defName = "HungerRateMultiplier"]/parts</xpath>
+				<value>
+					<li Class="VFEPirates.StatPart_CurseOfGluttony"></li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/StatDef[defName = "ShootingAccuracyPawn"]/workerClass/text()</xpath>
+				<value>VFEPirates.StatWorker_ShootingAccuracy_CurseOfTheEyePatch</value>
+			</li>
+		</operations>	
+	</Operation>
+</Patch>

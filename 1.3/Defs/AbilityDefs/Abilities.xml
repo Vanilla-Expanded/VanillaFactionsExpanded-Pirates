@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VFECore.Abilities.AbilityDef>
+        <defName>VFEP_GrapplingHook</defName>
+        <label>grappling hook</label>
+        <description>Grappling hook connects to walls and solid rock and allows the users to quickly move to the desired location. The launcher does not require ammunition, but time needs to be reserved between shots to wind it up again.</description>
+        <abilityClass>VFEPirates.Ability_GrapplingHook</abilityClass>
+        <targetMode>Thing</targetMode>
+        <range>19.9</range>
+        <iconPath>Things/Pawn/Humanlike/PrivateerArmor/GrapplingHook</iconPath>
+        <cooldownTime>0</cooldownTime>
+        <castTime>0</castTime>
+        <chance>0</chance>
+        <modExtensions>
+            <li Class="VFEPirates.AbilityExtension_GrapplingHook">
+                <reloadIconPath>Things/Pawn/Humanlike/PrivateerArmor/ReloadGrapplingHook</reloadIconPath>
+                <reloadTicks>600</reloadTicks>
+                <labelUnloaded>reload grappling hook</labelUnloaded>
+            </li>
+            <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+                <projectile>VFEP_Bullet_GrapplingHook</projectile>
+            </li>
+        </modExtensions>
+    </VFECore.Abilities.AbilityDef>
+	
+    <ThingDef ParentName="BaseBullet">
+        <defName>VFEP_Bullet_GrapplingHook</defName>
+        <label>grappling hook</label>
+        <thingClass>VFEPirates.Projectile_GrapplingHook</thingClass>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/PrivateerArmor/GrapplingHookProjectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.5, 0.5)</drawSize>
+        </graphicData>
+        <drawerType>RealtimeOnly</drawerType>
+        <tickerType>Normal</tickerType>
+        <projectile>
+            <speed>40</speed>
+        </projectile>
+    </ThingDef>
+    <ThingDef ParentName="PawnFlyerBase">
+        <defName>VFEP_GrapplingPawn</defName>
+        <thingClass>VFEPirates.PawnFlyer_Pulled</thingClass>
+        <pawnFlyer>
+            <flightDurationMin>0.2</flightDurationMin>
+            <flightSpeed>20</flightSpeed>
+        </pawnFlyer>
+    </ThingDef>
+	
+	<VFECore.Abilities.AbilityDef>
+		<defName>VFEP_SiegeMode</defName>
+		<label>Siege Mode</label>
+		<description>Drill yourself into the ground in order to gain more stability and turn yourself into a stationary artillery unit, increasing the attack range and reload efficiency drastically.</description>
+		<abilityClass>VFEPirates.Ability_SiegeMode</abilityClass>
+		<targetMode>Self</targetMode>
+		<iconPath>UI/Abilities/SiegeModeOn</iconPath>
+		<cooldownTime>600</cooldownTime>
+		<cooldownTimeStatFactors>
+			<VFEP_SiegeModeCooldown>1</VFEP_SiegeModeCooldown>
+		</cooldownTimeStatFactors>
+		<modExtensions>
+			<li Class="VFEPirates.SiegeModeExtension">
+				<siegeModeHediff>VFEP_SiegeMode</siegeModeHediff>
+				<soundEnabled>VFEP_SiegeMode_Engaged</soundEnabled>
+				<soundDisabled>VFEP_SiegeMode_Disengaged</soundDisabled>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<HediffDef>
+		<defName>VFEP_SiegeMode</defName>
+		<label>siege mode</label>
+		<labelNoun>siege mode</labelNoun>
+		<description>siege mode.</description>
+		<hediffClass>VFEPirates.Hediff_SiegeMode</hediffClass>
+		<stages>
+			<li>
+				<statOffsets>
+					<VEF_VerbRangeFactor>0.25</VEF_VerbRangeFactor>
+					<VEF_VerbCooldownFactor>-0.25</VEF_VerbCooldownFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<VFECore.Abilities.AbilityDef>
+		<defName>VFEP_PowerJump</defName>
+		<label>Power jump</label>
+		<description>Use shoulder-mounted jump packs to travel a short distance and create a small explosion at both start and end of the flight.</description>
+		<abilityClass>VFEPirates.Ability_PowerJump</abilityClass>
+		<targetMode>Location</targetMode>
+		<iconPath>UI/Abilities/PowerJump</iconPath>
+		<castTime>60</castTime>
+		<modExtensions>
+			<li Class="VFEPirates.PowerJumpExtension">
+				<fuelConsumption>20</fuelConsumption>
+				<detonationDamageAmount>15</detonationDamageAmount>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+	<ThingDef ParentName="PawnFlyerBase">
+		<defName>VFEP_PowerJumpPawn</defName>
+		<thingClass>VFEPirates.PawnFlyer_PowerJump</thingClass>
+		<pawnFlyer>
+			<flightDurationMin>0.5</flightDurationMin>
+			<flightSpeed>12</flightSpeed>
+			<flightEffecterDef>VFEP_PowerJumpPawnEffect</flightEffecterDef>
+		</pawnFlyer>
+	</ThingDef>
+
+	<EffecterDef>
+		<defName>VFEP_PowerJumpPawnEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+				<spawnLocType>OnSource</spawnLocType>
+				<soundDef>VFEP_JumpLaunch</soundDef>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<spawnLocType>OnSource</spawnLocType>
+				<fleckDef>ShotFlash</fleckDef>
+				<scale>6</scale>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.5~0.6</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>VFEP_JumpFlame</fleckDef>
+				<ticksBetweenMotes>1</ticksBetweenMotes>
+				<maxMoteCount>14</maxMoteCount>
+				<speed>4~5</speed>
+				<angle>170~190</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.9~0.7</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>VFEP_JumpFlameGlow</fleckDef>
+				<ticksBetweenMotes>1</ticksBetweenMotes>
+				<maxMoteCount>14</maxMoteCount>
+				<speed>4~5</speed>
+				<angle>160~200</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.8~1.2</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>VFEP_JumpSmoke</fleckDef>
+				<ticksBetweenMotes>2</ticksBetweenMotes>
+				<maxMoteCount>8</maxMoteCount>
+				<speed>5~6</speed>
+				<angle>170~190</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<VFECore.Abilities.AbilityDef>
+		<defName>VFEP_BlastOff</defName>
+		<label>Blast off</label>
+		<description>Fire a large propulsion engine strapped to the back of your armor and designate a location on the world map to drop pod into. This will create a large explosion at the destination, but will most likely leave you stranded without fuel for the trip back.</description>
+		<abilityClass>VFEPirates.Ability_BlastOff</abilityClass>
+		<iconPath>UI/Abilities/BlastOff</iconPath>
+		<castTime>60</castTime>
+		<range>30</range>
+		<worldTargeting>true</worldTargeting>
+		<targetMode>Location</targetMode>
+		<modExtensions>
+			<li Class="VFEPirates.BlastOffExtension">
+				<fuelConsumption>100</fuelConsumption>
+				<maxLaunchDistance>30</maxLaunchDistance>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>VFEP_PawnIncoming</defName>
+    <thingClass>VFEPirates.PawnIncoming</thingClass>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.9</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>ConstantSpeed</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPod_Fall</anticipationSound>
+      <anticipationSoundTicks>100</anticipationSoundTicks>
+      <motesPerCell>0</motesPerCell>
+	  <speed>1</speed>
+    </skyfaller>
+	<pawnFlyer>
+		<flightEffecterDef>VFEP_BlastOffEffect</flightEffecterDef>
+	</pawnFlyer>
+  </ThingDef>
+  
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>VFEP_PawnLeaving</defName>
+    <thingClass>VFEPirates.PawnLeaving</thingClass>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.9</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <reversed>true</reversed>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPod_Leaving</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+      <ticksToImpactRange>-40</ticksToImpactRange>
+      <motesPerCell>1</motesPerCell>
+      <angleCurve>
+        <points>
+          <li>(0,10)</li>
+          <li>(1,20)</li>
+        </points>
+      </angleCurve>
+      <speedCurve>
+        <points>
+          <li>(0,0.05)</li>
+          <li>(0.98,0.1)</li>
+        </points>
+      </speedCurve>
+    </skyfaller>
+	<pawnFlyer>
+		<flightEffecterDef>VFEP_BlastOffEffect</flightEffecterDef>
+	</pawnFlyer>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>VFEP_ActiveDropPawn</defName>
+    <label>drop pawn</label>
+    <category>Item</category>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <thingClass>VFEPirates.ActiveDropPawn</thingClass>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.9</drawSize>
+      <shadowData>
+        <volume>(0.8, 0.6, 0.8)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <blockWind>true</blockWind>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+  </ThingDef>
+	<EffecterDef>
+		<defName>VFEP_BlastOffEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+				<spawnLocType>OnSource</spawnLocType>
+				<soundDef>VFEP_JumpLaunch</soundDef>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<spawnLocType>OnSource</spawnLocType>
+				<fleckDef>ShotFlash</fleckDef>
+				<scale>6</scale>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.5~0.6</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>VFEP_JumpFlame</fleckDef>
+				<ticksBetweenMotes>1</ticksBetweenMotes>
+				<maxMoteCount>1000</maxMoteCount>
+				<speed>4~5</speed>
+				<angle>170~190</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.9~0.7</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>VFEP_JumpFlameGlow</fleckDef>
+				<ticksBetweenMotes>1</ticksBetweenMotes>
+				<maxMoteCount>1000</maxMoteCount>
+				<speed>4~5</speed>
+				<angle>160~200</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.8~1.2</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<positionOffset>(0,0,-0.5)</positionOffset>
+				<fleckDef>VFEP_JumpSmoke</fleckDef>
+				<ticksBetweenMotes>2</ticksBetweenMotes>
+				<maxMoteCount>1000</maxMoteCount>
+				<speed>5~6</speed>
+				<angle>170~190</angle>
+				<absoluteAngle>true</absoluteAngle>
+			</li>
+		</children>
+	</EffecterDef>
+	
+  <WorldObjectDef>
+    <defName>VFEP_TravelingPawn</defName>
+    <label>pawn</label>
+    <description>pawn in flight.</description>
+    <worldObjectClass>VFEPirates.TravelingPawn</worldObjectClass>
+    <texture>World/WorldObjects/TravelingTransportPods</texture>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+  </WorldObjectDef>
+  
+</Defs>

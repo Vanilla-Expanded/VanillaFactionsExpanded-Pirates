@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="VFEP_FoundryBase" ParentName="BuildingBase" Abstract="True">
+    <canOverlapZones>true</canOverlapZones>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <comps>
+      <li>
+        <compClass>CompReportWorkSpeed</compClass>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+    </placeWorkers>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_FoundryBase">
+    <defName>VFEP_WarcasketFoundry</defName>
+    <label>warcasket foundry</label>
+    <description>A complex foundry with four operating arms designed to assist an operator in mounting a person into the frame of a warcasket. Once they are locked in, the pilot cannot leave until the procedure is finished.\n\nTo begin, an operator starts linking them to the suit - their nerves and limbs permanently linked to the frame. Since the warcasket is not designed to register wear or damage they will feel no pain. The pilot can exit the foundry only when the final rivet is placed, the last plate is welded, and the power system is brought online. Until then they will need external help such as feeding as they are effectively buried alive.\n\nBecause the various parts of the warcasket are welded onto the frame as a single, homogenous entity,  one can mix and match various designs to suit the situation but certain later generations of warcaskets function better if they are part of the same series.</description>
+	<tickerType>Normal</tickerType>
+    <thingClass>VFEPirates.Building_WarcasketFoundry</thingClass>
+    <graphicData>
+      <texPath>Things/Building/WarcasketFoundry/WarcasketFoundry</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,5)</drawSize>
+      <shadowData>
+        <volume>(2.8, 0.35, 3.59)</volume>
+        <offset>(0, 0, 0.08)</offset>
+      </shadowData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Steel>120</Steel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+    </costList>
+    <constructEffect>ConstructWood</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-4</Cleanliness>
+    </statBases>
+    <size>(3,3)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>100</pathCost>
+    <rotatable>False</rotatable>
+    <hasInteractionCell>False</hasInteractionCell>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <!-- <inspectorTabs> Doubt it should have bills, leaving it just in case, will remove later
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building> --> 
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>VFEP_Warcaskets</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

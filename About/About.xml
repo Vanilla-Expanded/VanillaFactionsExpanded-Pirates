@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Vanilla Factions Expanded - Pirates</name>
+  <author>Oskar Potocki, Sarg Bjornson, erdelf, Roolo, Smash Phil, Taranchuk, xrushha, Kikohi, legodude17</author>
+  <supportedVersions>
+    <li>1.3</li>
+  </supportedVersions>
+  <packageId>OskarPotocki.VFE.Pirates</packageId>
+  <description>One faction that always felt a little bit 'un-expanded' in vanilla RimWorld is the pirate faction. They feel more like evil outlanders than anything unique, and they don't really threaten late game colonies, nor do they provide engaging content in any way, shape or form. It always annoyed me that they are industrial tier only and don't even spawn with charge rifles anymore.
+  
+  Roolo, Smash Phil and I are launching a new pirate survival video game inspired by RimWorld on Kickstarter. It's called Cursed Crew if anyone would like to check it out. I figured that the best way to promote the game through the channels I know a lot about is to create a mod, ideally a factions expanded mod, expanding pirates. Of course there is no boats and sea-faring pirates in RimWorld, but there are space pirates, so let's expand them!
+  
+  Vanilla Factions Expanded - Pirates greatly expands the vanilla pirate faction by adding new events, technology, defense means etc. We are also adding two new factions - Junkers, which are inspired by the hordes of Huns, but instead of riding horses, they weld themselves inside powerful warcaskets; and Mercenaries, a spacer-tech faction of 'legal', sanctioned pirates that you can befriend!
+  
+  You can now use your Comms console to hire pirates too! Pirates you hire join you for a period of time, but they come with a hefty price.
+  
+  And most importantly, you can now create warcaskets - steel suits of industrial-tier armor, a powered-armor precursor, around your pawns. Fully customizable, with unique weapons and armor graphics!
+  
+  And with Ideology, you can enjoy a new Pirate meme, with singing sea shanties and much more important camaraderie!
+  
+  Do check out Cursed Crew, as if you liked RimWorld, I'm sure you will like our take on rogue-like survival, sailing the endless ocean and fighting dangerous, mythical creatures.
+
+  </description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+      <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+      <displayName>Vanilla Expanded Framework</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>brrainz.harmony</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <li>VanillaExpanded.VWEL</li>
+  </loadAfter>
+	<incompatibleWith>
+		<li>n7huntsman.combatshields</li> 
+	</incompatibleWith>
+</ModMetaData>

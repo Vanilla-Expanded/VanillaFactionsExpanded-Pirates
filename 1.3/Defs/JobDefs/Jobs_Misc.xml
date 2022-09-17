@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--========= General ============-->
+
+  <JobDef>
+    <defName>VFEP_EntombIn</defName>
+    <driverClass>VFEPirates.JobDriver_EntombIn</driverClass>
+    <reportString>entombing in TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    <casualInterruptible>false</casualInterruptible>
+    <playerInterruptible>false</playerInterruptible>
+    <suspendable>false</suspendable>
+  </JobDef>
+  
+  <JobDef>
+    <defName>VFEP_DoWelding</defName>
+    <driverClass>VFEPirates.JobDriver_DoWelding</driverClass>
+    <reportString>Welding TargetB in TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+  <JobDef>
+    <defName>VFEP_EquipFromWeaponBox</defName>
+    <driverClass>VFEPirates.JobDriver_EquipFromWeaponBox</driverClass>
+    <reportString>equipping TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+  <JobDef>
+    <defName>VFEP_GotoAndExplode</defName>
+    <driverClass>VFEPirates.JobDriver_GotoAndExplode</driverClass>
+    <reportString>moving.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    <carryThingAfterJob>true</carryThingAfterJob>
+    <dropThingBeforeJob>false</dropThingBeforeJob>
+  </JobDef>
+
+</Defs>

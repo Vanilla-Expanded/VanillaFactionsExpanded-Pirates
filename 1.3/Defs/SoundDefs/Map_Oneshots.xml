@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <SoundDef>
+    <defName>VFEP_ConfettiExplosion</defName>  
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Curses/ConfettiCheer_SoundEffect</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>30~30</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>
