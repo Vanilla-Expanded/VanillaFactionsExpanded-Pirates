@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SoundDef Abstract="True" Name="VFEP_RitualSustainerBase">
+    <sustain>True</sustain>
+    <context>MapOnly</context>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainFadeoutTime>2.5</sustainFadeoutTime>
+  </SoundDef>
+  
+  <SoundDef ParentName="VFEP_RitualSustainerBase">
+    <defName>VFEP_RitualSustainer_Pirate</defName>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ideology/CursedCrewOST</clipPath>
+          </li>
+        </grains>
+        <volumeRange>35</volumeRange>
+        <distRange>30~100</distRange>
+        <sustainAttack>5.0</sustainAttack>
+        <sustainSkipFirstAttack>False</sustainSkipFirstAttack>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+ 
+ 
+  
+</Defs>

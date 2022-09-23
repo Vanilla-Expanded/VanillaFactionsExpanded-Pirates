@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<MemeDef>
+		<defName>VFEP_PirateMeme</defName>
+		<label>pirate</label>
+		<description>Strong should take from the weak, for that is our right, but camaraderie and code should be elevated above all.</description>
+		<iconPath>UI/Ideology/Pirate</iconPath>
+		<groupDef>Misc</groupDef>
+		<impact>2</impact>
+		<exclusionTags>
+			
+		</exclusionTags>
+		<generalRules>
+			<rulesStrings>
+				<li>memeAdjective->buccaneering</li>
+				<li>memeAdjective->criminal</li>
+				<li>memeAdjective->pillaging</li>
+				<li>memeAdjective->plundering</li>
+				<li>memeAdjective->mutinous</li>
+				<li>memeAdjective->piratical</li>				
+				
+				<li>memeLeaderNoun->skipper</li>
+				<li>memeLeaderNoun->commander</li>
+				<li>memeLeaderNoun->boss</li>				
+				<li>memeLeaderAdjective->gallant</li>
+				<li>memeLeaderAdjective->draconian</li>
+				<li>memeLeaderAdjective->callous</li>
+				<li>memeLeaderAdjective->brave</li>
+				<li>memeLeaderAdjective->ruthless</li>
+				<li>memeLeaderAdjective->daring</li>
+				<li>memeMoralist->chaplain</li>
+				<li>memeMoralist->first mate</li>
+				<li>memeMoralist->first officer</li>
+			</rulesStrings>
+		</generalRules>
+		<descriptionMaker>
+			<rules>
+				<rulesStrings>
+					<!-- theist myth -->
+					<li>creation(tag=meme_Pirate)        ->[deity0_name] showed us that the [memberNamePlural] must stand together as a crew to impose [deity0_possessive] will upon those who are weaker.</li>
+					<li>episode(uses=1,tag=meme_Pirate)  ->[deity0_name] shouted to all the [memberNamePlural], "In an honest service there is thin commons, low wages, and hard labor; in piracy, plenty and satiety, pleasure and ease, liberty and power. Seize it."</li>
+					<!-- theist founder -->
+					<li>intro(tag=meme_Pirate)           ->On the [place_summary] [place_name], the [memberNamePlural] had created a safe haven, where their plunder could be counted for the glory of [deity0_name].</li>
+					<li>conflict(tag=meme_Pirate)           ->A coward [foeLeader] looked at this with scorn, for [foeLeader_pronoun] desired all the riches for [foeLeader_objective]self.</li>
+					<li>founderJoin(tag=meme_Pirate)        ->[deity0_name]'s truest follower, captain [founderName], captured the [foeLeader] in a daring raid.</li>
+					<li>victory(tag=meme_Pirate)            ->[founderName]'s crewmates incarcerated the [foeLeader], who was executed a few days later for [deity0_name]'s glory.</li>
+					<!-- ideological founder -->
+					<li>setup(tag=meme_Pirate)           ->[founderName] was the greatest captain, a true leader. Thousands of pirates united under [founder_possessive] terrifying banner.</li>
+					<li>story(uses=1,tag=meme_Pirate)    ->[founderName] made us understand that hardships, suffering and sacrifices must be faced together, as a crew. We learned to value the comradeship and camaraderie, and respect each other.</li>
+					<!-- ideological lesson -->
+					<li>lessonIntro(tag=meme_Pirate)         ->I talked to the greatest pirate to ever live, a legend amongst men. He showed me that</li>
+					<li>lesson(tag=meme_Pirate)              ->hardships, suffering and sacrifices must be faced together, as a crew</li>
+					<li>lessonReinforcement(tag=meme_Pirate) ->He taught me to value the comradeship and camaraderie, and the merits of respecting each other.</li>
+					<!-- archist -->
+					<li>archistBasis(tag=meme_Pirate)    ->Archotechs do not respect those who can't defend themselves: we will face those weaker than ourselves as a crew.</li>
+					<li>archistFact(tag=meme_Pirate)     ->We will prove to the archotechs that comradeship and camaraderie are the values that keep us strong.</li>
+					<li>archistProphecy(tag=meme_Pirate) ->Only by standing proud together can we become worthy of transcendence.</li>
+					<!-- animist -->
+					<li>animistBasis(tag=meme_Pirate)    ->The spirits do not respect those who can't defend themselves: we will face those weaker than ourselves as a crew.</li>
+					<li>animistFact(tag=meme_Pirate)     ->We will prove to the spirits that comradeship and camaraderie are the values that keep us strong.</li>
+					<li>animistProphecy(tag=meme_Pirate) ->[itIsSaid] only by standing proud together can we make the spirits truly listen to us.</li>
+					<!-- serketist -->
+					<li>serketistProphecy(tag=meme_Pirate)->[itIsSaid] we will prove that comradeship and camaraderie are the values that keep us strong.</li>
+					<!-- eldritch / chthonian -->
+					<li>chthonianProphecy(tag=meme_Pirate)->These eldritch entities would seek to destroy us, but we will stand together against them. Our camaraderie can't be shaken by anything, not even them.</li>
+					<!-- esoteric -->
+					<li>esotericismProphecy(tag=meme_Pirate)->Such occult knowledge requires an unified will. We will stand together as a crew, our camaraderie allowing us to embrace these arcane secrets with ease.</li>
+					<!-- eschatologism -->
+					<li>eschatologismFact(tag=meme_Pirate)->We will plunder and pillage those weaker than ourselves, for the world they have created must be destroyed, and only our crew deserves their achievements.</li>
+					<!-- corporate -->
+					<li>introMemo(tag=meme_Pirate)->As a member of our Reclamation and Repossession Office, let us remind you that any resources found on this planet are the property of the Company, and as such any hostile factions trying to take possession of our assets must be terminated with EXTREME prejudice. We will not allow others to take what is rightfully ours.</li>
+					<!-- alienist -->
+					<li>alienistProphecy(tag=meme_Pirate)->These wayward creatures are ours to do as we please.</li>
+
+				</rulesStrings>
+			</rules>
+		</descriptionMaker>
+		<requireOne>
+			<li>
+				<li>Raiding_Respected</li>
+				<li>Raiding_Required</li>
+			</li>
+			<li>
+				<li>Execution_HorribleIfInnocent</li>
+				<li>Execution_DontCare</li>
+				<li>Execution_RespectedIfGuilty</li>
+				<li>Execution_Required</li>
+			</li>
+			<li>
+				<li>VFEP_Camaraderie_Respected</li>
+				<li>VFEP_Camaraderie_Exalted</li>
+			</li>
+		</requireOne>
+		<symbolPacks>
+			<li>
+				<ideoName>Piracy</ideoName>
+				<theme>piracy</theme>
+				<adjective>pirate</adjective>
+				<member>crewmember</member>
+			</li>
+		</symbolPacks>
+		<requiredRituals>
+			<li>
+				<precept>VFEP_SingingShanties</precept>
+				<pattern>VFEP_SingingShantiesPattern</pattern>
+			</li>
+		</requiredRituals>
+	</MemeDef>
+	
+</Defs>

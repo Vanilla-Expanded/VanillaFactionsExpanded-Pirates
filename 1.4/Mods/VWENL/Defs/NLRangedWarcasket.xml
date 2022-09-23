@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+   <ThingDef ParentName="VFEP_BaseWarcasketGun">
+      <defName>VFEP_WarcasketGun_TearGasGrenadeLauncher</defName>
+      <label>warcasket tear gas grenade launcher</label>
+      <description>An upscaled version of the Tear Gas Grenade Launcher designed for use by a Warcasket. A straight upgrade, it fires 2 rounds and benefits from more powerful propellant for better range. In order to improve gas dispersal and not have two gas clouds overlap, the weapon was made even less accurate in order to try and spread out the supporting fire.</description>
+      <graphicData>
+         <texPath>Things/Item/Weapons/WarcasketTearGasGrenadeLauncher</texPath>
+      </graphicData>
+      <soundInteract>Interact_Rifle</soundInteract>
+      <statBases>
+         <MarketValue>1650</MarketValue>
+         <WorkToMake>45000</WorkToMake>
+         <Mass>25</Mass>
+         <AccuracyTouch>0.55</AccuracyTouch>
+         <AccuracyShort>0.64</AccuracyShort>
+         <AccuracyMedium>0.55</AccuracyMedium>
+         <AccuracyLong>0.45</AccuracyLong>
+         <RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+      </statBases>
+      <weaponTags>
+         <li>WarcasketHeavy</li>
+      </weaponTags>
+      <costList>
+         <Steel>150</Steel>
+         <Neutroamine>100</Neutroamine>
+         <ComponentIndustrial>3</ComponentIndustrial>
+      </costList>
+      <verbs>
+         <li>
+            <verbClass>Verb_Shoot</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>VWENL_Projectile_TearGasGrenade</defaultProjectile>
+            <warmupTime>3.5</warmupTime>
+            <range>29.9</range>
+            <forcedMissRadius>3.9</forcedMissRadius>
+            <noiseRadius>4</noiseRadius>
+            <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+            <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+            <burstShotCount>2</burstShotCount>
+            <targetParams>
+               <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+            <soundCast>VFEP_Shot_GrenadeLauncher</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+         </li>
+      </verbs>
+      <tools>
+         <li>
+            <label>stock</label>
+            <capacities>
+               <li>Blunt</li>
+            </capacities>
+            <power>11</power>
+            <cooldownTime>3</cooldownTime>
+         </li>
+         <li>
+            <label>barrel</label>
+            <capacities>
+               <li>Blunt</li>
+               <li>Poke</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>3</cooldownTime>
+         </li>
+      </tools>
+      <modExtensions>
+         <li Class="VFECore.FloorGraphicExtension">
+            <graphicData>
+               <graphicClass>Graphic_Single</graphicClass>
+               <texPath>Things/Item/WeaponsBoxed/WarcasketTearGasGrenadeLauncher_OnFloor</texPath>
+               <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+               <drawSize>1</drawSize>
+            </graphicData>
+         </li>
+      </modExtensions>
+   </ThingDef>
+   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+      <defName>VFEP_Box_TearGasGrenadeLauncher</defName>
+      <label>warcasket tear gas grenade launcher</label>
+      <description>An upscaled version of the Tear Gas Grenade Launcher designed for use by a Warcasket. A straight upgrade, it fires 2 rounds and benefits from more powerful propellant for better range. In order to improve gas dispersal and not have two gas clouds overlap, the weapon was made even less accurate in order to try and spread out the supporting fire.</description>
+      <graphicData>
+         <texPath>Things/Item/WeaponsBoxed/WarcasketTearGasGrenadeLauncher_OnFloor</texPath>
+      </graphicData>
+      <costList>
+         <Steel>150</Steel>
+         <Neutroamine>100</Neutroamine>
+         <ComponentIndustrial>3</ComponentIndustrial>
+      </costList>
+      <statBases>
+         <MarketValue>1650</MarketValue>
+         <Mass>25</Mass>
+         <WorkToBuild>45000</WorkToBuild>
+      </statBases>
+      <researchPrerequisites>
+         <li>VWE_NonLethal</li>
+      </researchPrerequisites>
+      <comps>
+         <li Class="VFEPirates.CompProperties_WeaponBox">
+            <weaponToEquip>VFEP_WarcasketGun_TearGasGrenadeLauncher</weaponToEquip>
+         </li>
+      </comps>
+   </ThingDef>
+</Defs>

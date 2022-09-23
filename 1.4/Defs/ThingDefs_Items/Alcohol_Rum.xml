@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="VFEP_DrugToolBase">
+		<defName>VFEP_Rum</defName>
+		<label>rum</label>
+		<description>A highly alcoholic beverage made from the recycled bodily fluids of those wearing rumsuits.\n\nAn ingenious way of not only improving morale but also allowing crew to operate longer without needing to resupply for food or dispose of human waste. Rum is very thick to drink - much like a protein shake - and the alcohol helps mask the otherwise unpleasant taste from repurposed nutrient paste dispenser technology.</description>
+		<graphicData>
+			<texPath>Things/Item/Drugs/Rum</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<thingCategories>
+			
+		</thingCategories>
+		<equippedAngleOffset>-150</equippedAngleOffset>
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>6</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+			<Nutrition>0.6</Nutrition>
+		</statBases>
+		<ingestible>
+			<specialThoughtAsIngredient>VFEP_RumAsIngredient</specialThoughtAsIngredient>
+			<foodType>Fluid, Processed, Liquor</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.17</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<chairSearchRadius>25</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholHigh</hediffDef>
+					<severity>0.15</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholTolerance</hediffDef>
+					<severity>0.016</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<equipmentType>Primary</equipmentType>
+		<techLevel>Neolithic</techLevel>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Alcohol</chemical>
+				<addictiveness>0.010</addictiveness>
+				<minToleranceToAddict>0.25</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>10</listOrder>
+			</li>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

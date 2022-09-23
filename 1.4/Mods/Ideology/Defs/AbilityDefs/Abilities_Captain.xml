@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+  <AbilityGroupDef>
+    <defName>VFEP_Captain</defName>
+    <cooldownTicks>180000</cooldownTicks>
+  </AbilityGroupDef>
+  
+  <AbilityDef Abstract="True" Name="VFEP_RoleAuraBuffBase">
+    <jobDef>CastAbilityOnThing</jobDef>
+    <targetRequired>False</targetRequired>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <groupDef>VFEP_Captain</groupDef>
+    <hotKey>Misc12</hotKey>
+    <warmupStartSound>CombatCommand_Warmup</warmupStartSound>
+    <statBases>
+      <Ability_Duration>1000</Ability_Duration>
+      <Ability_EffectRadius>9.9</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <range>9.9</range>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <AbilityDef ParentName="VFEP_RoleAuraBuffBase">
+    <defName>VFEP_FiringFrenzy</defName>
+    <label>firing frenzy</label>
+    <description>Inspire everyone nearby to increase their firing rate and withstand greater amounts of pain. The effect remains attached to the caster for 24 hours.</description>
+    <iconPath>UI/Ideology/FiringFrenzyCommand</iconPath>
+    <warmupMoteSocialSymbol>UI/Abilities/MarksmanCommand</warmupMoteSocialSymbol>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>VFEP_FiringFrenzy</hediffDef>
+        <onlyBrain>True</onlyBrain>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+ 
+
+</Defs>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <DesignatorDropdownGroupDef>
+        <defName>VFEP_WarcasketWeapon</defName>
+        <label>warcasket weapons</label>
+    </DesignatorDropdownGroupDef>
+
+</Defs>
