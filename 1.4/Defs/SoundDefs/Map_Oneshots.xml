@@ -8,8 +8,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Curses/ConfettiCheer_SoundEffect</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Curses/ConfettiCheer_SoundEffect</clipPath>
           </li>
         </grains>
         <volumeRange>30~30</volumeRange>

@@ -54,7 +54,6 @@ namespace VFEPirates
 				}
 				var hediff = HediffMaker.MakeHediff(VFEP_DefOf.VFEP_KillItself, pawn) as Hediff_KillItself;
 				hediff.killInstant = true;
-				Log.Message("Kill instant: " + TargetA);
 				pawn.health.AddHediff(hediff);
 			};
 			toil2.defaultCompleteMode = ToilCompleteMode.Instant;

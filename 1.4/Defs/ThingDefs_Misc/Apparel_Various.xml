@@ -187,9 +187,9 @@
 			<li Class="VFECore.ApparelDrawPosExtension">
 				<shellPosDrawSettings>
 					<drawPosNorthOffset>(0, 0.2, 0)</drawPosNorthOffset>
-					<drawPosSouthOffset>(0, 0.1, 0)</drawPosSouthOffset>
-					<drawPosWestOffset>(0, 0.1, 0)</drawPosWestOffset>
-					<drawPosEastOffset>(0, 0.1, 0)</drawPosEastOffset>
+					<drawPosSouthOffset>(0, 0.01, 0)</drawPosSouthOffset>
+					<drawPosWestOffset>(0, 0.01, 0)</drawPosWestOffset>
+					<drawPosEastOffset>(0, 0.01, 0)</drawPosEastOffset>
 					<!--
 				<drawNorthSize>(2, 2)</drawNorthSize>
 				<drawSouthSize>(2, 2)</drawSouthSize>

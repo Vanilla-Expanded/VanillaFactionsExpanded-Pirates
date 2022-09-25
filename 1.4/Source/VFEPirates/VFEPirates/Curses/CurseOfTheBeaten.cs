@@ -40,7 +40,7 @@ namespace VFEPirates
             for (int i = 0; i < instructionList.Count; i++)
             {
                 CodeInstruction instruction = instructionList[i];
-
+                yield return instruction;
                 if (instruction.Calls(DecoratePrioritizedTaskInfo) && instructionList[i - 4].LoadsField(tendTargetField))
                 {
                     FieldInfo medicineField = AccessTools.Field(typeof(FloatMenuMakerMap).GetNestedTypes(AccessTools.all)
@@ -51,17 +51,15 @@ namespace VFEPirates
                         operand: AccessTools.Method(typeof(CurseOfTheBeaten), nameof(RevalidateFloatMenuOption)));
                 }
 
-                yield return instruction;
             }
         }
 
         public static FloatMenuOption RevalidateFloatMenuOption(FloatMenuOption floatMenuOption, Thing medicine)
 		{
-            Log.Message("floatMenuOption: " + floatMenuOption + " - medicine: " + medicine);
             if (IsActive(VFEP_DefOf.VFEP_CurseOfTheBeaten) && medicine is null)
 			{
                 floatMenuOption.action = null;
-                floatMenuOption.Label += $"({VFEP_DefOf.VFEP_CurseOfTheBeaten.LabelCap} - {VFEP_DefOf.VFEP_CurseOfTheBeaten.description})";
+                floatMenuOption.Label += $" ({VFEP_DefOf.VFEP_CurseOfTheBeaten.LabelCap} - {VFEP_DefOf.VFEP_CurseOfTheBeaten.description})";
             }
             return floatMenuOption;
 		}

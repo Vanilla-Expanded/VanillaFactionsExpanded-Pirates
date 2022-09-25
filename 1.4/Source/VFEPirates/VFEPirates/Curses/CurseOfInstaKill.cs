@@ -21,14 +21,12 @@ namespace VFEPirates
         public static bool InstaKill(DamageInfo? dinfo, Hediff hediff, Pawn ___pawn)
         {
             ___pawn.Kill(dinfo, hediff);
-            Log.Message("Killing");
             return false;
         }
 
         public static bool InstaKillHealthUtil(Pawn p, bool allowBleedingWounds = true)
 		{
             p.Kill(null);
-            Log.Message("Killing");
             return false;
 		}
     }

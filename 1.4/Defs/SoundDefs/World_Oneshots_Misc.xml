@@ -8,8 +8,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Things/GauntletCrashing</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/GauntletCrashing</clipPath>
           </li>
         </grains>
         <volumeRange>30~30</volumeRange>
@@ -25,8 +25,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Abilities/PowerJump_Jump</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Abilities/PowerJump_Jump</clipPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      
@@ -41,8 +41,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Abilities/Shot_GrapplingHook</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Abilities/Shot_GrapplingHook</clipPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      
@@ -58,8 +58,8 @@
       <li>
         <onCamera>True</onCamera>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Abilities/SiegeMode_Disengaged</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Abilities/SiegeMode_Disengaged</clipPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      
@@ -75,8 +75,8 @@
       <li>
         <onCamera>True</onCamera>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Abilities/SiegeMode_Engaged</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Abilities/SiegeMode_Engaged</clipPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      
@@ -91,8 +91,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Things/RumFinished</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/RumFinished</clipPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      
@@ -107,8 +107,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Ideology/CursedCrewOST</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ideology/CursedCrewOST</clipPath>
           </li>
         </grains>      
         <volumeRange>35~35</volumeRange>      
@@ -141,8 +141,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Things/Interact_LaserGun</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Interact_LaserGun</clipPath>
           </li>
         </grains>  
         <volumeRange>

@@ -20,7 +20,7 @@ namespace VFEPirates
 		public static bool TryFindBestFixedIngredients(List<IngredientCount> ingredients, Pawn pawn, Thing ingredientDestination, List<ThingCount> chosen, float searchRadius = 999f)
 		{
 			return TryFindBestIngredientsHelper((Thing t) => ingredients.Any((IngredientCount ingNeed) => ingNeed.filter.Allows(t)), 
-				(List<Thing> foundThings) => CachedData.tryFindBestIngredientsInSet_NoMixHelper(foundThings, ingredients, chosen, ingredientDestination.Position, alreadySorted: false), 
+				(List<Thing> foundThings) => CachedData.tryFindBestIngredientsInSet_NoMixHelper(foundThings, ingredients, chosen, ingredientDestination.Position, alreadySorted: false, null), 
 				ingredients, pawn, ingredientDestination, chosen, searchRadius);
 		}
 		public static bool TryFindBestIngredientsHelper(Predicate<Thing> thingValidator, Predicate<List<Thing>> foundAllIngredientsAndChoose, List<IngredientCount> ingredients, Pawn pawn, Thing billGiver, List<ThingCount> chosen, float searchRadius)
