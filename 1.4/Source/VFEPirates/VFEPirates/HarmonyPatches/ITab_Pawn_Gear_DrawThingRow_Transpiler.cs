@@ -17,7 +17,7 @@ namespace VFEPirates
             {
                 if (codes[i].opcode == OpCodes.Ldstr && codes[i].OperandIs("DropThingLocked"))
                 {
-                    yield return new CodeInstruction(OpCodes.Ldloc_S, 9);
+                    yield return new CodeInstruction(OpCodes.Ldloc_S, 10);
                     yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(ITab_Pawn_Gear_DrawThingRow_Transpiler), nameof(DropThingTooltip)));
                     i += 2;
                 }
