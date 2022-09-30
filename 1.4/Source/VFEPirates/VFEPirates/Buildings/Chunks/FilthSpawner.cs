@@ -1,9 +1,4 @@
 ﻿using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace VFEPirates
@@ -16,15 +11,18 @@ namespace VFEPirates
         public int totalFilthSpawn = 40;
         public int spawnEachXticks = 300;
 
-        public CompProperties_FilthSpawner() => this.compClass = typeof(CompFilthSpawner);
+        public CompProperties_FilthSpawner()
+        {
+            compClass = typeof(CompFilthSpawner);
+        }
     }
 
     internal class CompFilthSpawner : ThingComp
     {
-        int ticksCount = 0;
-        int leftToSpawn;
+        private int ticksCount = 0;
+        private int leftToSpawn;
 
-        private CompProperties_FilthSpawner Props => (CompProperties_FilthSpawner)this.props;
+        private CompProperties_FilthSpawner Props => (CompProperties_FilthSpawner)props;
 
         public override void PostExposeData()
         {
@@ -42,20 +40,21 @@ namespace VFEPirates
         public override void CompTick()
         {
             base.CompTick();
-            if (ticksCount % Props.spawnEachXticks == 0 && parent.Spawned)
+            if (leftToSpawn > 0)
             {
-                for (int i = 0; i < Props.spawnCountOnSpawn && leftToSpawn > 0; i++)
+                if (ticksCount % Props.spawnEachXticks == 0 && parent.Spawned)
                 {
-                    if (RCellFinder.TryFindRandomCellNearWith(parent.Position, c => c.Walkable(parent.Map) && FilthMaker.CanMakeFilth(c, parent.Map, Props.filthDef), parent.Map, out IntVec3 c, 2, Props.spawnRadius) &&
-                        FilthMaker.TryMakeFilth(c, parent.Map, Props.filthDef, 1))
+                    for (int i = 0; i < Props.spawnCountOnSpawn && leftToSpawn > 0; i++)
                     {
-                        leftToSpawn--;
+                        if (RCellFinder.TryFindRandomCellNearWith(parent.Position, c => c.Walkable(parent.Map) && FilthMaker.CanMakeFilth(c, parent.Map, Props.filthDef), parent.Map, out var c, 2, Props.spawnRadius) &&
+                            FilthMaker.TryMakeFilth(c, parent.Map, Props.filthDef, 1))
+                        {
+                            leftToSpawn--;
+                        }
                     }
                 }
-
-                if (leftToSpawn == 0) parent.AllComps.Remove(this);
+                ticksCount++;
             }
-            ticksCount++;
         }
     }
 }
