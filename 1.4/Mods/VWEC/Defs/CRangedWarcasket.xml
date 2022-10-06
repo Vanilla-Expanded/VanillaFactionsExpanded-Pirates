@@ -58,14 +58,6 @@
          </li>
       </tools>
       <equippedAngleOffset>-35</equippedAngleOffset>
-      <comps>
-         <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-            <eastOffset>(0,0,-0.18)</eastOffset>
-            <westOffset>(0,0,-0.18)</westOffset>
-            <southOffset>(0,0,-0.18)</southOffset>
-            <northOffset>(0,0,-0.18)</northOffset>
-         </li>
-      </comps>
       <modExtensions>
          <li Class="VFECore.FloorGraphicExtension">
             <graphicData>
@@ -75,6 +67,22 @@
                <drawSize>1</drawSize>
             </graphicData>
          </li>
+	<li Class="VFECore.ThingDefExtension">
+		<weaponCarryDrawOffsets>
+			<north>
+				<drawOffset>(0,0,-0.18)</drawOffset>
+			</north>
+			<east>
+				<drawOffset>(0,0,-0.18)</drawOffset>
+			</east>
+			<south>
+				<drawOffset>(0,0,-0.18)</drawOffset>
+			</south>
+			<west>
+				<drawOffset>(0,0,-0.18)</drawOffset>
+			</west>
+		</weaponCarryDrawOffsets>
+	</li>
       </modExtensions>
    </ThingDef>
    <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">

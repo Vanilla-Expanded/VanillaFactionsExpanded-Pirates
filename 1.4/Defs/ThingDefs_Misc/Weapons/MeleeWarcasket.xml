@@ -19,11 +19,6 @@
     </tradeTags>
 	<relicChance>0</relicChance>
 	<recipeMaker Inherit="False" IsNull="True"/>
-	<comps>
-		<li>
-			<compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
-		</li>
-	</comps>
 	<modExtensions>
 		<li Class="HeavyWeapons.HeavyWeapon">
 			<isHeavy>true</isHeavy>
