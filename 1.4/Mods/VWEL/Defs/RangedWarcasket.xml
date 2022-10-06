@@ -167,6 +167,12 @@
       <weaponTags>
          <li>WarcasketVeteran</li>
       </weaponTags>
+      <tradeTags>
+         <li>VFEP_WarcasketWeaponExotic</li>
+      </tradeTags>
+      <thingSetMakerTags>
+         <li>RewardStandardLowFreq</li>
+      </thingSetMakerTags>
       <verbs>
          <li>
             <verbClass>Verb_Shoot</verbClass>
@@ -232,33 +238,7 @@
 	</li>
       </modExtensions>
    </ThingDef>
-   <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
-      <defName>VFEP_Box_WarcasketLaserBolter</defName>
-      <label>warcasket laser bolter</label>
-      <description>An enlarged laser weapon, combining both modern and antique methods into a compact package. Taking advantage of a greater weight tolerance, this system includes a revolver cylinder using advanced battery cells instead of cartridges. This allows the weapon to fire more powerful shots at a slower warmup reduction, meaning safer sustained fire for the operator.</description>
-      <graphicData>
-         <texPath>Things/Item/WeaponsBoxed/WarcasketLaserBolter_OnFloor</texPath>
-      </graphicData>
-      <costList>
-         <Steel>75</Steel>
-         <Plasteel>100</Plasteel>
-         <ComponentSpacer>8</ComponentSpacer>
-      </costList>
-      <statBases>
-         <MarketValue>3200</MarketValue>
-         <Mass>30</Mass>
-         <WorkToBuild>100000</WorkToBuild>
-      </statBases>
-      <researchPrerequisites>
-         <li>VWE_UltratechLaserWeapons</li>
-         <li>VFEP_SpacerWarcasketWeaponry</li>
-      </researchPrerequisites>
-      <comps>
-         <li Class="VFEPirates.CompProperties_WeaponBox">
-            <weaponToEquip>VFEP_WarcasketGun_LaserBlaster</weaponToEquip>
-         </li>
-      </comps>
-   </ThingDef>
+
    <ThingDef ParentName="VWEL_Bullet_LaserGeneric" Class="VanillaWeaponsExpandedLaser.LaserBeamDef">
       <defName>VWEL_Bullet_LaserRifle</defName>
       <label>laser shot</label>
