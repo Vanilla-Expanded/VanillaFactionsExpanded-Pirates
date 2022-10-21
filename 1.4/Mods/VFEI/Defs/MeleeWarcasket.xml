@@ -16,6 +16,7 @@
          <Mass>25</Mass>
       </statBases>
       <equippedAngleOffset>-65</equippedAngleOffset>
+	  <smeltable>false</smeltable>
       <weaponTags>
          <li>WarcasketMelee</li>
          <li>WarcasketVeteran</li>

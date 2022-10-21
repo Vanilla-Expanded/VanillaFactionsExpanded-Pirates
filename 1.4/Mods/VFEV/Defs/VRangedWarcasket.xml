@@ -18,6 +18,7 @@
          <AccuracyLong>0.70</AccuracyLong>
          <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
       </statBases>
+	  <smeltable>false</smeltable>
       <weaponTags>
          <li>WarcasketVeteran</li>
       </weaponTags>
