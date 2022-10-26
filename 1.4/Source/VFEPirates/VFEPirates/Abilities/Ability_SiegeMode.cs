@@ -87,7 +87,7 @@ namespace VFEPirates
                         enabled = false;
                         DoAction();
                     },
-                    isActive = () => enabled = true,
+                    isActive = () => enabled,
                     icon = ContentFinder<Texture2D>.Get("UI/Abilities/SiegeModeOff"),
                     turnOnSound = def.GetModExtension<SiegeModeExtension>().soundEnabled,
                     turnOffSound = def.GetModExtension<SiegeModeExtension>().soundDisabled
@@ -100,7 +100,7 @@ namespace VFEPirates
                     enabled = true;
                     DoAction();
                 },
-                isActive = () => enabled = false,
+                isActive = () => enabled,
                 icon = ContentFinder<Texture2D>.Get("UI/Abilities/SiegeModeOn"),
                 turnOnSound = def.GetModExtension<SiegeModeExtension>().soundEnabled,
                 turnOffSound = def.GetModExtension<SiegeModeExtension>().soundDisabled
