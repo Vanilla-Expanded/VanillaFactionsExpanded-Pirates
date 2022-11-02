@@ -47,14 +47,10 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
     </backstoryFilters>
     <xenotypeSet>
       <xenotypeChances>
-        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.1</Dirtmole>
-        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
-        <Waster MayRequire="Ludeon.RimWorld.Biotech">0.025</Waster>
-        <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0.025</Pigskin>
-        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.025</Neanderthal>
-        <Impid MayRequire="Ludeon.RimWorld.Biotech">0.025</Impid>
-        <Genie MayRequire="Ludeon.RimWorld.Biotech">0.025</Genie>
-        <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.025</Yttakin>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.15</Hussar>
+        <Waster MayRequire="Ludeon.RimWorld.Biotech">0.15</Waster>
+        <Impid MayRequire="Ludeon.RimWorld.Biotech">0.15</Impid>
+        <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.15</Yttakin>
       </xenotypeChances>
     </xenotypeSet>
     <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
@@ -207,14 +203,8 @@ Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of t
     </backstoryFilters>
     <xenotypeSet>
       <xenotypeChances>
-        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.1</Dirtmole>
-        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
-        <Waster MayRequire="Ludeon.RimWorld.Biotech">0.025</Waster>
-        <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0.025</Pigskin>
-        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.025</Neanderthal>
-        <Impid MayRequire="Ludeon.RimWorld.Biotech">0.025</Impid>
-        <Genie MayRequire="Ludeon.RimWorld.Biotech">0.025</Genie>
-        <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.025</Yttakin>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.6</Hussar>
+        <Genie MayRequire="Ludeon.RimWorld.Biotech">0.1</Genie>
       </xenotypeChances>
     </xenotypeSet>
     <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
