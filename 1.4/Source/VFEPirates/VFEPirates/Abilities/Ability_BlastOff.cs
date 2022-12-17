@@ -39,7 +39,7 @@ namespace VFEPirates
             return true;
         }
 
-        public override bool CanHitTargetTile(GlobalTargetInfo target) => target.WorldObject is MapParent {HasMap: true};
+        public override bool CanHitTargetTile(GlobalTargetInfo target) => target.WorldObject is MapParent;
 
         public override bool ValidateTargetTile(GlobalTargetInfo target, bool showMessages = false)
         {
@@ -346,19 +346,8 @@ namespace VFEPirates
 
                 if (arrivalAction == null)
                 {
-                    if (TransportPodsArrivalAction_FormCaravan.CanFormCaravanAt(podsField.GetValue<List<ActiveDropPodInfo>>(), destinationTile))
-                        arrivalAction = new TransportPodsArrivalAction_FormCaravan();
-                    else
-                    {
-                        var caravans = Find.WorldObjects.Caravans;
-                        for (var j = 0; j < caravans.Count; j++)
-                            if (caravans[j].Tile == destinationTile &&
-                                TransportPodsArrivalAction_GiveToCaravan.CanGiveTo(podsField.GetValue<List<ActiveDropPodInfo>>(), caravans[j]))
-                            {
-                                arrivalAction = new TransportPodsArrivalAction_GiveToCaravan(caravans[j]);
-                                break;
-                            }
-                    }
+                    Map orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(destinationTile, null);
+                    arrivalAction = new PawnArrivalAction_LandInSpecificCell(orGenerateMap.Parent, pawn);
                 }
             }
 
