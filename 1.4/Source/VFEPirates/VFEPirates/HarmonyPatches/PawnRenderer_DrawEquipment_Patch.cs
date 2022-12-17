@@ -6,7 +6,7 @@ using Verse;
 namespace VFEPirates.HarmonyPatches
 {
     [HarmonyPatch(typeof(PawnRenderer), "DrawEquipment")]
-    public class PawnRenderer_DrawEquipment_Patch
+    public static class PawnRenderer_DrawEquipment_Patch
     {
         public static bool Prefix(PawnRenderer __instance, Pawn ___pawn, Vector3 rootLoc, Rot4 pawnRotation, PawnRenderFlags flags)
         {

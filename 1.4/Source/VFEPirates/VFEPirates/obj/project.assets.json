@@ -99,7 +99,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sarg\\.nuget\\packages\\": {}
+    "C:\\Users\\Vova\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -107,12 +107,12 @@
       "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.4\\Source\\VFEPirates\\VFEPirates\\VFEPirates.csproj",
       "projectName": "VFEPirates",
       "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.4\\Source\\VFEPirates\\VFEPirates\\VFEPirates.csproj",
-      "packagesPath": "C:\\Users\\Sarg\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
       "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.4\\Source\\VFEPirates\\VFEPirates\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Sarg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vova\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

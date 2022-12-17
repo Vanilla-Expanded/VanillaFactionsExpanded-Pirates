@@ -75,6 +75,8 @@ namespace VFEPirates
 
         public string CannotUseNowReason(Pawn selPawn)
         {
+            if (selPawn.DevelopmentalStage != DevelopmentalStage.Adult)
+                return "VFEP.ChildrenCannotUseThis".Translate();
             if (!compPower.PowerOn) return "NoPower".Translate();
             if (!VFEPiratesMod.allShoulderPadsDefs.Any(d => d.IsResearchFinished) || !VFEPiratesMod.allShoulderPadsDefs.Any(d => d.IsResearchFinished) ||
                 !VFEPiratesMod.allShoulderPadsDefs.Any(d => d.IsResearchFinished))

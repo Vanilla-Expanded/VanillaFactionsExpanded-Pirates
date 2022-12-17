@@ -30,4 +30,5 @@ assembly over other tasks.</VFEP.WarcasketText>
 	<VFEP.DeployWarDrone>Deploy small, combat-ready drones from the docking port in the back. These drones can be controlled to provide firing support, but will self-detonate after 60 seconds.</VFEP.DeployWarDrone>
 	<VFEP.DeploySpidermineDesc>Fire a long range spidermine that will automatically run towards the nearest enemy, detonating as soon as it reaches them.</VFEP.DeploySpidermineDesc>
 	<VFEP.Cancel>Cancel</VFEP.Cancel>
+	<VFEP.ChildrenCannotUseThis>Children cannot use this.</VFEP.ChildrenCannotUseThis>
 </LanguageData>
