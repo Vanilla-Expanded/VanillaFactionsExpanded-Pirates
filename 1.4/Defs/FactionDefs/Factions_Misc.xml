@@ -128,7 +128,7 @@ Junkers utilise warcasket technology and seal themselves in metal tombs in which
         </options>
       </li>
     </pawnGroupMakers>
-    <settlementTexturePath>UI/FactionIcons/JunkersOutpost</settlementTexturePath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>30</configurationListOrderPriority>
   </FactionDef>
@@ -270,7 +270,7 @@ Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of t
         </options>
       </li>
     </pawnGroupMakers>
-    <settlementTexturePath>UI/FactionIcons/MercsOutpost</settlementTexturePath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>30</configurationListOrderPriority>
   </FactionDef>
