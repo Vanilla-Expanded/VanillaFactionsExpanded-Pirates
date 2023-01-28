@@ -3,6 +3,7 @@
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Save Our Ship 2</li>
+			<li>Universum</li>
 		</mods>
 
 		<match Class="PatchOperationSequence">
