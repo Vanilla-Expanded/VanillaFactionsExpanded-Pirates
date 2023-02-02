@@ -358,9 +358,6 @@
     <Compile Include="Curses\StorytellerComp_Cursed.cs" />
     <Compile Include="Defs\Defs.cs" />
     <Compile Include="Buildings\Building_WarcasketFoundry.cs" />
-    <Compile Include="HarmonyPatches\Building_TurretGun_DrawExtraSelectionOverlays_Patch.cs" />
-    <Compile Include="HarmonyPatches\Building_TurretGun_DrawExtraSelectionOverlays_Transpiler.cs" />
-    <Compile Include="HarmonyPatches\Building_TurretGun_IsValidTarget_Patch.cs" />
     <Compile Include="HarmonyPatches\CompPowerBattery_AmountCanAccept_Patch.cs" />
     <Compile Include="HarmonyPatches\CompReloadable_CreateVerbTargetCommand_Patch.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
@@ -380,7 +377,6 @@
     <Compile Include="HarmonyPatches\StorytellerUtilityPopulation_CalculatePopulationIntent_Patch.cs" />
     <Compile Include="HarmonyPatches\TaleUtility_Notify_PawnDied_Patch.cs" />
     <Compile Include="HarmonyPatches\Trait_AllowsWorkType_Patch.cs" />
-    <Compile Include="HarmonyPatches\TurretTop_get_CurRotation_Patch.cs" />
     <Compile Include="Jobs\JobDriver_EquipFromWeaponBox.cs" />
     <Compile Include="Projectiles\CryptoProjectile.cs" />
     <Compile Include="RaidStrategy\Building_CrashedShip.cs" />
@@ -409,7 +405,6 @@
     <Compile Include="Verbs\Verb_ShieldDetonation.cs" />
     <Compile Include="Verbs\Verb_DroneDeployment.cs" />
     <Compile Include="Verbs\Verb_LaunchProjectileStaticMultiple.cs" />
-    <Compile Include="Verbs\Verb_ShootCone.cs" />
     <Compile Include="Verbs\Verb_Spidermine.cs" />
     <Compile Include="VFEPiratesMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
