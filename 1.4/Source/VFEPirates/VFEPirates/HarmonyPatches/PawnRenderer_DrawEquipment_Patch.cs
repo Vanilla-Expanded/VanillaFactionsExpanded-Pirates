@@ -88,7 +88,6 @@ namespace VFEPirates.HarmonyPatches
 				drawLoc += drawOffset;
 				num += angleOffset;
 			}
-			Material material = null;
 			Graphic_StackCount graphic_StackCount = eq.Graphic as Graphic_StackCount;
 			Graphics.DrawMesh(material: (graphic_StackCount == null) ? eq.Graphic.MatSingleFor(eq) : graphic_StackCount.SubGraphicForStackCount(1, eq.def).MatSingleFor(eq), mesh: mesh, position: drawLoc, rotation: Quaternion.AngleAxis(num, Vector3.up), layer: 0);
 		}

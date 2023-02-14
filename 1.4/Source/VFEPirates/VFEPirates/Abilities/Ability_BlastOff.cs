@@ -19,14 +19,11 @@ namespace VFEPirates
     {
         private CompTransporter cachedCompTransporter;
         private BlastOffExtension cachedExtension;
-
         private ThingWithComps transporter;
         public float FuelConsumption => Extension.fuelConsumption;
         public int MaxLaunchDistance => Extension.maxLaunchDistance;
-
         public CompTransporter Transporter => cachedCompTransporter ??= transporter.GetComp<CompTransporter>();
         public BlastOffExtension Extension => cachedExtension ??= def.GetModExtension<BlastOffExtension>();
-
         public override bool IsEnabledForPawn(out string reason)
         {
             if (holder.TryGetComp<CompReloadable>().RemainingCharges < FuelConsumption)
@@ -67,9 +64,30 @@ namespace VFEPirates
             return true;
         }
 
-        protected override Texture2D MouseAttachment(GlobalTargetInfo target) =>
-            TravelingPawn.MakeReadableTextureInstance(PortraitsCache.Get(pawn, new Vector2(50, 50), Rot4.South));
-
+        public (Texture2D, int) CurPawnTexture = new();
+        protected override Texture2D MouseAttachment(GlobalTargetInfo target)
+        {
+            if ((Find.TickManager.TicksGame - CurPawnTexture.Item2) > 60)
+            {
+                var portraitTexture = PortraitsCache.Get(pawn, new Vector2(50, 50), Rot4.South);
+                CurPawnTexture = new (MakeReadableTextureInstance(portraitTexture), Find.TickManager.TicksGame);
+            }
+            return CurPawnTexture.Item1;
+        }
+        public static Texture2D MakeReadableTextureInstance(RenderTexture source)
+        {
+            var temporary = RenderTexture.GetTemporary(source.width, source.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
+            temporary.name = "MakeReadableTexture_Temp";
+            Graphics.Blit(source, temporary);
+            var active = RenderTexture.active;
+            RenderTexture.active = temporary;
+            var texture2D = new Texture2D(source.width, source.height);
+            texture2D.ReadPixels(new Rect(0f, 0f, temporary.width, temporary.height), 0, 0);
+            texture2D.Apply();
+            RenderTexture.active = active;
+            RenderTexture.ReleaseTemporary(temporary);
+            return texture2D;
+        }
         protected override string WorldTargetingLabel(GlobalTargetInfo target)
         {
             if (!target.IsValid) return null;
@@ -289,8 +307,7 @@ namespace VFEPirates
     {
         [TweakValue("00", 0, 1)] public static float drawTest = 0.083f;
         public Pawn pawn;
-        public Texture2D PawnTexture => MakeReadableTextureInstance(PortraitsCache.Get(pawn, new Vector2(50, 50), Rot4.South));
-        public override Material Material => MaterialPool.MatFrom(PawnTexture);
+        public override Material Material => MaterialPool.MatFrom(new MaterialRequest(PortraitsCache.Get(pawn, new Vector2(50, 50), Rot4.South)));
         public override string Label => pawn.Label;
         public override string LabelShort => pawn.LabelShort;
         public override string LabelShortCap => pawn.LabelShortCap;
@@ -311,22 +328,6 @@ namespace VFEPirates
             var layer = WorldCameraManager.WorldLayer;
             Graphics.DrawMesh(MeshPool.plane10, matrix, material, layer);
         }
-
-        public static Texture2D MakeReadableTextureInstance(RenderTexture source)
-        {
-            var temporary = RenderTexture.GetTemporary(source.width, source.height, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
-            temporary.name = "MakeReadableTexture_Temp";
-            Graphics.Blit(source, temporary);
-            var active = RenderTexture.active;
-            RenderTexture.active = temporary;
-            var texture2D = new Texture2D(source.width, source.height);
-            texture2D.ReadPixels(new Rect(0f, 0f, temporary.width, temporary.height), 0, 0);
-            texture2D.Apply();
-            RenderTexture.active = active;
-            RenderTexture.ReleaseTemporary(temporary);
-            return texture2D;
-        }
-
         public void ArrivedOverride()
         {
             var arrivedField = Traverse.Create(this).Field("arrived");
