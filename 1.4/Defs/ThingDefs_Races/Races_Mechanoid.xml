@@ -97,6 +97,7 @@
 		<label>wardrone</label>
 		<race>VFEP_Mech_Wardrone</race>
 		<combatPower>15</combatPower>
+		<allowInMechClusters>false</allowInMechClusters>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -175,6 +176,7 @@
 		<label>spidermine</label>
 		<race>VFEP_Mech_Spidermine</race>
 		<combatPower>15</combatPower>
+		<allowInMechClusters>false</allowInMechClusters>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
