@@ -108,6 +108,7 @@
 				<isUnifiedApparel>true</isUnifiedApparel>
 			</li>
 		</modExtensions>
+		<colorGenerator IsNull="True"></colorGenerator>
 	</VFEPirates.WarcasketDef>
 	<!-- Basic warcasket -->
 	<VFEPirates.WarcasketDef ParentName="VFEP_WarcasketArmorBase">
