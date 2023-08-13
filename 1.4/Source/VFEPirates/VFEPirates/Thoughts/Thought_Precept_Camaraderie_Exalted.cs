@@ -12,6 +12,12 @@ namespace VFEPirates
 			{
 				return false;
 			}
+
+			if(p.IsSlave || p.IsPrisonerOfColony || p.Faction!= Faction.OfPlayerSilentFail)
+			{
+                return false;
+            }
+
 			if (StaticCollectionsClass.crewMembersLost == 0)
             {
 				return false;
