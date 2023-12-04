@@ -60,7 +60,7 @@ namespace VFEPirates
         public Pawn Wearer => Apparel.Wearer;
         private void TickInterval(int interval)
         {
-            if (Wearer is null)
+            if (Wearer is null || Wearer.MapHeld is null)
             {
                 return;
             }
