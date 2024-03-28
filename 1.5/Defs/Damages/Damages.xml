@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="BluntBase">
+    <defName>VFEP_GravityHammerAttack</defName>
+    <deathMessage>{0} has been smashed to death.</deathMessage>
+    <label>gravity hammer attack</label>
+    <workerClass>VFECore.DamageWorker_PushBackAttackMelee</workerClass>
+	<modExtensions>
+		<li Class="VFECore.DamageExtension">
+			<pushBackDistance>3</pushBackDistance>
+			<soundOnDamage>DropPod_Open</soundOnDamage>
+		</li>
+	</modExtensions>
+  </DamageDef>
+  
+	<ManeuverDef>
+    <defName>VFEP_GravityHammerAttack</defName>
+    <requiredCapacity>VFEP_GravityHammerAttack</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>VFEP_GravityHammerAttack</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+  
+  <ToolCapacityDef>
+    <defName>VFEP_GravityHammerAttack</defName>
+    <label>gravity hammer attack</label>
+  </ToolCapacityDef>
+
+</Defs>

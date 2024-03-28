@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  
+
+  <RitualBehaviorDef>
+    <defName>VFEP_SingingShantiesBehaviour</defName>
+	<workerClass>VFEPirates.RitualBehaviorWorker_SingingShanties</workerClass>
+    <durationTicks>7500</durationTicks>
+    <roles>
+      <li Class="RitualRoleTag">
+        <label>chanter</label>
+        <tag>Captain</tag>
+        <id>chanter</id>
+        <precept>VFEP_IdeoRole_Captain</precept>
+        <required>True</required>
+        <substitutable>false</substitutable>
+        <maxCount>1</maxCount>
+        <countsAsParticipant>true</countsAsParticipant>
+      </li>
+    </roles>
+    <spectatorsLabel>Participants</spectatorsLabel>
+    <spectatorGerund>participate</spectatorGerund>
+    <stages>
+      <li>
+        
+		<essential>True</essential>
+       <defaultDuty>SpectateCircle</defaultDuty>
+        <spectateDistanceOverride>5~7</spectateDistanceOverride>
+        <spectatorsRequired>true</spectatorsRequired>
+        <endTriggers>
+          <li Class="StageEndTrigger_DurationPercentage">
+            <percentage>1</percentage>
+          </li>
+        </endTriggers>
+        <roleBehaviors>
+          <li>
+            <roleId>chanter</roleId>
+            <dutyDef>SpeakOnCell_Leader</dutyDef>
+            <speakerInteraction>VFEP_Speech_Shanties</speakerInteraction>
+            <customPositions>
+              <li Class="RitualPosition_BesideThing" />
+            </customPositions>
+          </li>
+        </roleBehaviors>
+		
+      </li>
+	  
+    </stages>
+  </RitualBehaviorDef>
+  
+  
+  
+ 
+
+</Defs>

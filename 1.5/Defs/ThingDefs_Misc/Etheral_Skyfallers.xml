@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <!-- Base -->
+  <ThingDef Name="VFEP_Ship" ParentName="SkyfallerBase" Abstract="True">
+    <thingClass>VFEPirates.IncomingSmoker</thingClass>
+    <label>ship (incoming)</label>
+    <size>(5,3)</size>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(7,5)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(5.5,3.5)</shadowSize>
+      <motesPerCell>1</motesPerCell>
+      <anticipationSound>VFEP_Ship_CrashLanding</anticipationSound>
+      <anticipationSoundTicks>250</anticipationSoundTicks>
+      <ticksToImpactRange>380~550</ticksToImpactRange>
+      <angleCurve>
+        <points>
+          <li>(0,-60)</li>
+          <li>(1,-90)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(0,30)</li>
+          <li>(0.5,5)</li>
+          <li>(0.9,-5)</li>
+          <li>(0.95,0)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0.95,0.75)</li>
+          <li>(1,0)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0.6,0.6)</li>
+          <li>(0.95,0.55)</li>
+        </points>
+      </speedCurve>
+      <!-- Crashing -->
+      <explosionDamage>Bomb</explosionDamage>
+      <explosionRadius>4</explosionRadius>
+      <cameraShake>1</cameraShake>
+      <metalShrapnelCountRange>
+        <min>6</min>
+        <max>10</max>
+      </metalShrapnelCountRange>
+      <rubbleShrapnelCountRange>
+        <min>300</min>
+        <max>400</max>
+      </rubbleShrapnelCountRange>
+      <shrapnelDistanceFactor>0.35</shrapnelDistanceFactor>
+    </skyfaller>
+  </ThingDef>
+
+  <!-- Ships -->
+  <ThingDef ParentName="VFEP_Ship">
+    <defName>VFEP_Ship_Black</defName>
+    <graphicData>
+      <texPath>Things/Skyfaller/GauntletShipBlack_Landing</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_Ship">
+    <defName>VFEP_Ship_Green</defName>
+    <graphicData>
+      <texPath>Things/Skyfaller/GauntletShipGreen_Landing</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_Ship">
+    <defName>VFEP_Ship_Orange</defName>
+    <graphicData>
+      <texPath>Things/Skyfaller/GauntletShipOrange_Landing</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_Ship">
+    <defName>VFEP_Ship_Red</defName>
+    <graphicData>
+      <texPath>Things/Skyfaller/GauntletShipRed_Landing</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <!-- Scenario side pod -->
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>VFEP_SideDropPod</defName>
+    <label>drop pod (incoming)</label>
+    <thingClass>DropPodIncoming</thingClass>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.9</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPod_Fall</anticipationSound>
+      <anticipationSoundTicks>100</anticipationSoundTicks>
+      <motesPerCell>0</motesPerCell>
+      <ticksToImpactRange>300~450</ticksToImpactRange>
+      <angleCurve>
+        <points>
+          <li>(0,-60)</li>
+          <li>(1,-90)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(0,30)</li>
+          <li>(0.5,5)</li>
+          <li>(0.9,-5)</li>
+          <li>(0.95,0)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0.95,0.25)</li>
+          <li>(1,0)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0.6,0.6)</li>
+          <li>(0.95,0.5)</li>
+        </points>
+      </speedCurve>
+    </skyfaller>
+  </ThingDef>
+
+  <!-- Chunks base -->
+  <ThingDef Name="VFEP_ChunkBase" ParentName="SkyfallerBase" Abstract="True">
+    <thingClass>VFEPirates.IncomingSmoker</thingClass>
+    <size>(2,2)</size>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <shadowSize>(2.5, 2.5)</shadowSize>
+      <motesPerCell>1</motesPerCell>
+      <ticksToImpactRange>250~350</ticksToImpactRange>
+      <angleCurve>
+        <points>
+          <li>(0,-60)</li>
+          <li>(1,-90)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(0,30)</li>
+          <li>(0.5,5)</li>
+          <li>(0.9,-5)</li>
+          <li>(0.95,0)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(1,0)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0,1)</li>
+        </points>
+      </speedCurve>
+      <!-- Crashing -->
+      <explosionDamage>Bomb</explosionDamage>
+      <explosionRadius>2</explosionRadius>
+      <cameraShake>0.5</cameraShake>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>VFEP_IShipChunkDebris</defName>
+    <thingClass>VFEPirates.IncomingSmoker</thingClass>
+    <label>ship chunk debris (incoming)</label>
+    <size>(2, 2)</size>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <shadowSize>(2.5, 2.5)</shadowSize>
+      <motesPerCell>1</motesPerCell>
+      <ticksToImpactRange>250~350</ticksToImpactRange>
+      <angleCurve>
+        <points>
+          <li>(0,-60)</li>
+          <li>(1,-90)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(0,30)</li>
+          <li>(0.5,5)</li>
+          <li>(0.9,-5)</li>
+          <li>(0.95,0)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(1,0)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0,1)</li>
+        </points>
+      </speedCurve>
+      <!-- Crashing -->
+      <explosionDamage>Bomb</explosionDamage>
+      <explosionRadius>2</explosionRadius>
+      <cameraShake>0.5</cameraShake>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_ChunkBase">
+    <defName>VFEP_IShipChunkBattery</defName>
+    <label>ship chunk battery (incoming)</label>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkBattery</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_ChunkBase">
+    <defName>VFEP_IShipChunkCryptosleepCasket</defName>
+    <label>ship chunk cryptosleep casket (incoming)</label>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkCryptosleep</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_ChunkBase">
+    <defName>VFEP_IShipChunkVolatileEngine</defName>
+    <label>ship chunk volatile engine (incoming)</label>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkEngine</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_ChunkBase">
+    <defName>VFEP_IShipChunkFuelTank</defName>
+    <label>ship chunk fuel tank (incoming)</label>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkFuelTank</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_ChunkBase">
+    <defName>VFEP_IShipChunkGauntletTurret</defName>
+    <label>ship chunk gauntlet turret (incoming)</label>
+    <size>(3,3)</size>
+    <graphicData>
+      <texPath>Things/Skyfaller/ShipChunkGauntletTurret_Skyfaller</texPath>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <shadowSize>(3.5, 3.5)</shadowSize>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_ChunkBase">
+    <defName>VFEP_IShipChunkReactor</defName>
+    <label>ship chunk Reactor (incoming)</label>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkReactor</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_ChunkBase">
+    <defName>VFEP_IShipMedicalCrate</defName>
+    <label>ship chunk medical crate (incoming)</label>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkMedicine</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_ChunkBase">
+    <defName>VFEP_IShipNutrientPasteCrate</defName>
+    <label>ship chunk nutrient paste crate (incoming)</label>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkNutrientPaste</texPath>
+    </graphicData>
+  </ThingDef>
+</Defs>

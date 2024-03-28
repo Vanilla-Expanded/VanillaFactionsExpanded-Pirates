@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ScenPartDef>
+    <defName>VFEP_PlayerPawnsArriveCrash</defName>
+    <label>arrival method</label>
+    <category>Fixed</category>
+    <scenPartClass>VFEPirates.ScenPart_LowOrbitCrash</scenPartClass>
+    <summaryPriority>470</summaryPriority>
+  </ScenPartDef>
+
+  <ScenarioDef>
+    <defName>VFEP_LowOrbitCrash</defName>
+    <label>Low orbit crash</label>
+    <description>As the ship entered the lower orbit, something struck the hull with tremendous force. Not sure if it was the AI-core miscalculation, a terrible accident or a targeted strike, you quickly realized it doesn’t matter. You ordered your crew to get in the escape pods, but not everyone managed to get out of cryptosleep in time. The ship split into numerous chunks as it quickly descended onto the surface, and the only thing you could have done is hit the Eject button on the emergency drop pod. Perhaps some things can still be recovered from the wreckage.
+
+Note: Since you start crash landing and with no supplies other than what you can scavenge, this is a difficult scenario.</description>
+    <scenario>
+      <summary>A group of pirates, crash landing in the middle of nowhere. A classic VFE - Pirates experience.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>VFEP_PlayerPirate</factionDef>
+      </playerFaction>
+      <parts>
+
+        <!-- Config pages -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>4</pawnCount>
+          <pawnChoiceCount>6</pawnChoiceCount>
+        </li>
+
+        <!-- Player starting stuff spawn method-->
+        <li Class="VFEPirates.ScenPart_LowOrbitCrash">
+          <def>VFEP_PlayerPawnsArriveCrash</def>
+          <visible>false</visible>
+        </li>
+
+        <!-- Player pawns modifiers -->
+        <li Class="ScenPart_ForcedHediff">
+          <def>ForcedHediff</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <chance>0.5</chance>
+          <hediff>CryptosleepSickness</hediff>
+          <hideOffMap>true</hideOffMap>
+          <severityRange>1~1</severityRange>
+        </li>
+
+        <!-- Player starting things -->
+        <li Class="ScenPart_StartingAnimal">
+          <def>StartingAnimal</def>
+          <count>1</count>
+          <bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Gun_ChargeRifle</thingDef>
+          <count>1</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Gun_Autopistol</thingDef>
+          <count>2</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>8</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Gold</thingDef>
+          <count>80</count>
+        </li>
+
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <textKey>GameStartDialog</textKey>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+</Defs>

@@ -21,6 +21,17 @@
         <li IfModActive="VanillaExpanded.VWENL">1.4/Mods/VWENL</li>	
         <li IfModActive="VanillaExpanded.VWEQ">1.4/Mods/VWEQ</li>			
 	</v1.4>
+	<v1.5>
+		<li>/</li>
+		<li>1.5</li>
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/Mods/Ideology</li>
+        <li IfModActive="OskarPotocki.VFE.Insectoid">1.5/Mods/VFEI</li>	
+        <li IfModActive="OskarPotocki.VFE.Vikings">1.5/Mods/VFEV</li>	
+        <li IfModActive="VanillaExpanded.VWEC">1.5/Mods/VWEC</li>	
+        <li IfModActive="VanillaExpanded.VWEL">1.5/Mods/VWEL</li>	
+        <li IfModActive="VanillaExpanded.VWENL">1.5/Mods/VWENL</li>	
+        <li IfModActive="VanillaExpanded.VWEQ">1.5/Mods/VWEQ</li>			
+	</v1.5>
 </loadFolders>
 
 

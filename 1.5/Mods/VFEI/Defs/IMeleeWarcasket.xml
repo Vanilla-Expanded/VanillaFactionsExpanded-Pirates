@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+   <ThingDef ParentName="VFEP_BaseMeleeWeapon_Warcasket">
+      <defName>VFEP_WarcasketMeleeWeapon_PlasmaSword</defName>
+      <label>warcasket plasma sword</label>
+      <description>A military modification of the Plasmasaw, adapted for use by warcaskets for anti-materiel purposes. The original intention for this bastard sword was for it to be able to extend like a whip while also having a simple straight form, however issues with containing the plasma shelved the idea. Instead, the links are used to change the length of the sword as well as allow easier replacement of damaged sections.</description>
+      <thingClass>VFECore.ThingWithFloorGraphic</thingClass>
+      <graphicData>
+         <texPath>Things/Item/Weapons/WarcasketPlasmaSword</texPath>
+         <graphicClass>Graphic_Single</graphicClass>
+         <drawSize>1.7</drawSize>
+      </graphicData>
+      <statBases>
+         <MarketValue>3600</MarketValue>
+         <WorkToMake>35000</WorkToMake>
+         <Mass>25</Mass>
+      </statBases>
+      <equippedAngleOffset>-65</equippedAngleOffset>
+	  <smeltable>false</smeltable>
+      <weaponTags>
+         <li>WarcasketMelee</li>
+         <li>WarcasketVeteran</li>
+      </weaponTags>
+      <thingSetMakerTags>
+         <li>RewardStandardLowFreq</li>
+      </thingSetMakerTags>
+      <tradeTags>
+         <li>VFEP_WarcasketWeaponExotic</li>
+      </tradeTags>
+      <tools>
+         <li>
+            <label>point</label>
+            <capacities>
+               <li>Stab</li>
+            </capacities>
+            <power>26</power>
+            <cooldownTime>2</cooldownTime>
+            <armorPenetration>0.15</armorPenetration>
+            <extraMeleeDamages>
+               <li>
+                  <def>Flame</def>
+                  <amount>10</amount>
+                  <chance>0.15</chance>
+               </li>
+            </extraMeleeDamages>
+         </li>
+         <li>
+            <label>blade</label>
+            <capacities>
+               <li>Cut</li>
+            </capacities>
+            <power>34</power>
+            <cooldownTime>2.6</cooldownTime>
+            <armorPenetration>0.15</armorPenetration>
+            <extraMeleeDamages>
+               <li>
+                  <def>Flame</def>
+                  <amount>10</amount>
+                  <chance>0.5</chance>
+               </li>
+            </extraMeleeDamages>
+         </li>
+      </tools>
+      <modExtensions>
+         <li Class="VFECore.FloorGraphicExtension">
+            <graphicData>
+               <graphicClass>Graphic_Single</graphicClass>
+               <texPath>Things/Item/WeaponsBoxed/WarcasketPlasmaSword_OnFloor</texPath>
+               <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+               <drawSize>1</drawSize>
+            </graphicData>
+         </li>
+      </modExtensions>
+   </ThingDef>
+</Defs>

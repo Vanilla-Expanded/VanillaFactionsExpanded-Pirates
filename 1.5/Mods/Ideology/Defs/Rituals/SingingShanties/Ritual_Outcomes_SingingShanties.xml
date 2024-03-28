@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+ 
+ <RitualOutcomeEffectDef>
+    <defName>VFEP_SingingShantiesOutcome</defName>
+    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days. A shanty of above average quality will provide a new quest. A good quality shanty will remove negative thoughts from losing someone for all participants.</description>
+    <workerClass>VFEPirates.RitualOutcomeEffectWorker_SingingShanties</workerClass>
+    
+    <comps>
+      
+      <li Class="RitualOutcomeComp_RolePresentNotSubstituted">
+        <roleId>chanter</roleId>
+        <label>chanter present</label>
+        <qualityOffset>0.25</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve>
+          <points>
+            <li>(1,  0.0)</li>
+            <li>(10,  0.5)</li>
+            <li>(20, 0.75)</li>
+          </points>
+        </curve>
+      </li>
+	  <li Class="RitualOutcomeComp_RoomStat">
+        <label>room impressiveness</label>
+        <statDef>Impressiveness</statDef>
+        <curve>
+          <points>
+            <li>0,  0</li>
+            <li>50,  0.1</li>
+            <li>120, 0.2</li>
+          </points>
+        </curve>
+      </li>
+      
+    </comps>
+    <outcomeChances>
+      <li>
+        <label>Boring</label>
+        <chance>0.1</chance>
+        <memory>VFEP_BoringShanties</memory>
+        <description>The {0} were incredibly boring. The cap'n displayed a lack of passion and the feeling of camaraderie just wasn't there.</description>
+		
+        <positivityIndex>-2</positivityIndex>
+      </li>
+      <li>
+        <label>Lame</label>
+        <chance>0.3</chance>
+        <memory>VFEP_LameShanties</memory>
+        <description>The {0} were lame. The cap'n treated us like children, wanting so desperately to hear something to lift their spirits.</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Rousing</label>
+        <chance>0.4</chance>
+        <memory>VFEP_RousingShanties</memory>
+        <description>The {0} were very rousing. Shiver me timbers, those were some good shanties! The cap'n lifted our spirits and made us feel a camaraderie and togetherness that will only make us stronger.\n\nAnalyzing the lyrics afterwards, we found that the ancient words are actually cleverly encoded clues to a possible quest!</description>
+      
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Amazing</label>
+        <chance>0.2</chance>
+        <memory>VFEP_AmazingShanties</memory>
+        <description>The {0} were amazing! We can still hear the mesmerizing words of the cap'n, as they reminded us of the importance of our shared camaraderie. We can even feel our sadness vanish away.\n\nAnalyzing the lyrics afterwards, we found that the ancient words are actually cleverly encoded clues to a possible quest!</description>
+        
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+ 
+  
+  
+</Defs>

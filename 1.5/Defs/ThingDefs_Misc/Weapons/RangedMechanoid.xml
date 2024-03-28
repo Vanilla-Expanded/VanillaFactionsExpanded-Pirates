@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseGunWithQuality">
+    <defName>VFEPGun_MiniBlaster</defName>
+    <label>mini-blaster</label>
+    <description>A simple automatic gun made to be mounted on a wardrone.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Mechanoid/WarcasketCombatDrone_Gun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+	  <MarketValue>300</MarketValue>
+      <AccuracyTouch>0.77</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.24</AccuracyLong>
+      <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>2.5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>true</destroyOnDrop>
+    <weaponTags>
+      <li>VFEP_GunWardrone</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6.7</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Bullet_MiniTurret</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>28.9</range>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>GunShotA</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+	<relicChance>0</relicChance>
+	<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+			<weaponCarryDrawOffsets>
+				<north>
+					<angleOffset>180</angleOffset>
+				</north>
+				<east>
+					<drawOffset>(-0.17, 0, 0.2)</drawOffset>
+				</east>
+				<south>
+					<drawOffset>(0, 0, 0.2)</drawOffset>
+				</south>
+				<west>
+					<drawOffset>(0.17, 0, 0.2)</drawOffset>
+				</west>
+			</weaponCarryDrawOffsets>
+		</li>
+</modExtensions>
+  </ThingDef>
+
+</Defs>
