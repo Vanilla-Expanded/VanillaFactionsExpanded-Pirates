@@ -50,7 +50,7 @@ namespace VFEPirates
 
             var destCell = targets[0].Cell;
             AbilityPawnFlyer flyer = (PawnFlyer_PowerJump)PawnFlyer.MakeFlyer(VFEP_DefOf.VFEP_PowerJumpPawn, pawn, destCell, 
-                null, null);
+                null, null, true);
             flyer.ability = this;
             flyer.DestinationCell = destCell;
             GenSpawn.Spawn(flyer, destCell, map);
