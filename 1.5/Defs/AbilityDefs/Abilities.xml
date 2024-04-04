@@ -44,7 +44,7 @@
         <pawnFlyer>
             <flightDurationMin>0.2</flightDurationMin>
             <flightSpeed>20</flightSpeed>
-			<workerClass>VFEPirates.PawnFlyerWorker_Pulled</workerClass>
+            <workerClass>VFEPirates.PawnFlyerWorker_Pulled</workerClass>
         </pawnFlyer>
     </ThingDef>
 	
