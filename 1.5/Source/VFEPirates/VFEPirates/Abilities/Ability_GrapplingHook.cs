@@ -105,9 +105,12 @@ namespace VFEPirates
         {
             ticksTillPull = -2;
             var destCell = usedTarget.Thing.OccupiedRect().AdjacentCells.MinBy(cell => cell.DistanceTo(launcher.Position));
+            var selected = Find.Selector.IsSelected(ability.pawn);
             var flyer = (PawnFlyer_Pulled) PawnFlyer.MakeFlyer(VFEP_DefOf.VFEP_GrapplingPawn, ability.pawn, destCell, null, null);
             flyer.Hook = this;
             GenSpawn.Spawn(flyer, destCell, Map);
+            if (selected)
+                Find.Selector.Select(ability.pawn);
         }
 
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
@@ -132,18 +135,7 @@ namespace VFEPirates
 
     public class PawnFlyer_Pulled : PawnFlyer
     {
-        protected Vector3 effectivePos;
         public Projectile_GrapplingHook Hook;
-        private int positionLastComputedTick;
-
-        public override Vector3 DrawPos
-        {
-            get
-            {
-                RecomputePosition();
-                return effectivePos;
-            }
-        }
 
         protected override void RespawnPawn()
         {
@@ -156,30 +148,14 @@ namespace VFEPirates
             base.ExposeData();
             Scribe_References.Look(ref Hook, "hook");
         }
+    }
 
-        public override void Tick()
+    public class PawnFlyerWorker_Pulled : PawnFlyerWorker
+    {
+        public PawnFlyerWorker_Pulled(PawnFlyerProperties properties) : base(properties)
         {
-            base.Tick();
-            if (FlyingPawn != null) RecomputePosition();
         }
 
-        protected bool CheckRecompute()
-        {
-            if (positionLastComputedTick == ticksFlying) return false;
-
-            positionLastComputedTick = ticksFlying;
-            return true;
-        }
-
-        protected virtual void RecomputePosition()
-        {
-            if (CheckRecompute()) return;
-            effectivePos = Vector3.Lerp(startVec, DestinationPos, ticksFlying / (float) ticksFlightTime);
-        }
-
-        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
-        {
-            FlyingPawn.DynamicDrawPhaseAt(DrawPhase.Draw, drawLoc, flip);
-        }
+        public override float GetHeight(float t) => 0f;
     }
 }

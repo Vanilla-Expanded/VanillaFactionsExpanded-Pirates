@@ -44,6 +44,7 @@
         <pawnFlyer>
             <flightDurationMin>0.2</flightDurationMin>
             <flightSpeed>20</flightSpeed>
+			<workerClass>VFEPirates.PawnFlyerWorker_Pulled</workerClass>
         </pawnFlyer>
     </ThingDef>
 	
@@ -91,6 +92,7 @@
 		<targetMode>Location</targetMode>
 		<iconPath>UI/Abilities/PowerJump</iconPath>
 		<castTime>60</castTime>
+		<keepCarryingThing>true</keepCarryingThing>
 		<modExtensions>
 			<li Class="VFEPirates.PowerJumpExtension">
 				<fuelConsumption>20</fuelConsumption>
