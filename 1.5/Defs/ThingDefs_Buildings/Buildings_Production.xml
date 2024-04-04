@@ -4,9 +4,7 @@
 		<canOverlapZones>true</canOverlapZones>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<comps>
-			<li>
-				<compClass>CompReportWorkSpeed</compClass>
-			</li>
+			<li Class="CompProperties_ReportWorkSpeed"/>
 		</comps>
 		<placeWorkers>
 			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
