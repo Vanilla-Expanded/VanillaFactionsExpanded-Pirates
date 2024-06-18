@@ -30,7 +30,8 @@
         <li IfModActive="VanillaExpanded.VWEC">1.5/Mods/VWEC</li>	
         <li IfModActive="VanillaExpanded.VWEL">1.5/Mods/VWEL</li>	
         <li IfModActive="VanillaExpanded.VWENL">1.5/Mods/VWENL</li>	
-        <li IfModActive="VanillaExpanded.VWEQ">1.5/Mods/VWEQ</li>			
+        <li IfModActive="VanillaExpanded.VWEQ">1.5/Mods/VWEQ</li>		
+        <li IfModActive="VanillaExpanded.VWEBF">1.5/Mods/VWEBF</li>			
 	</v1.5>
 </loadFolders>
 
