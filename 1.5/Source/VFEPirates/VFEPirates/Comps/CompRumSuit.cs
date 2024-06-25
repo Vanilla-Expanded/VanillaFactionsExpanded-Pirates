@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using HarmonyLib;
 using RimWorld;
@@ -76,6 +77,19 @@ namespace VFEPirates
             CheckShouldSpawn();
         }
 
+        public float GetQualityScaleFactor(QualityCategory quality) =>
+            quality switch
+            {
+                QualityCategory.Awful => 0.8f,
+                QualityCategory.Poor => 0.9f,
+                QualityCategory.Normal => 1f,
+                QualityCategory.Good => 1.1f,
+                QualityCategory.Excellent => 1.2f,
+                QualityCategory.Masterwork => 1.45f,
+                QualityCategory.Legendary => 1.65f,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+
         private void CheckShouldSpawn()
         {
             if (ticksUntilSpawn <= 0)
@@ -118,7 +132,10 @@ namespace VFEPirates
             if (TryFindSpawnCell(Wearer, PropsSpawner.thingToSpawn, PropsSpawner.spawnCount, out var result))
             {
                 Thing thing = ThingMaker.MakeThing(PropsSpawner.thingToSpawn);
-                thing.stackCount = PropsSpawner.spawnCount;
+                QualityCategory quality = QualityCategory.Normal;
+                Apparel.TryGetQuality(out quality);
+                float num = GetQualityScaleFactor(quality);
+                thing.stackCount = (int)(PropsSpawner.spawnCount * num);
                 if (thing == null)
                 {
                     Log.Error("Could not spawn anything for " + Wearer);
@@ -210,5 +227,7 @@ namespace VFEPirates
             }
             return null;
         }
+
+      
     }
 }
