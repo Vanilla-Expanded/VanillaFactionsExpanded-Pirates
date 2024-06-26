@@ -28,6 +28,7 @@
       <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>VWEB_Rocket</defaultProjectile>
         <range>34.9</range>
         <consumeFuelPerShot>1</consumeFuelPerShot>
@@ -146,15 +147,10 @@
     </verbProperties>
   </AbilityDef>
    
-  <ThingDef>
+  <ThingDef ParentName="BaseBullet">
     <defName>VWEB_Rocket</defName>
     <label>rocket</label>
     <thingClass>Projectile_Explosive</thingClass>
-    <category>Projectile</category>
-    <tickerType>Normal</tickerType>
-    <altitudeLayer>Projectile</altitudeLayer>
-    <useHitPoints>False</useHitPoints>
-    <neverMultiSelect>True</neverMultiSelect>
     <graphicData>
       <texPath>Things/Projectile/Rocket_Swarm</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -169,6 +165,7 @@
 	  <stoppingPower>0.5</stoppingPower>
       <arcHeightFactor>0.4</arcHeightFactor>
       <soundExplode>Explosion_Rocket</soundExplode>
+      <screenShakeFactor>0</screenShakeFactor>
     </projectile>
   </ThingDef>
   
