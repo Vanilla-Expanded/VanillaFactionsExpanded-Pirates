@@ -31,7 +31,6 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>VWEB_Rocket</defaultProjectile>
         <range>34.9</range>
-        <consumeFuelPerShot>1</consumeFuelPerShot>
         <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <burstShotCount>3</burstShotCount>
 		<warmupTime>1.5</warmupTime>
@@ -95,7 +94,7 @@
     <warmupStartSound>FireSpew_Warmup</warmupStartSound>
     <showOnCharacterCard>false</showOnCharacterCard>
     <verbProperties>
-        <verbClass>Verb_ArcSprayIncinerator</verbClass>
+        <verbClass>VanillaWeaponsExpanded_Bioferrite.Verb_CastAbility_ArcSprayIncinerator</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <warmupTime>0.75</warmupTime>
         <range>34.9</range>
