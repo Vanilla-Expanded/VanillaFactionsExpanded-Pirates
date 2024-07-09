@@ -25,7 +25,6 @@
 		<li>/</li>
 		<li>1.5</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/Mods/Ideology</li>
-        <li IfModActive="OskarPotocki.VFE.Insectoid">1.5/Mods/VFEI</li>	
         <li IfModActive="OskarPotocki.VFE.Vikings">1.5/Mods/VFEV</li>	
         <li IfModActive="VanillaExpanded.VWEC">1.5/Mods/VWEC</li>	
         <li IfModActive="VanillaExpanded.VWEL">1.5/Mods/VWEL</li>	
