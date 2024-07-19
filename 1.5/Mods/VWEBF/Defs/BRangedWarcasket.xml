@@ -61,7 +61,18 @@
 			<armorPenetration>0.13</armorPenetration>
          </li>
       </tools>
-      <comps>
+     <comps Inherit="False">
+       <li Class="CompProperties_Forbiddable"/>
+       <li Class="CompProperties_Styleable"/>
+       <li Class="CompProperties_Art">
+         <nameMaker>NamerArtWeaponGun</nameMaker>
+         <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+         <minQualityForArtistic>Excellent</minQualityForArtistic>
+       </li>      
+       <li>
+         <compClass>CompQuality</compClass>
+       </li>
+       <li Class="CompProperties_Biocodable"/>
       <li Class="CompProperties_EquippableAbilityReloadable">
         <abilityDef>VWEB_WarbolterLongBurner</abilityDef>
         <maxCharges>1</maxCharges>
