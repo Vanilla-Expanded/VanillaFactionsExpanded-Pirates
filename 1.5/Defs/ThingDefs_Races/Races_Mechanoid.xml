@@ -60,7 +60,7 @@
 			<body>VFEP_Wardrone</body>
 			<baseHealthScale>0.22</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding_Metal</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 			<intelligence>ToolUser</intelligence>
 			<thinkTreeMain>VFEP_WarDrone</thinkTreeMain>
@@ -149,7 +149,7 @@
 			<body>VFEP_Spidermine</body>
 			<baseHealthScale>0.22</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding_Metal</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 			<intelligence>ToolUser</intelligence>
 			<thinkTreeMain>VFEP_SpiderMine</thinkTreeMain>
