@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{212A004B-FF6D-4C17-8010-58B61F85CA07}|VFEPirates\\VFEPirates.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\vfepirates\\abilities\\ability_grapplinghook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212A004B-FF6D-4C17-8010-58B61F85CA07}|VFEPirates\\VFEPirates.csproj|solutionrelative:vfepirates\\abilities\\ability_grapplinghook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{212A004B-FF6D-4C17-8010-58B61F85CA07}|VFEPirates\\VFEPirates.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\vfepirates\\abilities\\ability_blastoff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{212A004B-FF6D-4C17-8010-58B61F85CA07}|VFEPirates\\VFEPirates.csproj|solutionrelative:vfepirates\\abilities\\ability_blastoff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -59,10 +63,6 @@
       "RelativeMoniker": "D:0:0:{212A004B-FF6D-4C17-8010-58B61F85CA07}|VFEPirates\\VFEPirates.csproj|solutionrelative:vfepirates\\abilities\\ability_powerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{212A004B-FF6D-4C17-8010-58B61F85CA07}|VFEPirates\\VFEPirates.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\vfepirates\\abilities\\ability_grapplinghook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{212A004B-FF6D-4C17-8010-58B61F85CA07}|VFEPirates\\VFEPirates.csproj|solutionrelative:vfepirates\\abilities\\ability_grapplinghook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{212A004B-FF6D-4C17-8010-58B61F85CA07}|VFEPirates\\VFEPirates.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\vfepirates\\projectiles\\projectile_lasereradicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{212A004B-FF6D-4C17-8010-58B61F85CA07}|VFEPirates\\VFEPirates.csproj|solutionrelative:vfepirates\\projectiles\\projectile_lasereradicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -110,47 +110,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CurseOfBlind.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfBlind.cs",
-              "RelativeDocumentMoniker": "VFEPirates\\Curses\\CurseOfBlind.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfBlind.cs",
-              "RelativeToolTip": "VFEPirates\\Curses\\CurseOfBlind.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAkwBUAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T16:01:04.923Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CurseOfTheBeaten.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfTheBeaten.cs",
-              "RelativeDocumentMoniker": "VFEPirates\\Curses\\CurseOfTheBeaten.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfTheBeaten.cs",
-              "RelativeToolTip": "VFEPirates\\Curses\\CurseOfTheBeaten.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAADMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:58:13.354Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CurseOfGreed.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfGreed.cs",
               "RelativeDocumentMoniker": "VFEPirates\\Curses\\CurseOfGreed.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfGreed.cs",
               "RelativeToolTip": "VFEPirates\\Curses\\CurseOfGreed.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAAbAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAABBwBsAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:53:17.477Z"
+              "WhenOpened": "2024-03-27T15:53:17.477Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "GenSpawn_Spawn_Patch.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\HarmonyPatches\\GenSpawn_Spawn_Patch.cs",
               "RelativeDocumentMoniker": "VFEPirates\\HarmonyPatches\\GenSpawn_Spawn_Patch.cs",
@@ -158,11 +135,12 @@
               "RelativeToolTip": "VFEPirates\\HarmonyPatches\\GenSpawn_Spawn_Patch.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:34:42.078Z"
+              "WhenOpened": "2024-03-27T14:34:42.078Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "VolatileEngine.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Buildings\\Chunks\\VolatileEngine.cs",
               "RelativeDocumentMoniker": "VFEPirates\\Buildings\\Chunks\\VolatileEngine.cs",
@@ -170,23 +148,25 @@
               "RelativeToolTip": "VFEPirates\\Buildings\\Chunks\\VolatileEngine.cs",
               "ViewState": "AQIAADwAAAAAAAAAAIAwwEwAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:32:06.853Z"
+              "WhenOpened": "2024-03-27T14:32:06.853Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Dialog_WarcasketCustomization.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Buildings\\Dialog_WarcasketCustomization.cs",
               "RelativeDocumentMoniker": "VFEPirates\\Buildings\\Dialog_WarcasketCustomization.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Buildings\\Dialog_WarcasketCustomization.cs",
               "RelativeToolTip": "VFEPirates\\Buildings\\Dialog_WarcasketCustomization.cs",
-              "ViewState": "AQIAAOoAAAAAAAAAAAAAAPYAAAAnAAAA",
+              "ViewState": "AQIAAOgAAAAAAAAAAABBwPYAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:14:55.895Z"
+              "WhenOpened": "2024-03-27T14:14:55.895Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Building_CrashedShip.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\RaidStrategy\\Building_CrashedShip.cs",
               "RelativeDocumentMoniker": "VFEPirates\\RaidStrategy\\Building_CrashedShip.cs",
@@ -194,11 +174,12 @@
               "RelativeToolTip": "VFEPirates\\RaidStrategy\\Building_CrashedShip.cs",
               "ViewState": "AQIAABEAAAAAAAAAAIAwwCEAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:14:39.854Z"
+              "WhenOpened": "2024-03-27T14:14:39.854Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CurseOfDarkness.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfDarkness.cs",
               "RelativeDocumentMoniker": "VFEPirates\\Curses\\CurseOfDarkness.cs",
@@ -211,20 +192,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Ability_BlastOff.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Abilities\\Ability_BlastOff.cs",
               "RelativeDocumentMoniker": "VFEPirates\\Abilities\\Ability_BlastOff.cs",
               "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Abilities\\Ability_BlastOff.cs",
               "RelativeToolTip": "VFEPirates\\Abilities\\Ability_BlastOff.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-27T13:42:29.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "Ability_GrapplingHook.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Abilities\\Ability_GrapplingHook.cs",
+              "RelativeDocumentMoniker": "VFEPirates\\Abilities\\Ability_GrapplingHook.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Abilities\\Ability_GrapplingHook.cs",
+              "RelativeToolTip": "VFEPirates\\Abilities\\Ability_GrapplingHook.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAYwGsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T13:52:53.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CurseOfTheBeaten.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfTheBeaten.cs",
+              "RelativeDocumentMoniker": "VFEPirates\\Curses\\CurseOfTheBeaten.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfTheBeaten.cs",
+              "RelativeToolTip": "VFEPirates\\Curses\\CurseOfTheBeaten.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAABBwDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T15:58:13.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CurseOfBlind.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfBlind.cs",
+              "RelativeDocumentMoniker": "VFEPirates\\Curses\\CurseOfBlind.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfBlind.cs",
+              "RelativeToolTip": "VFEPirates\\Curses\\CurseOfBlind.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAkwBUAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T16:01:04.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "PawnRenderer_DrawEquipment_Patch.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\HarmonyPatches\\PawnRenderer_DrawEquipment_Patch.cs",
               "RelativeDocumentMoniker": "VFEPirates\\HarmonyPatches\\PawnRenderer_DrawEquipment_Patch.cs",
@@ -232,11 +252,12 @@
               "RelativeToolTip": "VFEPirates\\HarmonyPatches\\PawnRenderer_DrawEquipment_Patch.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAkwBQAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T13:42:29.876Z"
+              "WhenOpened": "2024-03-27T13:42:29.876Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PawnRenderNodeWorker_Apparel_Head_HeadgearVisible_Patch.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\HarmonyPatches\\PawnRenderNodeWorker_Apparel_Head_HeadgearVisible_Patch.cs",
               "RelativeDocumentMoniker": "VFEPirates\\HarmonyPatches\\PawnRenderNodeWorker_Apparel_Head_HeadgearVisible_Patch.cs",
@@ -244,11 +265,12 @@
               "RelativeToolTip": "VFEPirates\\HarmonyPatches\\PawnRenderNodeWorker_Apparel_Head_HeadgearVisible_Patch.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T13:42:29.876Z"
+              "WhenOpened": "2024-03-27T13:42:29.876Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "RitualOutcomeEffectWorker_SingingShanties.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Rituals\\RitualOutcomeEffectWorker_SingingShanties.cs",
               "RelativeDocumentMoniker": "VFEPirates\\Rituals\\RitualOutcomeEffectWorker_SingingShanties.cs",
@@ -256,11 +278,12 @@
               "RelativeToolTip": "VFEPirates\\Rituals\\RitualOutcomeEffectWorker_SingingShanties.cs",
               "ViewState": "AQIAACUAAAAAAAAAAIAwwCgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:14:29.463Z"
+              "WhenOpened": "2024-03-27T14:14:29.463Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "CurseOfTheBoomalopes.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Curses\\CurseOfTheBoomalopes.cs",
               "RelativeDocumentMoniker": "VFEPirates\\Curses\\CurseOfTheBoomalopes.cs",
@@ -268,11 +291,12 @@
               "RelativeToolTip": "VFEPirates\\Curses\\CurseOfTheBoomalopes.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAIAwwCAAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:12:52.342Z"
+              "WhenOpened": "2024-03-27T14:12:52.342Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Ability_PowerJump.cs",
               "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Abilities\\Ability_PowerJump.cs",
               "RelativeDocumentMoniker": "VFEPirates\\Abilities\\Ability_PowerJump.cs",
@@ -280,7 +304,8 @@
               "RelativeToolTip": "VFEPirates\\Abilities\\Ability_PowerJump.cs",
               "ViewState": "AQIAADEAAAAAAAAAAIAwwE0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T14:07:26.74Z"
+              "WhenOpened": "2024-03-27T14:07:26.74Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -317,18 +342,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-27T13:55:24.537Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Ability_GrapplingHook.cs",
-              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Abilities\\Ability_GrapplingHook.cs",
-              "RelativeDocumentMoniker": "VFEPirates\\Abilities\\Ability_GrapplingHook.cs",
-              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\Abilities\\Ability_GrapplingHook.cs",
-              "RelativeToolTip": "VFEPirates\\Abilities\\Ability_GrapplingHook.cs",
-              "ViewState": "AQIAAKkAAAAAAAAAAAAkwLUAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T13:52:53.968Z"
             },
             {
               "$type": "Document",

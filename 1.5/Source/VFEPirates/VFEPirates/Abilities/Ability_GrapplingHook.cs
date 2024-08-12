@@ -104,13 +104,21 @@ namespace VFEPirates
         public void Pull()
         {
             ticksTillPull = -2;
-            var destCell = usedTarget.Thing.OccupiedRect().AdjacentCells.MinBy(cell => cell.DistanceTo(launcher.Position));
-            var selected = Find.Selector.IsSelected(ability.pawn);
-            var flyer = (PawnFlyer_Pulled) PawnFlyer.MakeFlyer(VFEP_DefOf.VFEP_GrapplingPawn, ability.pawn, destCell, null, null);
-            flyer.Hook = this;
-            GenSpawn.Spawn(flyer, destCell, Map);
-            if (selected)
-                Find.Selector.Select(ability.pawn);
+            if (ability.pawn.Dead is false)
+            {
+                var destCell = usedTarget.Thing.OccupiedRect().AdjacentCells.MinBy(cell => cell.DistanceTo(launcher.Position));
+                var selected = Find.Selector.IsSelected(ability.pawn);
+                ability.pawn.rotationTracker.FaceTarget(destCell);
+                var flyer = (PawnFlyer_Pulled)PawnFlyer.MakeFlyer(VFEP_DefOf.VFEP_GrapplingPawn, ability.pawn, destCell, null, null);
+                flyer.Hook = this;
+                GenSpawn.Spawn(flyer, destCell, Map);
+                if (selected)
+                    Find.Selector.Select(ability.pawn);
+            }
+            else
+            {
+                Destroy();
+            }
         }
 
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
