@@ -21,6 +21,7 @@
     <modExtensions>
         <li Class="VFECore.TraitExtension">
             <painFactor>0</painFactor>
+			<apparelExclusiveTrait>true</apparelExclusiveTrait>
         </li>
     </modExtensions>
   </TraitDef>

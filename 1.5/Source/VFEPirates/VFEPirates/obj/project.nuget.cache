@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rmXloF05ShUxqzGJgLoXpm41gm6dKIlAoxGJJANzB54Wbd2hi2AAcUFnOzbd/ip1r+/q62gi79JFwkVbRmI8vg==",
+  "dgSpecHash": "mzOLILt9/o0=",
   "success": true,
-  "projectFilePath": "E:\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\VFEPirates.csproj",
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaFactionsExpanded-Pirates\\1.5\\Source\\VFEPirates\\VFEPirates\\VFEPirates.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Administrator\\.nuget\\packages\\lib.harmony\\2.3.2\\lib.harmony.2.3.2.nupkg.sha512"
+    "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.3.2\\lib.harmony.2.3.2.nupkg.sha512"
   ],
   "logs": []
 }

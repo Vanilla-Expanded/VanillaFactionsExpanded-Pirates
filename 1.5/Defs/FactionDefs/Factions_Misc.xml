@@ -255,6 +255,16 @@ Mercenaries utilise spacer-tech weapons and armors to eliminate the targets of t
         </options>
       </li>
       <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <VFEP_Private>2</VFEP_Private>
+          <VFEP_Corporal>6</VFEP_Corporal>
+          <VFEP_Sergeant>4</VFEP_Sergeant>
+          <VFEP_SergeantMajor>3</VFEP_SergeantMajor>
+          <VFEP_Lieutenant>2</VFEP_Lieutenant>
+        </options>
+      </li>
+      <li>
         <!-- Base defense -->
         <kindDef>Settlement</kindDef>
         <options>
