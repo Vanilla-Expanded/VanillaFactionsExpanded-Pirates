@@ -2,11 +2,16 @@
 <Defs>
 
   <!--========= General ============-->
-
+  <JobDef>
+    <defName>VFEP_GoToFoundry</defName>
+    <driverClass>VFEPirates.JobDriver_GoToFoundry</driverClass>
+    <reportString>going to TargetA.</reportString>
+  </JobDef>
+  
   <JobDef>
     <defName>VFEP_EntombIn</defName>
     <driverClass>VFEPirates.JobDriver_EntombIn</driverClass>
-    <reportString>entombing in TargetA.</reportString>
+    <reportString>entombed in TargetA.</reportString>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
     <casualInterruptible>false</casualInterruptible>
     <playerInterruptible>false</playerInterruptible>

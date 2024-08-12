@@ -6,7 +6,7 @@ namespace VFEPirates
     [DefOf]
     public static class VFEP_DefOf
     {
-        public static JobDef VFEP_EntombIn;
+        public static JobDef VFEP_EntombIn, VFEP_GoToFoundry;
         public static ThingDef VFEP_Warcasket_Bodysuit;
 
         [MayRequireIdeology] public static PreceptDef VFEP_Camaraderie_Respected;

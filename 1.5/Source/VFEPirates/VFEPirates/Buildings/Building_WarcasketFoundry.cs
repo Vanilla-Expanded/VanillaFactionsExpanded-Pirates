@@ -57,7 +57,7 @@ namespace VFEPirates
                         yield return new FloatMenuOption("VFEPirates.CannotEntomb".Translate(reason), null);
                     else
                     {
-                        var jobDef = VFEP_DefOf.VFEP_EntombIn;
+                        var jobDef = VFEP_DefOf.VFEP_GoToFoundry;
                         string label = "VFEPirates.EntombInWarcasket".Translate();
                         if (selPawn.WorkTagIsDisabled(WorkTags.Violent))
                         {

@@ -8,24 +8,34 @@ using VFEPirates.Buildings;
 
 namespace VFEPirates
 {
+    public class JobDriver_GoToFoundry : JobDriver
+    {
+        public override bool TryMakePreToilReservations(bool errorOnFailed) => true;
+        public Building_WarcasketFoundry Foundry => TargetA.Thing as Building_WarcasketFoundry;
+        protected override IEnumerable<Toil> MakeNewToils()
+        {
+            this.FailOnDestroyedNullOrForbidden(TargetIndex.A);
+            yield return Toils_Goto.GotoThing(TargetIndex.A, Foundry.Position);
+            yield return Toils_General.Do(delegate
+            {
+                var job = JobMaker.MakeJob(VFEP_DefOf.VFEP_EntombIn, Foundry);
+                pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
+            });
+        }
+    }
+
     public class JobDriver_EntombIn : JobDriver
     {
         public Building_WarcasketFoundry Foundry => TargetA.Thing as Building_WarcasketFoundry;
-        public override Vector3 ForcedBodyOffset
-        {
-            get
-            {
-                if (pawn.Position == Foundry.Position) return new Vector3(0, 0, 0.67f);
-                return default;
-            }
-        }
+        public override Vector3 ForcedBodyOffset => new Vector3(0, 0, 0.67f);
 
-        public override bool TryMakePreToilReservations(bool errorOnFailed) => pawn.Reserve(TargetA, job);
+        public override bool TryMakePreToilReservations(bool errorOnFailed)
+        {
+            return true;
+        }
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            yield return Toils_Goto.GotoThing(TargetIndex.A, Foundry.Position);
-            yield return Toils_Reserve.Release(TargetIndex.A);
             var toil = new Toil();
             toil.initAction = delegate
             {
