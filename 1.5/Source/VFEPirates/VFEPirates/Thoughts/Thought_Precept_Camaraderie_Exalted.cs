@@ -18,7 +18,12 @@ namespace VFEPirates
                 return false;
             }
 
-			if (StaticCollectionsClass.crewMembersLost == 0)
+            if (p.Ideo?.HasPrecept(VFEP_DefOf.VFEP_Camaraderie_Exalted)!= true)
+            {
+                return false;
+            }
+
+            if (StaticCollectionsClass.crewMembersLost == 0)
             {
 				return false;
 			}
