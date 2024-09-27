@@ -13,8 +13,11 @@ namespace VFEPirates
 	public static class ModCompatibility
 	{
 		static ModCompatibility()
-        {
-			DubsBadHygieneActive = ModsConfig.IsActive("Dubwise.DubsBadHygiene") || ModsConfig.IsActive("Dubwise.DubsBadHygiene.Lite");
+		{
+			DubsBadHygieneActive = ModsConfig.IsActive("Dubwise.DubsBadHygiene")
+			                       || ModsConfig.IsActive("Dubwise.DubsBadHygiene_steam")
+			                       || ModsConfig.IsActive("Dubwise.DubsBadHygiene.Lite")
+			                       || ModsConfig.IsActive("Dubwise.DubsBadHygiene.Lite_steam");
 		}
 
 		public static void FillBladderNeed(Pawn pawn, float value) 
