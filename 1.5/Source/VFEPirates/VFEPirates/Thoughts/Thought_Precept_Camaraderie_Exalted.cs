@@ -13,7 +13,7 @@ namespace VFEPirates
 				return false;
 			}
 
-			if(p.IsSlave || p.IsPrisonerOfColony || p.Faction!= Faction.OfPlayerSilentFail)
+			if(p.IsSlave || p.IsPrisonerOfColony || p.Faction!= Faction.OfPlayerSilentFail || otherPawn.Faction != Faction.OfPlayerSilentFail)
 			{
                 return false;
             }
