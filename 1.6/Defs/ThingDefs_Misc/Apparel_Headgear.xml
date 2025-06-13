@@ -426,6 +426,9 @@
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+			
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
+		
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>2</ComponentSpacer>
@@ -471,6 +474,7 @@
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>2</ComponentSpacer>
@@ -516,6 +520,7 @@
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>4</ComponentSpacer>
@@ -561,6 +566,7 @@
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>2</ComponentSpacer>
@@ -633,6 +639,7 @@
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.7</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>4</ComponentSpacer>
