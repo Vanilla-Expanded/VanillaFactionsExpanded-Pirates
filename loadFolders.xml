@@ -1,37 +1,38 @@
 <loadFolders>
-	<v1.3>
-		<li>/</li>
-		<li>1.3</li>
-		<li IfModActive="Ludeon.RimWorld.Ideology">1.3/Mods/Ideology</li>
-        <li IfModActive="OskarPotocki.VFE.Insectoid">1.3/Mods/VFEI</li>	
-        <li IfModActive="OskarPotocki.VFE.Vikings">1.3/Mods/VFEV</li>	
-        <li IfModActive="VanillaExpanded.VWEC">1.3/Mods/VWEC</li>	
-        <li IfModActive="VanillaExpanded.VWEL">1.3/Mods/VWEL</li>	
-        <li IfModActive="VanillaExpanded.VWENL">1.3/Mods/VWENL</li>	
-        <li IfModActive="VanillaExpanded.VWEQ">1.3/Mods/VWEQ</li>			
-	</v1.3>
 	<v1.4>
 		<li>/</li>
 		<li>1.4</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.4/Mods/Ideology</li>
-        <li IfModActive="OskarPotocki.VFE.Insectoid">1.4/Mods/VFEI</li>	
-        <li IfModActive="OskarPotocki.VFE.Vikings">1.4/Mods/VFEV</li>	
-        <li IfModActive="VanillaExpanded.VWEC">1.4/Mods/VWEC</li>	
-        <li IfModActive="VanillaExpanded.VWEL">1.4/Mods/VWEL</li>	
-        <li IfModActive="VanillaExpanded.VWENL">1.4/Mods/VWENL</li>	
-        <li IfModActive="VanillaExpanded.VWEQ">1.4/Mods/VWEQ</li>			
+		<li IfModActive="OskarPotocki.VFE.Insectoid">1.4/Mods/VFEI</li>
+		<li IfModActive="OskarPotocki.VFE.Vikings">1.4/Mods/VFEV</li>
+		<li IfModActive="VanillaExpanded.VWEC">1.4/Mods/VWEC</li>
+		<li IfModActive="VanillaExpanded.VWEL">1.4/Mods/VWEL</li>
+		<li IfModActive="VanillaExpanded.VWENL">1.4/Mods/VWENL</li>
+		<li IfModActive="VanillaExpanded.VWEQ">1.4/Mods/VWEQ</li>
 	</v1.4>
 	<v1.5>
 		<li>/</li>
 		<li>1.5</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/Mods/Ideology</li>
-        <li IfModActive="OskarPotocki.VFE.Vikings">1.5/Mods/VFEV</li>	
-        <li IfModActive="VanillaExpanded.VWEC">1.5/Mods/VWEC</li>	
-        <li IfModActive="VanillaExpanded.VWEL">1.5/Mods/VWEL</li>	
-        <li IfModActive="VanillaExpanded.VWENL">1.5/Mods/VWENL</li>	
-        <li IfModActive="VanillaExpanded.VWEQ">1.5/Mods/VWEQ</li>		
-        <li IfModActive="VanillaExpanded.VWEBF">1.5/Mods/VWEBF</li>			
+		<li IfModActive="OskarPotocki.VFE.Vikings">1.5/Mods/VFEV</li>
+		<li IfModActive="VanillaExpanded.VWEC">1.5/Mods/VWEC</li>
+		<li IfModActive="VanillaExpanded.VWEL">1.5/Mods/VWEL</li>
+		<li IfModActive="VanillaExpanded.VWENL">1.5/Mods/VWENL</li>
+		<li IfModActive="VanillaExpanded.VWEQ">1.5/Mods/VWEQ</li>
+		<li IfModActive="VanillaExpanded.VWEBF">1.5/Mods/VWEBF</li>
 	</v1.5>
+	<v1.6>
+		<li>/</li>
+		<li>1.6</li>
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.6/Mods/Ideology</li>
+		<li IfModActive="OskarPotocki.VFE.Vikings">1.6/Mods/VFEV</li>
+		<li IfModActive="VanillaExpanded.VWEC">1.6/Mods/VWEC</li>
+		<li IfModActive="VanillaExpanded.VWEL">1.6/Mods/VWEL</li>
+		<li IfModActive="VanillaExpanded.VWENL">1.6/Mods/VWENL</li>
+		<li IfModActive="VanillaExpanded.VWEQ">1.6/Mods/VWEQ</li>
+		<li IfModActive="VanillaExpanded.VWEBF">1.6/Mods/VWEBF</li>
+		<li IfModActive="VanillaExpanded.VMemesE">1.6/Mods/VanillaMemesExpanded</li>
+	</v1.6>
 </loadFolders>
 
 
