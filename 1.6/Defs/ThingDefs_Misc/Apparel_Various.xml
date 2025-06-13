@@ -81,6 +81,7 @@
 		</apparel>
 		<equippedStatOffsets>
 			<VEF_MassCarryCapacity>125</VEF_MassCarryCapacity>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
 		</equippedStatOffsets>
 		<modExtensions>
 			<li Class="VEF.Pawns.ApparelDrawPosExtension">

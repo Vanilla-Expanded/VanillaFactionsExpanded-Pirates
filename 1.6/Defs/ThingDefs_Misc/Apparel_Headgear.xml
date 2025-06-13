@@ -15,6 +15,10 @@
 				<dataWest><offset>(-0.07, 0, 0.07)</offset></dataWest>
 			</drawData>
 		</apparel>
+		<equippedStatOffsets>
+			
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.67</VacuumResistance>
+		</equippedStatOffsets>
 		<modExtensions>
 			<li Class="VEF.Pawns.ApparelDrawPosExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
