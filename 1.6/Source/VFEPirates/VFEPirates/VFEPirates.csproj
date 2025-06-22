@@ -24,9 +24,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\..\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -320,6 +320,7 @@
     <Compile Include="HarmonyPatches\PawnRenderNodeWorker_Apparel_Head_HeadgearVisible_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_HealthTracker_NotifyPlayerOfKilled_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_Strip_Patch.cs" />
+    <Compile Include="Jobs\JobGiver_StandIdle.cs" />
     <Compile Include="Misc\DeathActionWorker_SpidermineExplosion.cs" />
     <Compile Include="Misc\Hediff_KillItself.cs" />
     <Compile Include="Jobs\JobDriver_GotoAndExplode.cs" />

@@ -27,7 +27,7 @@ namespace VFEPirates
             if (this.parent.Faction == Faction.OfPlayer)
             {
                 var options = Props.weaponToEquip.GetModExtension<HeavyWeapon>();
-                if (options != null && options.isHeavy && !Patch_FloatMenuMakerMap.AddHumanlikeOrders_Fix.CanEquip(selPawn, options))
+                if (options != null && options.isHeavy && !VanillaExpandedFramework_EquipmentUtility_CanEquip_Patch.CanEquip(selPawn, options))
                 {
                     yield return new FloatMenuOption("CannotEquip".Translate(Props.weaponToEquip.label) + " (" + options.disableOptionLabelKey.Translate(selPawn.LabelShort) + ")", null);
                 }
