@@ -57,7 +57,7 @@
 		
 		<li Class="VFEPirates.JobGiver_GoToNearestEnemyAndExplode"/>
 
-		<li Class="VFE.Mechanoids.AI.JobGivers.JobGiver_StandIdle"/>
+		<li Class="VFEPirates.JobGiver_StandIdle"/>
 
 		</subNodes>
     </thinkRoot>
