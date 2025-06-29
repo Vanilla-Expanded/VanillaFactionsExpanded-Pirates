@@ -20,7 +20,7 @@
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.67</VacuumResistance>
 		</equippedStatOffsets>
 		<modExtensions>
-			<li Class="VEF.Pawns.ApparelDrawPosExtension">
+			<li Class="VEF.Apparels.ApparelExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>true</hideHead>
 			</li>

@@ -84,7 +84,7 @@
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
 		</equippedStatOffsets>
 		<modExtensions>
-			<li Class="VEF.Pawns.ApparelDrawPosExtension">
+		<li Class="VEF.Apparels.ApparelExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
 				<showBodyInBedAlways>true</showBodyInBedAlways>
 				<secondaryApparelGraphics>
@@ -108,7 +108,7 @@
 			</layers>
 		</apparel>
 		<modExtensions>
-			<li Class="VEF.Pawns.ApparelDrawPosExtension">
+			<li Class="VEF.Apparels.ApparelExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
 			</li>
 		</modExtensions>
@@ -199,7 +199,7 @@
 			</drawData>
 		</apparel>
 		<modExtensions>
-			<li Class="VEF.Pawns.ApparelDrawPosExtension">
+			<li Class="VEF.Apparels.ApparelExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
 			</li>
 		</modExtensions>
