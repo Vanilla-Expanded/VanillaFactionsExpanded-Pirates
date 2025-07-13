@@ -1343,6 +1343,10 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.8</MoveSpeed>
+			
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
+		
+	
 		</equippedStatOffsets>
 		<thingCategories>
 			<li>Apparel</li>
