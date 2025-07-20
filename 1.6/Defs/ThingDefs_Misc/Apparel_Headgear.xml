@@ -14,11 +14,9 @@
 				<dataSouth><offset>(0, 0.001, 0.07)</offset></dataSouth>
 				<dataWest><offset>(-0.07, 0, 0.07)</offset></dataWest>
 			</drawData>
+			<canBeGeneratedToSatisfyVacuumResistance>false</canBeGeneratedToSatisfyVacuumResistance>
 		</apparel>
-		<equippedStatOffsets>
-			
-			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.67</VacuumResistance>
-		</equippedStatOffsets>
+		
 		<modExtensions>
 			<li Class="VEF.Apparels.ApparelExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>

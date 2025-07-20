@@ -22,6 +22,7 @@
 		</statBases>
 		<apparel>
 			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<canBeGeneratedToSatisfyVacuumResistance>false</canBeGeneratedToSatisfyVacuumResistance>
 		</apparel>
 		<altitudeLayer>Item</altitudeLayer>
 		<alwaysHaulable>True</alwaysHaulable>
@@ -81,7 +82,7 @@
 		</apparel>
 		<equippedStatOffsets>
 			<VEF_MassCarryCapacity>125</VEF_MassCarryCapacity>
-			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
+			
 		</equippedStatOffsets>
 		<modExtensions>
 		<li Class="VEF.Apparels.ApparelExtension">
@@ -1411,6 +1412,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.2</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>6</ComponentSpacer>
@@ -1496,6 +1498,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		<equippedStatOffsets>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
 			<EnergyShieldRechargeRate>1</EnergyShieldRechargeRate>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.1</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<Plasteel>60</Plasteel>
@@ -1545,6 +1548,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.2</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>6</ComponentSpacer>
@@ -1641,6 +1645,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		<equippedStatOffsets>
 		    <MoveSpeed>-0.5</MoveSpeed>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.1</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 		    <Plasteel>80</Plasteel>
@@ -1690,6 +1695,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.2</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>12</ComponentSpacer>
@@ -1808,6 +1814,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		</statBases>
 		<equippedStatOffsets>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.1</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<Plasteel>60</Plasteel>
@@ -1898,6 +1905,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.2</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>6</ComponentSpacer>
@@ -2001,6 +2009,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		</statBases>
 		<equippedStatOffsets>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.1</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<Plasteel>60</Plasteel>
@@ -2068,6 +2077,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.2</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>4</ComponentSpacer>
@@ -2154,6 +2164,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 		<equippedStatOffsets>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.2</SlaveSuppressionOffset>
 			<VEF_EnergyShieldEnergyMaxFactor>0.5</VEF_EnergyShieldEnergyMaxFactor>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.1</VacuumResistance>
 		</equippedStatOffsets>
 		<costList>
 			<Plasteel>60</Plasteel>
