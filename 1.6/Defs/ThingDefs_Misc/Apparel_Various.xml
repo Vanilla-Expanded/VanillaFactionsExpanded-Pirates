@@ -1407,12 +1407,15 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<Insulation_Cold>80</Insulation_Cold>
 			<Insulation_Heat>80</Insulation_Heat>
 			<EquipDelay>1</EquipDelay>
+			<EnergyShieldRechargeRate>0.01</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>2.5</EnergyShieldEnergyMax>	
 		</statBases>
 		<equippedStatOffsets>
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.2</VacuumResistance>
+			
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>6</ComponentSpacer>
@@ -1449,8 +1452,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<showOnHostiles>true</showOnHostiles>
 				<showOnNeutralInCombat>true</showOnNeutralInCombat>
 				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
-				<EnergyShieldRechargeRate>1</EnergyShieldRechargeRate>
-				<EnergyShieldEnergyMax>250</EnergyShieldEnergyMax>
+				
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
 				<minShieldSize>2.1</minShieldSize>
 				<maxShieldSize>2.7</maxShieldSize>
@@ -1543,6 +1545,8 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<Insulation_Heat>80</Insulation_Heat>
 			<EquipDelay>1</EquipDelay>
 			<VEF_EnergyShieldRadiusApparel>5</VEF_EnergyShieldRadiusApparel>
+			<EnergyShieldRechargeRate>0.01</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax>	
 		</statBases>
 		<equippedStatOffsets>
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
@@ -1595,8 +1599,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<showOnHostiles>true</showOnHostiles>
 				<showOnNeutralInCombat>true</showOnNeutralInCombat>
 				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
-				<EnergyShieldRechargeRate>1</EnergyShieldRechargeRate>
-				<EnergyShieldEnergyMax>150</EnergyShieldEnergyMax>
+				
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
 				<minShieldSize>2.1</minShieldSize>
 				<maxShieldSize>2.7</maxShieldSize>
@@ -1690,12 +1693,15 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<Insulation_Cold>80</Insulation_Cold>
 			<Insulation_Heat>80</Insulation_Heat>
 			<EquipDelay>1</EquipDelay>
+			<EnergyShieldRechargeRate>0.01</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax>	
 		</statBases>
 		<equippedStatOffsets>
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
 			<ToxicResistance>0.5</ToxicResistance>
 			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.3</SlaveSuppressionOffset>
 			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.2</VacuumResistance>
+			
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>12</ComponentSpacer>
@@ -1755,8 +1761,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<showOnHostiles>true</showOnHostiles>
 				<showOnNeutralInCombat>true</showOnNeutralInCombat>
 				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
-				<EnergyShieldRechargeRate>1</EnergyShieldRechargeRate>
-				<EnergyShieldEnergyMax>150</EnergyShieldEnergyMax>
+				
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
 				<minShieldSize>2.1</minShieldSize>
 				<maxShieldSize>2.7</maxShieldSize>
@@ -1900,6 +1905,8 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<Insulation_Cold>80</Insulation_Cold>
 			<Insulation_Heat>80</Insulation_Heat>
 			<EquipDelay>1</EquipDelay>
+			<EnergyShieldRechargeRate>0.01</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax>	
 		</statBases>
 		<equippedStatOffsets>
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
@@ -1943,8 +1950,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<showOnHostiles>true</showOnHostiles>
 				<showOnNeutralInCombat>true</showOnNeutralInCombat>
 				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
-				<EnergyShieldRechargeRate>1</EnergyShieldRechargeRate>
-				<EnergyShieldEnergyMax>150</EnergyShieldEnergyMax>
+			
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
 				<minShieldSize>2.1</minShieldSize>
 				<maxShieldSize>2.7</maxShieldSize>
@@ -2072,6 +2078,8 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 			<Insulation_Cold>80</Insulation_Cold>
 			<Insulation_Heat>80</Insulation_Heat>
 			<EquipDelay>1</EquipDelay>
+			<EnergyShieldRechargeRate>0.05</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>5</EnergyShieldEnergyMax>	
 		</statBases>
 		<equippedStatOffsets>
 			<PsychicSensitivity>-0.5</PsychicSensitivity>
@@ -2114,8 +2122,7 @@ Privateers usually specialize in getting in and out of dangerous situations easi
 				<showOnHostiles>true</showOnHostiles>
 				<showOnNeutralInCombat>true</showOnNeutralInCombat>
 				<shieldTexPath>Other/ShieldBubble</shieldTexPath>
-				<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-				<EnergyShieldEnergyMax>500</EnergyShieldEnergyMax>
+				
 				<chargeFullyWhenMade>true</chargeFullyWhenMade>
 				<minShieldSize>2.1</minShieldSize>
 				<maxShieldSize>2.7</maxShieldSize>
