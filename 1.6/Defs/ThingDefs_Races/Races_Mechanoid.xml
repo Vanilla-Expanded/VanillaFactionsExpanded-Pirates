@@ -12,7 +12,7 @@
 			<ComfyTemperatureMax>250</ComfyTemperatureMax>
 			<MeatAmount>0</MeatAmount>
 			<ArmorRating_Heat>2.00</ArmorRating_Heat>
-			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 		</statBases>
 		<receivesSignals>true</receivesSignals>
 		<tradeability>None</tradeability>
