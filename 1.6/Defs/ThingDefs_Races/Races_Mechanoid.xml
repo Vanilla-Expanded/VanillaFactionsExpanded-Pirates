@@ -13,6 +13,7 @@
 			<MeatAmount>0</MeatAmount>
 			<ArmorRating_Heat>2.00</ArmorRating_Heat>
 			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
 		</statBases>
 		<receivesSignals>true</receivesSignals>
 		<tradeability>None</tradeability>
