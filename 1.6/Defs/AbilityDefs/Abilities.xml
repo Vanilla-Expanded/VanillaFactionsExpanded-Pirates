@@ -78,7 +78,7 @@
 			<li>
 				<statOffsets>
 					<VEF_VerbRangeFactor>0.25</VEF_VerbRangeFactor>
-					<VEF_VerbCooldownFactor>-0.25</VEF_VerbCooldownFactor>
+					<RangedCooldownFactor>-0.25</RangedCooldownFactor>
 				</statOffsets>
 			</li>
 		</stages>
