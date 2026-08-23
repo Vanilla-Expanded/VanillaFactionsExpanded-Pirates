@@ -19,7 +19,8 @@
 				<li>memeAdjective->plundering</li>
 				<li>memeAdjective->mutinous</li>
 				<li>memeAdjective->piratical</li>				
-				
+				<li>memeConcept->camaraderie</li>
+				<li>memeConcept->piracy</li>
 				<li>memeLeaderNoun->skipper</li>
 				<li>memeLeaderNoun->commander</li>
 				<li>memeLeaderNoun->boss</li>				
