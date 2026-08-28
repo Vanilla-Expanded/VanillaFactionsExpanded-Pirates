@@ -8,12 +8,17 @@ namespace VFEPirates
 {
     public class Apparel_Warcasket : Apparel
     {
+        // Older saves store the color here rather than in CompColorable
         public Color? colorApparel;
-        public override Color DrawColor => colorApparel ??= this.def.colorGenerator.NewRandomizedColor();
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref colorApparel, "colorApparel");
+            if (Scribe.mode == LoadSaveMode.PostLoadInit && colorApparel.HasValue)
+            {
+                this.SetColor(colorApparel.Value);
+                colorApparel = null;
+            }
         }
 
         protected override void Tick()
