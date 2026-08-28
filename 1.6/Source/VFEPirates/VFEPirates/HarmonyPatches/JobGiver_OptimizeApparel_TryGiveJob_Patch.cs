@@ -14,9 +14,17 @@ namespace VFEPirates
             {
                 return true;
             }
-            if (ModsConfig.IdeologyActive && JobGiver_OptimizeApparel.TryCreateRecolorJob(pawn, out var job))
+            if (ModsConfig.IdeologyActive && Find.TickManager.TicksGame >= pawn.mindState.nextApparelOptimizeTick)
             {
-                __result = job;
+                if (JobGiver_OptimizeApparel.TryCreateRecolorJob(pawn, out var job))
+                {
+                    __result = job;
+                }
+                else
+                {
+                    // Vanilla's SetNextOptimizeTick, skipped along with the rest of the method
+                    pawn.mindState.nextApparelOptimizeTick = Find.TickManager.TicksGame + Rand.Range(6000, 9000);
+                }
             }
             return false;
         }
