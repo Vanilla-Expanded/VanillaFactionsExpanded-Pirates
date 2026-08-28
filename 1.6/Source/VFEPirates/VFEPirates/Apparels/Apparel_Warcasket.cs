@@ -14,7 +14,7 @@ namespace VFEPirates
         {
             base.ExposeData();
             Scribe_Values.Look(ref colorApparel, "colorApparel");
-            if (Scribe.mode == LoadSaveMode.PostLoadInit && colorApparel.HasValue)
+            if (Scribe.mode == LoadSaveMode.LoadingVars && colorApparel.HasValue)
             {
                 this.SetColor(colorApparel.Value);
                 colorApparel = null;
