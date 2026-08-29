@@ -354,6 +354,7 @@
     <Compile Include="Buildings\Building_WarcasketFoundry.cs" />
     <Compile Include="HarmonyPatches\CompPowerBattery_AmountCanAccept_Patch.cs" />
     <Compile Include="HarmonyPatches\CompReloadable_CreateVerbTargetCommand_Patch.cs" />
+    <Compile Include="HarmonyPatches\Dialog_StylingStation_DrawApparelColor_Transpiler.cs" />
     <Compile Include="HarmonyPatches\GenSpawn_Spawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ITab_Pawn_Gear_DrawThingRow_Transpiler.cs" />
     <Compile Include="HarmonyPatches\JobGiver_OptimizeApparel_TryGiveJob_Patch.cs" />
