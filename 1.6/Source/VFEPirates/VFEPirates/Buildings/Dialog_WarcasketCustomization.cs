@@ -67,9 +67,7 @@ namespace VFEPirates.Buildings
 
         private void Notify_SettingsChanged()
         {
-            VanillaExpandedFramework_Pawn_ApparelTracker_Wear_Patch.doNotRunTraitsPatch = true;
-            project.ApplyOn(pawn);
-            VanillaExpandedFramework_Pawn_ApparelTracker_Wear_Patch.doNotRunTraitsPatch = false;
+            WarcasketUtility.WithoutApparelTraits(() => project.ApplyOn(pawn));
             project.totalWorkAmount = project.armorDef.GetStatValueAbstract(StatDefOf.WorkToMake) + project.shoulderPadsDef.GetStatValueAbstract(StatDefOf.WorkToMake) +
                                       project.helmetDef.GetStatValueAbstract(StatDefOf.WorkToMake);
             PortraitsCache.SetDirty(pawn);
