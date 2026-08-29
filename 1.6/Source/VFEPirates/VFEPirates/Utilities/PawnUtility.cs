@@ -10,9 +10,17 @@ namespace VFEPirates
     {
         public static bool IsWearingWarcasket(this Pawn pawn)
         {
-            if (pawn.apparel != null)
+            if (pawn?.apparel == null)
             {
-                return pawn.apparel.WornApparel.Any(x => x is Apparel_Warcasket);
+                return false;
+            }
+            var wornApparel = pawn.apparel.WornApparel;
+            for (var i = 0; i < wornApparel.Count; i++)
+            {
+                if (wornApparel[i] is Apparel_Warcasket)
+                {
+                    return true;
+                }
             }
             return false;
         }
