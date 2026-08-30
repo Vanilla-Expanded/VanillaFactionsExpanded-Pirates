@@ -36,7 +36,7 @@
     <degreeDatas>
       <li>
         <label>shellcasket</label>
-        <description>{PAWN_nameDef} was entombed in a warcasket, and then brutally pulled out of one. The neural and nerve damage from being unplugged is so severe that {PAWN_nameDef} is in constant, agonizing pain and can barely assemble his thoughts. Only installing {PAWN_nameDef} back in a warcasket can cure the symptoms.</description>
+        <description>{PAWN_nameDef} was entombed in a warcasket, and then brutally pulled out of one. The neural and nerve damage from being unplugged is so severe that {PAWN_nameDef} is in constant, agonizing pain and can barely assemble {PAWN_possessive} thoughts. Only installing {PAWN_nameDef} back in a warcasket can cure the symptoms.</description>
         <marketValueFactorOffset>-0.3</marketValueFactorOffset>
       </li>
     </degreeDatas>
