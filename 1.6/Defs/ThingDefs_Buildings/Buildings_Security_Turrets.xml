@@ -6,7 +6,7 @@
   <ThingDef ParentName="BaseArtilleryBuilding">
     <defName>VFEP_Turret_FieldGun</defName>
     <label>field gun</label>
-    <description>A manned gun that launches all kinds of shells. A variation of the mortar with all the benefits and drawbacks, however it has a 90 degree cone of direct-fire in exchange for having an effective firing rate that is twice as fast.</description>
+    <description>A manned gun that launches all kinds of shells. A variation of the mortar with all the benefits and drawbacks, however it has a 45 degree cone of direct-fire in exchange for having an effective firing rate that is twice as fast.</description>
     <graphicData>
       <texPath>Things/Building/Security/DirectionalTurret_Base</texPath>
       <drawSize>(4,4)</drawSize>

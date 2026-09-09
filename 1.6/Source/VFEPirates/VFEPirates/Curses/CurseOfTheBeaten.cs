@@ -14,8 +14,11 @@ namespace VFEPirates
     {
         public override void DoPatches()
         {
-            Patch(original: AccessTools.Method(typeof(FloatMenuMakerMap), "AddDraftedOrders"),
-                transpiler: AccessTools.Method(typeof(CurseOfTheBeaten), nameof(Transpiler)));
+            /*Patch(original: AccessTools.Method(typeof(FloatMenuMakerMap), "AddDraftedOrders"),
+                transpiler: AccessTools.Method(typeof(CurseOfTheBeaten), nameof(Transpiler)));*/
+
+            Patch(original: AccessTools.Method(typeof(FloatMenuOptionProvider_DraftedTend), "IsValidTendTarget"),
+                postfix: AccessTools.Method(typeof(CurseOfTheBeaten), nameof(DontAutoTend_RemoveFloatMenu)));
             Patch(original: AccessTools.Method(typeof(WorkGiver_Tend), nameof(WorkGiver_Tend.HasJobOnThing)),
                 postfix: AccessTools.Method(typeof(CurseOfTheBeaten), nameof(DontAutoTend)));
         }
@@ -29,7 +32,16 @@ namespace VFEPirates
 			}
 		}
 
-        public static MethodInfo DecoratePrioritizedTaskInfo = AccessTools.Method(typeof(FloatMenuUtility),
+        public static void DontAutoTend_RemoveFloatMenu(Pawn doctor, Pawn patient, ref bool __result)
+        {
+            if (IsActive(VFEP_DefOf.VFEP_CurseOfTheBeaten) &&
+                HealthAIUtility.FindBestMedicine(doctor, patient, false) is null)
+            {
+                __result = false;
+            }
+        }
+
+        /*public static MethodInfo DecoratePrioritizedTaskInfo = AccessTools.Method(typeof(FloatMenuUtility),
             nameof(FloatMenuUtility.DecoratePrioritizedTask));
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
@@ -61,6 +73,6 @@ namespace VFEPirates
                 floatMenuOption.Label += $" ({VFEP_DefOf.VFEP_CurseOfTheBeaten.LabelCap} - {VFEP_DefOf.VFEP_CurseOfTheBeaten.description})";
             }
             return floatMenuOption;
-		}
+		}*/
     }
 }
