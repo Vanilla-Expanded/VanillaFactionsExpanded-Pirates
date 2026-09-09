@@ -81,11 +81,11 @@ namespace VFEPirates
         public static IEnumerable<CodeInstruction> DrawLayerTranspiler(IEnumerable<CodeInstruction> codeInstructions)
         {
             var codes = codeInstructions.ToList();
-            var hiddenField = AccessTools.Field(typeof(Zone), nameof(Zone.Hidden));
+            var hiddenField = AccessTools.Property(typeof(Zone), nameof(Zone.Hidden));
             for (var i = 0; i < codes.Count; i++)
             {
                 yield return codes[i];
-                if (i > 1 && codes[i - 1].LoadsField(hiddenField) && codes[i].opcode == OpCodes.Brtrue)
+                if (i > 1 && codes[i - 1].opcode == OpCodes.Callvirt && codes[i - 1].OperandIs(hiddenField) && codes[i].opcode == OpCodes.Brtrue)
                 {
                     yield return new CodeInstruction(OpCodes.Ldloc_S, 5);
                     yield return new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(CurseOfDarkness), nameof(CurseOfDarkness.ShouldShowZone)));

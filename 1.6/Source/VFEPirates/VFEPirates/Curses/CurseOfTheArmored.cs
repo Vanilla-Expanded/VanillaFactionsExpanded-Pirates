@@ -19,7 +19,7 @@ namespace VFEPirates
                 postfix: AccessTools.Method(typeof(CurseOfTheArmored), nameof(GetArmorPenetrationBase)));
             Patch(original: AccessTools.Method(typeof(ExtraDamage), nameof(ExtraDamage.AdjustedArmorPenetration), parameters: new Type[] { typeof(Verb), typeof(Pawn) }),
                 postfix: AccessTools.Method(typeof(CurseOfTheArmored), nameof(GetArmorPenetrationVerb)));
-            Patch(original: AccessTools.Method(typeof(ProjectileProperties), nameof(ProjectileProperties.GetArmorPenetration), parameters: new Type[] { typeof(float), typeof(StringBuilder) }), 
+            Patch(original: AccessTools.Method(typeof(ProjectileProperties), nameof(ProjectileProperties.GetArmorPenetration), parameters: new Type[] { typeof(Thing), typeof(StringBuilder) }), 
                 postfix: AccessTools.Method(typeof(CurseOfTheArmored), nameof(GetArmorPenetrationMultiplier)));
         }
 
@@ -43,7 +43,7 @@ namespace VFEPirates
             __result /= 2;
         }
 
-        public static void GetArmorPenetrationMultiplier(float weaponDamageMultiplier, StringBuilder explanation, ref float __result)
+        public static void GetArmorPenetrationMultiplier(Thing weapon, StringBuilder explanation, ref float __result)
         {
             __result /= 2;
         }
