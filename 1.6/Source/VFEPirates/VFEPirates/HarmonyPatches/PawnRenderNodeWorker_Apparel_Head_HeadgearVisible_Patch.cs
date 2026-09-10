@@ -11,6 +11,10 @@ namespace VFEPirates.HarmonyPatches
     {
 		public static void Postfix(PawnDrawParms parms, ref bool __result)
 		{
+			if (__result)
+			{
+				return;
+			}
 			if (parms.pawn.IsWearingWarcasket())
 			{
                 __result = true;
