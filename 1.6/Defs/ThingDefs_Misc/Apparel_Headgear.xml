@@ -15,6 +15,7 @@
 				<dataWest><offset>(-0.07, 0, 0.07)</offset></dataWest>
 			</drawData>
 			<canBeGeneratedToSatisfyVacuumResistance>false</canBeGeneratedToSatisfyVacuumResistance>
+			<useWornGraphicMask>true</useWornGraphicMask>
 		</apparel>
 		
 		<modExtensions>
