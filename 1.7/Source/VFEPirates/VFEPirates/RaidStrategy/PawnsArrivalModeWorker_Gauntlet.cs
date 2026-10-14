@@ -21,6 +21,23 @@ namespace VFEPirates
             { VFEP_DefOf.VFEP_Ship_Red, VFEP_DefOf.VFEP_CrashedShip_Red }
         };
 
+        // ResolveRaidStrategy hands parms.raidStrategy to TryRandomElementByWeight as its out parameter, so
+        // it holds the running candidate while later strategies are still being filtered, and the base
+        // check against its arriveModes rejects this mode. Only the gauntlet strategy lists it, so skip that.
+        public override bool CanUseWith(IncidentParms parms)
+        {
+            RaidStrategyDef raidStrategy = parms.raidStrategy;
+            parms.raidStrategy = null;
+            try
+            {
+                return base.CanUseWith(parms);
+            }
+            finally
+            {
+                parms.raidStrategy = raidStrategy;
+            }
+        }
+
         public override bool TryResolveRaidSpawnCenter(IncidentParms parms)
         {
             Map map = (Map)parms.target;
