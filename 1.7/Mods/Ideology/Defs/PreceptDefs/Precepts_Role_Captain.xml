@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PreceptDef ParentName="PreceptRoleSingleBase">
+		<defName>VFEP_IdeoRole_Captain</defName>
+		<label>captain</label>
+		<description>Generally chosen for his daring and dominating character, a pirate captain is often admired for his cruelty and destructiveness.</description>
+		<iconPath>UI/Ideology/Captain</iconPath>
+		<nameMaker>VFEP_NamerRoleCaptain</nameMaker>
+		<roleTags>
+			<li>Captain</li>
+		</roleTags>
+		<requiredMemes>
+			<li>VFEP_PirateMeme</li>
+		</requiredMemes>
+		<roleRequiredWorkTags>
+			<li>Violent</li>
+			<li>Shooting</li>
+		</roleRequiredWorkTags>
+		<displayOrderInImpact>2</displayOrderInImpact>
+		<grantedAbilities>
+			<li>VFEP_FiringFrenzy</li>
+		</grantedAbilities>
+		<roleRequirements>
+			<li Class="RoleRequirement_MinSkillAny">
+				<skills>
+					<Shooting>6</Shooting>
+				</skills>
+			</li>
+		</roleRequirements>
+		
+		<roleEffects>
+			<li Class="RoleEffect_NoMeleeWeapons" />
+			<li Class="RoleEffect_PawnStatOffset">
+				<statDef>ShootingAccuracyPawn</statDef>
+				<modifier>7</modifier>
+			</li>
+			<li Class="RoleEffect_PawnStatOffset">
+				<statDef>AimingDelayFactor</statDef>
+				<modifier>-0.5</modifier>
+			</li>
+		</roleEffects>
+	
+		<roleDisabledWorkTags>
+			<li>Crafting</li>
+			<li>Cooking</li>
+			<li>PlantWork</li>
+			<li>Mining</li>
+			<li>Constructing</li>
+		</roleDisabledWorkTags>
+		
+	</PreceptDef>
+</Defs>

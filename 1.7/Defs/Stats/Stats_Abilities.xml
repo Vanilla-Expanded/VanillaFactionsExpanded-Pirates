@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatDef>
+    <defName>VFEP_PowerJumpRange</defName>
+    <label>power jump range</label>
+    <category>BasicsPawn</category>
+    <description>The maximum distance of a power jump.</description>
+	<toStringStyle>FloatOne</toStringStyle>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1010</displayPriorityInCategory>
+	<alwaysHide>true</alwaysHide>
+  </StatDef>
+
+  <StatDef>
+    <defName>VFEP_PowerJumpDetonationRadius</defName>
+    <label>power jump detonation radius</label>
+    <category>BasicsPawn</category>
+    <description>The radius of the area of detonation.</description>
+	<toStringStyle>FloatOne</toStringStyle>
+    <defaultBaseValue>3</defaultBaseValue>
+    <minValue>3</minValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1011</displayPriorityInCategory>
+	<alwaysHide>true</alwaysHide>
+  </StatDef>
+  
+  <StatDef>
+    <defName>VFEP_FlightSpeed</defName>
+    <label>power jump flight speed</label>
+    <category>BasicsPawn</category>
+	<toStringStyle>FloatOne</toStringStyle>
+    <description>The speed of a power jump.</description>
+    <defaultBaseValue>12</defaultBaseValue>
+    <minValue>12</minValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1012</displayPriorityInCategory>
+	<alwaysHide>true</alwaysHide>
+  </StatDef>
+  
+  <StatDef>
+    <defName>VFEP_SiegeModeCooldown</defName>
+    <label>siege mode cooldown</label>
+    <category>BasicsPawn</category>
+    <description>How long it takes to activate siege mode again.</description>
+    <defaultBaseValue>10</defaultBaseValue>
+    <minValue>0</minValue>
+	<formatString>{0} s</formatString>
+    <toStringStyle>FloatOne</toStringStyle>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1013</displayPriorityInCategory>
+	<alwaysHide>true</alwaysHide>
+  </StatDef>
+  
+</Defs>

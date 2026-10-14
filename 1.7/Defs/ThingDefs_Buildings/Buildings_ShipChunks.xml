@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase" Name="VFEP_BuildingChunkBase" Abstract="True">
+    <category>Building</category>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <rect>(0.1,0.1,1.8,1.8)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1.39,0.5,1.25)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>42</pathCost>
+    <blockWind>true</blockWind>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.50</fillPercent>
+    <size>(2,2)</size>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-20</Beauty>
+      <WorkToBuild>2000</WorkToBuild>
+    </statBases>
+    <killedLeavings>
+      <ChunkSlagSteel>2</ChunkSlagSteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </killedLeavings>
+    <building>
+      <claimable>false</claimable>
+      <alwaysDeconstructible>true</alwaysDeconstructible>
+    </building>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <drawerType>MapMeshOnly</drawerType>
+    <repairEffect>ConstructMetal</repairEffect>
+    <stealable>false</stealable>
+    <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_BuildingChunkBase">
+    <defName>VFEP_ShipChunkDebris</defName>
+    <label>ship chunk debris</label>
+    <description>A chunk of a combat-grade spacecraft. It seems to have been torn off either by uncontrolled re-entry forces or some kind of weapon. It is densely packed with double-layer armor plating and control systems, which can be acquired by deconstructing it.</description>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkDebris</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <Steel>130</Steel>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_BuildingChunkBase">
+    <defName>VFEP_ShipChunkBattery</defName>
+    <label>ship chunk battery</label>
+    <description>The mangled remains of ship-borne battery, used to power systems with high power draw for short periods. It was leaps and bounds about Rimworld battery technology but it can no longer be recharged and yields decent salvage once it’s stored charge has run out.</description>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkBattery</texPath>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <Steel>80</Steel>
+    </costList>
+    <!-- Battery -->
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <thingClass>Building_Battery</thingClass>
+    <statBases>
+      <Flammability>1</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Battery">
+        <storedEnergyMax>20000</storedEnergyMax>
+        <efficiency>1</efficiency>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <transmitsPower>true</transmitsPower>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_BuildingChunkBase">
+    <defName>VFEP_ShipChunkCryptosleepCasket</defName>
+    <label>ship chunk cryptosleep casket</label>
+    <description>A self-powered cryptosleep casket caught in the remains of their ship’s hull. The occupant can still be recovered from the module, but most of the material is worth less than scrap metal and offers little salvage.</description>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkCryptosleep</texPath>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>70</Steel>
+    </costList>
+    <!-- Casket -->
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <thingClass>Building_CryptosleepCasket</thingClass>
+    <statBases>
+      <Flammability>1</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+      <li Class="CompProperties_EmptyStateGraphic">
+        <graphicData>
+          <texPath>Things/Building/ShipChunks/ShipChunkCryptosleepOpen</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(2, 2)</drawSize>
+        </graphicData>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_BuildingChunkBase">
+    <defName>VFEP_ShipChunkVolatileEngine</defName>
+    <label>ship chunk volatile engine</label>
+    <description>Self-powered turbo engines for a combat-grade spacecraft, designed for atmospheric use. The control and safety system are damaged and the turbines are unable to take in enough air to cool itself. If not properly dismantled, the accumulating energy will tear itself apart.</description>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkEngine</texPath>
+    </graphicData>
+    <costList>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>80</Steel>
+    </costList>
+    <!-- Engine -->
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <Flammability>1</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>12</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(255,0,0,0)</glowColor>
+      </li>
+      <li Class="VFEPirates.CompProperties_VolatileEngine">
+        <soundAmbient>Tornado</soundAmbient>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowExplosionRadius</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>VFEP_Filth_Fuel</defName>
+    <label>chemfuel puddle</label>
+    <description>A puddle of flammable chemfuel.</description>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <Beauty>-10</Beauty>
+      <Cleanliness>-15</Cleanliness>
+      <Flammability>2.0</Flammability>
+      <MaxHitPoints>150</MaxHitPoints>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/LiquidFuel</texPath>
+    </graphicData>
+    <filth>
+      <ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+      <disappearsInDays>35~40</disappearsInDays>
+      <rainWashes>true</rainWashes>
+      <cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+      <cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
+    </filth>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_BuildingChunkBase">
+    <defName>VFEP_ShipChunkFuelTank</defName>
+    <label>ship chunk fuel tank</label>
+    <description>A tank of Chemfuel, punctured by the hull of its ship’s hull. Some of the fluid can be recovered while the majority is filled with grime, leaking out and creating a fire hazard. A prime target for any pyromaniac wanting to watch the world burn.</description>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkFuelTank</texPath>
+    </graphicData>
+    <costList>
+      <Chemfuel>240</Chemfuel>
+      <Steel>40</Steel>
+    </costList>
+    <!-- Fuel -->
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <Flammability>1</Flammability>
+    </statBases>
+    <comps>
+      <li Class="VFEPirates.CompProperties_FilthSpawner">
+        <filthDef>VFEP_Filth_Fuel</filthDef>
+        <spawnCountOnSpawn>1</spawnCountOnSpawn>
+        <spawnRadius>10</spawnRadius>
+        <totalFilthSpawn>40</totalFilthSpawn>
+        <spawnEachXticks>300</spawnEachXticks>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_BuildingChunkBase">
+    <defName>VFEP_ShipChunkGauntletTurret</defName>
+    <label>ship chunk gauntlet turret</label>
+    <description>The remains of the housing for the Gauntlet charge cannon. Powered externally, the ammunition storage is wrecked and cannot be replaced. Once the turret empties its magazine, it is still valuable salvage worth recovery.</description>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkGauntletTurret</texPath>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>160</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <!-- Turret -->
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <statBases>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(3,3)</size>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="VFEPirates.CompProperties_Fueled">
+        <fuelLabel>Shots until barrel change</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <outOfFuelMessage>Cannot shoot: Needs new barrel</outOfFuelMessage>
+        <fuelFilter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>90</fuelCapacity>
+        <fuelMultiplier>0.75</fuelMultiplier>
+        <initialFuelPercent>1</initialFuelPercent>
+        <initialAllowAutoRefuel>false</initialAllowAutoRefuel>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>false</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+        <targetFuelLevelConfigurable>false</targetFuelLevelConfigurable>
+        <showAllowAutoRefuelToggle>false</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>120</basePowerConsumption>
+      </li>
+    </comps>
+    <hasTooltip>true</hasTooltip>
+    <building>
+      <combatPower>80</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>VFEP_GauntletChargeCanon</turretGunDef>
+      <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
+      <claimable>false</claimable>
+      <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_BuildingChunkBase">
+    <defName>VFEP_ShipChunkReactor</defName>
+    <label>ship chunk reactor</label>
+    <description>The remains of a combat-grade spacecraft’s nuclear reactor, low-yield and designed to operate alongside energy storage. Surprisingly, the reactor is fully functional with no structural damage, so it can be safely used for ground operations.</description>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkReactor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>120</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentSpacer>8</ComponentSpacer>
+    </costList>
+    <!-- Reactor -->
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-1700</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+        <soundAmbientProducingPower>ChemfuelFiredGenerator_Ambience</soundAmbientProducingPower>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(80,112,180,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>6</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>0</explosiveRadius>
+        <explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <wickTicks>70~150</wickTicks>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_BuildingChunkBase">
+    <defName>VFEP_ShipMedicalCrate</defName>
+    <label>ship medical crate</label>
+    <description>A now-unsealed crate containing first-aid supplies. The pallet can be dismantled for steel along with recovering the supplies.</description>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkMedicine</texPath>
+    </graphicData>
+    <costList>
+      <Steel>20</Steel>
+      <MedicineIndustrial>24</MedicineIndustrial>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="VFEP_BuildingChunkBase">
+    <defName>VFEP_ShipNutrientPasteCrate</defName>
+    <label>ship nutrient paste crate</label>
+    <description>A now-unsealed crate containing emergency food rations. The pallet can be dismantled for steel along with recovering the supplies.</description>
+    <graphicData>
+      <texPath>Things/Building/ShipChunks/ShipChunkNutrientPaste</texPath>
+    </graphicData>
+    <costList>
+      <Steel>20</Steel>
+      <MealNutrientPaste>72</MealNutrientPaste>
+    </costList>
+  </ThingDef>
+</Defs>

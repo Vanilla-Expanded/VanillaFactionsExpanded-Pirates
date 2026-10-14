@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+  
+  <RitualPatternDef>
+    <defName>VFEP_SingingShantiesPattern</defName>
+	<ritualOnlyForIdeoMembers>true</ritualOnlyForIdeoMembers>
+    <ritualBehavior>VFEP_SingingShantiesBehaviour</ritualBehavior>
+    <ritualObligationTargetFilter>AnyIdeoBuildingOrRitualSpot</ritualObligationTargetFilter>
+    <ritualTargetFilter>IdeoBuildingOrRitualSpot</ritualTargetFilter>
+    <alwaysStartAnytime>true</alwaysStartAnytime>
+	<ritualOutcomeEffect>VFEP_SingingShantiesOutcome</ritualOutcomeEffect>
+	<playsIdeoMusic>false</playsIdeoMusic>
+  </RitualPatternDef>
+
+
+
+ 
+
+</Defs>

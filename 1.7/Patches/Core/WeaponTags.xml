@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_ChargeRifle" or defName="Gun_SniperRifle" or defName="Gun_AssaultRifle" or defName="Gun_ChainShotgun"]/weaponTags</xpath>
+        <value>
+            <li>VFEP_Sergeant</li>
+        </value>
+    </Operation>
+	
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Gun_ChargeRifle" or defName="Gun_ChargeLance" or defName="Gun_TripleRocket" or defName="Gun_DoomsdayRocket" or defName="Gun_Minigun"]/weaponTags</xpath>
+        <value>
+            <li>VFEP_Captain</li>
+        </value>
+    </Operation>
+    
+</Patch>

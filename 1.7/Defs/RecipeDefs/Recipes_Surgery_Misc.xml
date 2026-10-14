@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>VFEP_RemoveWarcasket</defName>
+    <label>remove warcasket</label>
+    <description>Remove a warcasket from the body.</description>
+    <workerClass>VFEPirates.RecipeWorker_WarcasketRemoval</workerClass>
+    <jobString>Removing warcasket.</jobString>
+    <workAmount>5000</workAmount>
+	<hideBodyPartNames>true</hideBodyPartNames>
+	<targetsBodyPart>false</targetsBodyPart>
+	<surgerySuccessChanceFactor>0.5</surgerySuccessChanceFactor>
+	<ingredients>
+		<li>
+			<filter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories>
+			<li>Medicine</li>
+		</categories>
+	</fixedIngredientFilter>
+  </RecipeDef>
+
+</Defs>

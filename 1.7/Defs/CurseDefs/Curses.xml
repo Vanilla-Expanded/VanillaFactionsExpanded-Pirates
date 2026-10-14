@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfMind</defName>
+	<label>Curse of Mind</label>
+	<description>All mood effects are doubled.</description>
+	<iconPath>UI/Curses/CurseMind</iconPath>
+	<workerClass>VFEPirates.CurseOfMind</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfDarkness</defName>
+	<label>Curse of Darkness</label>
+	<description>Darkness intensified. Any tile with 0% light is pitch black.</description>
+	<iconPath>UI/Curses/CurseDarkness</iconPath>
+	<workerClass>VFEPirates.CurseOfDarkness</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef> <!-- is being handled in StatPart_CurseOfPestilence to ImmunityGainSpeed parts-->
+	<defName>VFEP_CurseOfPestilence</defName>
+	<label>Curse of Pestilence</label>
+	<description>Immunity gain speed is halved.</description>
+	<iconPath>UI/Curses/CurseSickly</iconPath>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfSteel</defName>
+	<label>Curse of Steel</label>
+	<description>All damage in the game is doubled.</description>
+	<iconPath>UI/Curses/CurseSteel</iconPath>
+	<workerClass>VFEPirates.CurseOfSteel</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfGreed</defName>
+	<label>Curse of Greed</label>
+	<description>All mineable resources yield gold instead of what they would normally yield.</description>
+	<iconPath>UI/Curses/CurseGreed</iconPath>
+	<workerClass>VFEPirates.CurseOfGreed</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfTheStabbed</defName>
+	<label>Curse of the Stabbed</label>
+	<description>All Melee attack cooldowns are halved.</description>
+	<iconPath>UI/Curses/CurseStabbed</iconPath>
+	<workerClass>VFEPirates.CurseOfTheStabbed</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfFire</defName>
+	<label>Curse of Fire</label>
+	<description>Rain no longer triggers when the map burns.</description>
+	<iconPath>UI/Curses/CurseFire</iconPath>
+	<workerClass>VFEPirates.CurseOfFire</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfConfetti</defName>
+	<label>Curse of Confetti</label>
+	<description>Killing a pawn spawns a confetti mote and a birthday Yay! Sound.</description>
+	<iconPath>UI/Curses/CurseConfetti</iconPath>
+	<workerClass>VFEPirates.CurseOfConfetti</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfTheBoomalopes</defName>
+	<label>Curse of the Boomalopes</label>
+	<description>Every animal explodes upon death.</description>
+	<iconPath>UI/Curses/CurseBoomalope</iconPath>
+	<workerClass>VFEPirates.CurseOfTheBoomalopes</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfTheBeaten</defName>
+	<label>Curse of the Beaten</label>
+	<description>Can’t tend wounds without medicine.</description>
+	<iconPath>UI/Curses/CurseBeatenUp</iconPath>
+	<workerClass>VFEPirates.CurseOfTheBeaten</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfTheArmored</defName>
+	<label>Curse of the Armored</label>
+	<description>Weapon penetration halved.</description>
+	<iconPath>UI/Curses/CurseArmor</iconPath>
+	<workerClass>VFEPirates.CurseOfTheArmored</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfAging</defName>
+	<label>Curse of Aging</label>
+	<description>Pawns age at 10x the speed.</description>
+	<iconPath>UI/Curses/CurseAging</iconPath>
+	<workerClass>VFEPirates.CurseOfAging</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfBandana</defName>
+	<label>Curse of Bandana</label>
+	<description>All weapon cooldown reduced by 90%.</description>
+	<iconPath>UI/Curses/CurseBandana</iconPath>
+	<workerClass>VFEPirates.CurseOfBandana</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfTheEyePatch</defName>
+	<label>Curse of the Eye Patch</label>
+	<description>Ranged accuracy halved.</description>
+	<iconPath>UI/Curses/CurseEyePatch</iconPath>
+	<workerClass>VFEPirates.CurseOfTheEyePatch</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef> <!-- handled with stat part -->
+	<defName>VFEP_CurseOfGluttony</defName>
+	<label>Curse of Gluttony</label>
+	<description>Hunger drops at twice the speed.</description>
+	<iconPath>UI/Curses/CurseGluttony</iconPath>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfInfestation</defName>
+	<label>Curse of Infestation</label>
+	<description>Infestations are twice as big.</description>
+	<iconPath>UI/Curses/CurseInfestation</iconPath>
+	<workerClass>VFEPirates.CurseOfInfestation</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfInstakill</defName>
+	<label>Curse of Instakill</label>
+	<description>Whenever a pawn would be downed, they die.</description>
+	<iconPath>UI/Curses/CurseInstakill</iconPath>
+	<workerClass>VFEPirates.CurseOfInstakill</workerClass>
+  </VFEPirates.CurseDef>
+
+  <VFEPirates.CurseDef>
+	<defName>VFEP_CurseOfBlind</defName>
+	<label>Curse of Blind</label>
+	<description>You don’t see any letters when events happen. They still show up in the History tab.</description>
+	<iconPath>UI/Curses/CurseBlind</iconPath>
+	<workerClass>VFEPirates.CurseOfBlind</workerClass>
+  </VFEPirates.CurseDef>
+
+</Defs>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Odyssey</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<PawnKindDef>
+							<defName>VFEP_Salvager_Warcasket</defName>
+							<label>warcasket</label>
+							<race>Human</race>
+							<combatPower>400</combatPower>
+							<maxGenerationAge>55</maxGenerationAge>
+							<apparelMoney>3200~5200</apparelMoney>
+							<apparelTags>
+								<li>WarcasketVeteran</li>
+							</apparelTags>
+							<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+							<weaponMoney>2800~3800</weaponMoney>
+							<weaponTags>
+								<li>WarcasketVeteran</li>
+							</weaponTags>
+							<techHediffsChance>0.3</techHediffsChance>
+							<techHediffsMoney>1800~3000</techHediffsMoney>
+							<techHediffsMaxAmount>2</techHediffsMaxAmount>
+							<techHediffsTags>
+								<li>ImplantEmpireCommon</li>
+								<li>Advanced</li>
+							</techHediffsTags>
+							<inventoryOptions>
+								<skipChance>0.5</skipChance>
+								<subOptionsChooseOne>
+									<li>
+										<thingDef>MedicineIndustrial</thingDef>
+										<countRange>5</countRange>
+									</li>
+								</subOptionsChooseOne>
+							</inventoryOptions>
+							<biocodeWeaponChance>0.25</biocodeWeaponChance>
+							<initialWillRange>2~3</initialWillRange>
+							<initialResistanceRange>14~18</initialResistanceRange>
+							<combatEnhancingDrugsChance>0.90</combatEnhancingDrugsChance>
+							<combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+						</PawnKindDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionDef[defName="Salvagers"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+					<value>
+						<VFEP_Salvager_Warcasket>1</VFEP_Salvager_Warcasket>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

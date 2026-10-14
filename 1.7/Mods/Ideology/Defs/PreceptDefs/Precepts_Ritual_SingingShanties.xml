@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Precepts -->
+
+
+
+	<PreceptDef>
+		<defName>VFEP_SingingShanties</defName>
+		<label>singing shanties</label>
+		<description>Colonists gather around a campfire and sing shanties to strengthen their camaraderie.</description>
+		<issue>Ritual</issue>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<visible>true</visible>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<ritualPatternBase>VFEP_SingingShantiesPattern</ritualPatternBase>
+		<iconPath>UI/Ideology/SingingShanties</iconPath>
+		<ignoreNameUniqueness>false</ignoreNameUniqueness>
+		<requiredMemes>
+			<li>VFEP_PirateMeme</li>
+		</requiredMemes>
+	</PreceptDef>
+
+
+
+
+
+</Defs>

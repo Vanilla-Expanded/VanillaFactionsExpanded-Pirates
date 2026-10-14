@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+ 
+
+  <ThoughtDef>
+    <defName>VFEP_RumSuitThought</defName>
+    <workerClass>VFEPirates.ThoughtWorker_RumSuit</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>sweaty</label>
+        <description>This suit is way too hot. I'm sweating.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+     
+    </stages>
+  </ThoughtDef>
+
+</Defs>

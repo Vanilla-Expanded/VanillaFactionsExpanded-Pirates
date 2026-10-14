@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RaidStrategyDef>
+    <defName>VFEP_GauntletStrat</defName>
+    <workerClass>VFEPirates.RaidStrategyWorker_Gauntlet</workerClass>
+    <pointsFactorCurve> <!-- Same as siege -->
+      <points>
+        <li>0, 0.80</li>
+        <li>5000, 0.65</li>
+      </points>
+    </pointsFactorCurve>
+    <selectionWeightPerPointsCurve>
+      <points>
+        <li>(700, 0)</li>
+        <li>(1000, 1.6)</li>
+      </points>
+    </selectionWeightPerPointsCurve>
+    <arriveModes>
+      <li>VFEP_GauntletDrop</li>
+    </arriveModes>
+    <letterLabelEnemy>Raid</letterLabelEnemy>
+    <arrivalTextEnemy>A group of {0} from {1} have arrived in gauntlet ships and are crashing on top of your colony. Gauntlet ships provide covering fire and need to be destroyed immediately.</arrivalTextEnemy>
+    <letterLabelFriendly>Friendlies</letterLabelFriendly>
+    <arrivalTextFriendly>They are dropping in to help you immediately.</arrivalTextFriendly>
+  </RaidStrategyDef>
+
+  <PawnsArrivalModeDef>
+    <defName>VFEP_GauntletDrop</defName>
+    <workerClass>VFEPirates.PawnsArrivalModeWorker_Gauntlet</workerClass>
+    <selectionWeightCurve> <!-- not usable in many strategies and by many factions, so this gets boosted -->
+      <points>
+        <li>(300, 0.0)</li>
+        <li>(1000, 3.5)</li>
+      </points>
+    </selectionWeightCurve>
+    <pointsFactorCurve>
+      <points>
+        <li>0, 0.5</li>
+        <li>5000, 0.3</li>
+      </points>
+    </pointsFactorCurve>
+    <textEnemy>A group of {0} from {1} have arrived in gauntlet ships and are crashing on top of your colony. Gauntlet ships provide covering fire and need to be destroyed immediately.</textEnemy>
+    <textFriendly>A group of friendly {0} from {1} have arrived in gauntlet ships and are crashing on top of your colony. Gauntlet ships will provide covering fire.</textFriendly>
+    <textWillArrive>({0_pawnsPluralDef} will arrive in gauntlet ships right on top of you.)</textWillArrive>
+  </PawnsArrivalModeDef>
+</Defs>

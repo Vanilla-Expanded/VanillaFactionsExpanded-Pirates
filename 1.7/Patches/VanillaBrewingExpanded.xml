@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Brewing Expanded</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/ThingDef[defName = "VFEP_Rum"]/thingCategories</xpath>
+					<value>
+
+					
+						<li>VBE_DrinksSimpleSpirits</li>
+				
+					</value>
+				</li>
+				
+
+			
+
+
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

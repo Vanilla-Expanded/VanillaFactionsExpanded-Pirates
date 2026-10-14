@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+   
+   <ThingDef ParentName="VFEP_BaseWarcasketGun">
+      <defName>VWEB_Warbolter</defName>
+      <label>warbolter</label>
+      <description>A downscaled variant of a swarmer missile turret mounted on a rifle frame, warbolter fires semi-precise missiles over medium range with the fire rate of a machine gun. Due to the very large recoil caused by the missiles leaving the barrel, it can only be fired in short bursts.\n\nThe weapon also comes equipped with a bioferrite-powered long-burner unit which generates a very narrow blast of flame from a pressurized bioferrite charge. Due to the tight stream of the long-burner, it can be fired over very long distances. The long-burner unit must be refueled after each use.</description>
+      <possessionCount>1</possessionCount>
+      <graphicData>
+         <texPath>Things/Item/Equipment/WeaponRanged/Pirates/Warbolter</texPath>
+         <graphicClass>Graphic_Single</graphicClass>
+      </graphicData>
+      <soundInteract>Interact_Rifle</soundInteract>
+      <weaponTags>
+         <li>WarcasketHeavy</li>
+      </weaponTags>
+	  <smeltable>false</smeltable>
+      <statBases>
+         <WorkToMake>60000</WorkToMake>
+         <Mass>40</Mass>
+         <AccuracyTouch>0.28</AccuracyTouch>
+         <AccuracyShort>0.72</AccuracyShort>
+         <AccuracyMedium>0.66</AccuracyMedium>
+         <AccuracyLong>0.50</AccuracyLong>
+         <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+         <MarketValue>2670</MarketValue>
+      </statBases>
+      <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>VWEB_Rocket</defaultProjectile>
+        <range>34.9</range>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+		<warmupTime>1.5</warmupTime>
+        <forcedMissRadius>1.75</forcedMissRadius>
+        <soundCast>VWEB_Warbolter_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+      </verbs>
+      <tools>
+         <li>
+            <label>stock</label>
+            <capacities>
+               <li>Blunt</li>
+            </capacities>
+            <power>12</power>
+            <cooldownTime>2</cooldownTime>
+			<armorPenetration>0.13</armorPenetration>
+         </li>
+         <li>
+            <label>barrel</label>
+            <capacities>
+               <li>Blunt</li>
+               <li>Poke</li>
+            </capacities>
+            <power>12</power>
+            <cooldownTime>2</cooldownTime>
+			<armorPenetration>0.13</armorPenetration>
+         </li>
+      </tools>
+     <comps Inherit="False">
+       <li Class="CompProperties_Forbiddable"/>
+       <li Class="CompProperties_Styleable"/>
+       <li Class="CompProperties_Art">
+         <nameMaker>NamerArtWeaponGun</nameMaker>
+         <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+         <minQualityForArtistic>Excellent</minQualityForArtistic>
+       </li>      
+       <li>
+         <compClass>CompQuality</compClass>
+       </li>
+       <li Class="CompProperties_Biocodable"/>
+      <li Class="CompProperties_EquippableAbilityReloadable">
+        <abilityDef>VWEB_WarbolterLongBurner</abilityDef>
+        <maxCharges>1</maxCharges>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>burner charge</chargeNoun>
+        <ammoDef>Bioferrite</ammoDef>
+        <ammoCountPerCharge>20</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+      </li>
+      </comps>
+	<modExtensions>
+		<li Class="VEF.Graphics.FloorGraphicExtension">
+			<graphicData>
+				<graphicClass>Graphic_Single</graphicClass>
+				<texPath>Things/Item/Equipment/WeaponRanged/Pirates/Warbolter_OnFloor</texPath>
+				<onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
+				<drawSize>1</drawSize>
+			</graphicData>
+		</li>
+	</modExtensions>
+   </ThingDef>
+   
+  <AbilityDef>
+    <defName>VWEB_WarbolterLongBurner</defName>
+    <label>warbolter long burner</label>
+    <description>Fire a short-ranged flame blast over a short but wide area.</description>
+    <iconPath>UI/Abilities/WarbolterBurner</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+        <verbClass>VanillaWeaponsExpanded_Bioferrite.Verb_CastAbility_ArcSprayIncinerator</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>0.75</warmupTime>
+        <range>34.9</range>
+        <minRange>7.9</minRange>
+        <beamFullWidthRange>4</beamFullWidthRange>
+        <burstShotCount>26</burstShotCount>
+        <showBurstShotStats>false</showBurstShotStats>
+        <requireLineOfSight>true</requireLineOfSight>
+        <beamWidth>1</beamWidth>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <beamDamageDef>Flame</beamDamageDef>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <soundCastBeam>Flamethrower_Firing</soundCastBeam>
+        <beamGroundFleckDef>Fleck_IncineratorBeamBurn</beamGroundFleckDef>
+        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+        <beamMaxDeviation>0.5</beamMaxDeviation>
+        <beamCurvature>0</beamCurvature>
+        <beamEndEffecterDef>IncineratorBeam_End</beamEndEffecterDef> 
+        <beamChanceToStartFire>0.85</beamChanceToStartFire>
+        <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
+        <beamStartOffset>.5</beamStartOffset>
+        <beamHitsNeighborCells>true</beamHitsNeighborCells>
+        <beamCantHitWithinMinRange>true</beamCantHitWithinMinRange>
+        <beamHitsNeighborCellsRequiresLOS>true</beamHitsNeighborCellsRequiresLOS>
+        <beamSetsGroundOnFire>true</beamSetsGroundOnFire>
+        <ai_BeamIsIncendiary>true</ai_BeamIsIncendiary>
+        <beamLineFleckDef>Fleck_IncineratorBeamSmoke</beamLineFleckDef>
+        <highlightColor>(180, 60, 10)</highlightColor>
+        <secondaryHighlightColor>(220, 210, 20)</secondaryHighlightColor>
+        <beamLineFleckChanceCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.65, 0.02)</li>
+            <li>(1, .5)</li>
+          </points>
+        </beamLineFleckChanceCurve>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <flammabilityAttachFireChanceCurve>
+          <points>
+            <li>(0.6, 0)</li>
+            <li>(0.7, 0.2)</li>
+            <li>(1.2, 0.8)</li>
+          </points>
+        </flammabilityAttachFireChanceCurve>
+        <rangedFireRulepack>Combat_RangedFlamethrower</rangedFireRulepack>
+    </verbProperties>
+  </AbilityDef>
+   
+  <ThingDef ParentName="BaseBullet">
+    <defName>VWEB_Rocket</defName>
+    <label>rocket</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Swarm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <explosionRadius>1.9</explosionRadius>
+      <speed>45</speed>
+      <damageAmountBase>24</damageAmountBase>
+	  <armorPenetrationBase>0.1</armorPenetrationBase>
+	  <stoppingPower>0.5</stoppingPower>
+      <arcHeightFactor>0.4</arcHeightFactor>
+      <soundExplode>Explosion_Rocket</soundExplode>
+      <screenShakeFactor>0</screenShakeFactor>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_Warbolter</defName>
+    <label>warbolter</label>
+    <description>A downscaled variant of a swarmer missile turret mounted on a rifle frame, warbolter fires semi-precise missiles over medium range with the fire rate of a machine gun. Due to the very large recoil caused by the missiles leaving the barrel, it can only be fired in short bursts.\n\nThe weapon also comes equipped with a bioferrite-powered long-burner unit which generates a very narrow blast of flame from a pressurized bioferrite charge. Due to the tight stream of the long-burner, it can be fired over very long distances. The long-burner unit must be refueled after each use.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketAutorifle_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>320</Steel>
+	  <Plasteel>20</Plasteel>
+	  <Bioferrite>20</Bioferrite>
+      <ComponentIndustrial>12</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MarketValue>2670</MarketValue>
+      <Mass>40</Mass>
+      <WorkToBuild>60000</WorkToBuild>
+    </statBases>
+    <researchPrerequisites>
+      <li>VFEP_WarcasketWeaponry</li>
+	  <li>BioferriteIgnition</li>
+    </researchPrerequisites>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VWEB_Warbolter</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <SoundDef>
+    <defName>VWEB_Warbolter_Fire</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Shots/Shot_Warbolter</clipPath>
+          </li>
+        </grains>      
+      </li>
+    </subSounds>
+  </SoundDef>
+   
+</Defs>
+

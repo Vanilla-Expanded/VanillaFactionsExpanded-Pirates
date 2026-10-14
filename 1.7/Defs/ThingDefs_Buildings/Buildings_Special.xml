@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase" Name="VFEP_WarcasketWeaponBoxBase" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+      <shadowData>
+        <volume>(0.8, 0.2, 0.8)</volume>
+      </shadowData>
+    </graphicData>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-1</Beauty>
+    </statBases>
+    <thingSetMakerTags>
+      <li>Warcasket</li>
+    </thingSetMakerTags>
+    <tradeTags>
+      <li>VFEP_WarcasketWeaponBox</li>
+    </tradeTags>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <size>(1, 1)</size>
+	<altitudeLayer>Item</altitudeLayer>
+    <fillPercent>0.25</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <passability>PassThroughOnly</passability>
+    <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <tradeability>Sellable</tradeability>
+    <researchPrerequisites>
+      <li>VFEP_WarcasketWeaponry</li>
+    </researchPrerequisites>
+	<designatorDropdown>VFEP_WarcasketWeapon</designatorDropdown>
+    <designationCategory>Security</designationCategory>
+	</ThingDef>
+
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_Autorifle</defName>
+    <label>warcasket autorifle</label>
+    <description>A portable version of the Autocannon designed for use by a warcasket. Due to a shortened barrel it has a lower range, less penetration and damage compared to the turreted version. However, it is very capable in close quarters combat which makes up for the slight accuracy loss at greater ranges.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketAutorifle_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>175</Steel>
+	  <Plasteel>20</Plasteel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MarketValue>1250</MarketValue>
+      <Mass>30</Mass>
+      <WorkToBuild>45000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_Autorifle</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_UraniumSlugRifle</defName>
+    <label>warcasket uranium slug rifle</label>
+    <description>A portable version of the uranium slug cannon designed for use by a warcasket. Due to a shortened barrel it has less penetration, worse recoil and damage compared to the turreted version. However, it lacks the minimum range requirement thanks to a human operator and has better mid-range performance.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketUraniumSlugRifle_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>150</Steel>
+	  <Plasteel>15</Plasteel>
+	  <Uranium>30</Uranium>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MarketValue>1650</MarketValue>
+      <Mass>40</Mass>
+      <WorkToBuild>48000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_UraniumSlugRifle</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_Slugthrower</defName>
+    <label>warcasket slugthrower</label>
+    <description>An upscaled version of the pump shotgun designed for use by a warcasket. Each cartridge fired contains 4 pellets larger than slugs from a regular-sized shotgun, giving it better range, armor penetration and much better damage. The recoil is insane though, even for a warcasket’s recoil damping system.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketSlugThrower_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>190</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MarketValue>1100</MarketValue>
+      <Mass>25</Mass>
+      <WorkToBuild>45000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_Slugthrower</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_Minigun</defName>
+    <label>warcasket minigun</label>
+    <description>An upscaled version of the minigun designed for use by a warcasket. It uses larger caliber rounds which are poorly made en masse due to how many rounds need to be manufactured. Thus, it has a slower rate of fire and armor penetration, but who cares because no one wants to be on the receiving end of this amount of dakka.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketMinigun_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>240</Steel>
+	  <Plasteel>10</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MarketValue>2240</MarketValue>
+      <Mass>45</Mass>
+      <WorkToBuild>55000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_Minigun</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_GrenadeLauncher</defName>
+    <label>warcasket grenade launcher</label>
+    <description>An upscaled version of the grenade launcher designed for use by a warcasket. A straight upgrade, it fires in bursts of 3 and benefits from recoil damping for faster recovery and better range. Like all launchers though, it has a worse miss radius compared to a hand-thrown grenade.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketGrenadeLauncher_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>120</Steel>
+	  <Chemfuel>80</Chemfuel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MarketValue>1890</MarketValue>
+      <Mass>30</Mass>
+      <WorkToBuild>55000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_GrenadeLauncher</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_HeavyFlamer</defName>
+    <label>warcasket heavy flamer</label>
+    <description>An upscaled version of the heavy flamer designed for use by a warcasket. Thanks to the twin barrels and larger heat sink, it can spit out two jets of flames while also needing less time to prevent overheating.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketHeavyFlamer_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>200</Steel>
+	  <Chemfuel>160</Chemfuel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MarketValue>2450</MarketValue>
+      <Mass>30</Mass>
+      <WorkToBuild>55000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_HeavyFlamer</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_CombatKnife</defName>
+    <label>warcasket combat knife</label>
+    <description>An upscaled version of the combat knife designed for use by a warcasket. It is only still called a knife due to size comparison to a warcasket, but it is capable of cleaving a man in half and is just as large. The preferred weapon for the faster moving warcaskets that prioritize lightly armored, isolated targets.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketCombatKnife_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>140</Steel>
+    </costList>
+    <statBases>
+      <MarketValue>870</MarketValue>
+      <Mass>10</Mass>
+      <WorkToBuild>25000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketMeleeWeapon_CombatKnife</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_Broadsword</defName>
+    <label>warcasket broadsword</label>
+    <description>A very unique melee weapon exclusively made for warcaskets. It combines massive weight and a cutting force that gives it no equal in melee combat. While it was intended for use against other warcaskets, it works just as well against smaller targets that would normally be considered armored.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketBroadsword_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>270</Steel>
+    </costList>
+    <statBases>
+      <MarketValue>1460</MarketValue>
+      <Mass>30</Mass>
+      <WorkToBuild>35000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketMeleeWeapon_Broadsword</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+	<!--======================================================= UPDATE =======================================================-->
+
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_ChargeLance</defName>
+    <label>warcasket charge lance</label>
+    <description>A terror on the battlefield, the charge lance received a massive upgrade for warcasket use. A considerably more powerful energy source gives it superior stopping power, able to fire multiple larger projectiles at a greater range with improved accuracy and penetration.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketChargeLance_OnFloor</texPath>
+    </graphicData>
+    <costList>
+	  <Plasteel>100</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>2250</MarketValue>
+      <Mass>45</Mass>
+      <WorkToBuild>75000</WorkToBuild>
+    </statBases>
+    <researchPrerequisites>
+        <li>VFEP_SpacerWarcasketWeaponry</li>
+    </researchPrerequisites>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_ChargeLance</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_HandheldCannon</defName>
+    <label>warcasket handheld cannon</label>
+    <description>Essentially a handheld smoothbore mortar that fires explosives in an arc, able to bypass enemy fortifications. Made by those who wanted to combine ancient naval warfare with modern technology. The accuracy is abysmal but the onboard fabricator ensures that artillery fire can be provided without ever needing a resupply.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketHandheldCannon_OnFloor</texPath>
+    </graphicData>
+    <costList>
+	  <Steel>220</Steel>
+    </costList>
+    <statBases>
+      <MarketValue>1350</MarketValue>
+      <Mass>50</Mass>
+      <WorkToBuild>45000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_HandheldCannon</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_ChargeBlaster</defName>
+    <label>warcasket charge blaster</label>
+    <description>Essentially an upscaled charge minigun designed to be used by a warcasket. While firing fewer projectiles in each burst, the ammunition has been improved with explosive payloads. Designed as a support weapon that completely invalidates cover for the unlucky bastards on the receiving end.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketChargeBlaster_OnFloor</texPath>
+    </graphicData>
+    <costList>
+	  <Plasteel>180</Plasteel>
+      <ComponentSpacer>10</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>2200</MarketValue>
+      <Mass>55</Mass>
+      <WorkToBuild>90000</WorkToBuild>
+    </statBases>
+    <researchPrerequisites>
+        <li>VFEP_SpacerWarcasketWeaponry</li>
+    </researchPrerequisites>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketGun_ChargeBlaster</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+	
+  <ThingDef ParentName="VFEP_WarcasketWeaponBoxBase">
+    <defName>VFEP_Box_GravityHammer</defName>
+    <label>warcasket gravity hammer</label>
+    <description>A monumental piece of anti-personnel technology that can only be properly utilized by the oversized warcaskets. Practically an engine block fitted to the end of a mech’s limb actuator, equipped with multiple pneumatic plates covering miniature repulsor generators designed for riot control. In layman’s terms, a strike from the head will launch the target backwards by several meters.</description>
+    <graphicData>
+      <texPath>Things/Item/WeaponsBoxed/WarcasketGravityHammer_OnFloor</texPath>
+    </graphicData>
+    <costList>
+      <Steel>120</Steel>
+	  <Plasteel>80</Plasteel>
+	  <ComponentSpacer>6</ComponentSpacer>
+	  <Uranium>40</Uranium>
+    </costList>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <Mass>50</Mass>
+      <WorkToBuild>80000</WorkToBuild>
+    </statBases>
+	<comps>
+		<li Class="VFEPirates.CompProperties_WeaponBox">
+			<weaponToEquip>VFEP_WarcasketMeleeWeapon_GravityHammer</weaponToEquip>
+		</li>
+	</comps>
+	</ThingDef>
+
+</Defs>
