@@ -242,15 +242,17 @@ namespace VFEPirates.Buildings
                 positionOffset.x -= 0.18f;
                 positionOffset.z -= 0.18f;
             }
-            RenderTexture renderTexture = NewRenderTexture(size);
-            Find.PawnCacheRenderer.RenderPawn(pawn, renderTexture, cameraOffset, cameraZoom, angle, rotation, 
+            RenderTexture renderTexture = NewRenderTexture(size, rotation);
+            Find.PawnCacheRenderer.RenderPawn(pawn, renderTexture, cameraOffset, cameraZoom, angle, rotation,
                 pawn.health.hediffSet.HasHead, renderHeadgear, renderClothes, portrait: false, positionOffset, overrideApparelColors, overrideHairColor, stylingStation);
             return renderTexture;
         }
 
-        private RenderTexture pawnTexture;
-        private RenderTexture NewRenderTexture(Vector2 size)
+        // One texture per facing: GUI draws may be deferred to the end of the frame, so the three previews cannot share a buffer
+        private readonly RenderTexture[] pawnTextures = new RenderTexture[4];
+        private RenderTexture NewRenderTexture(Vector2 size, Rot4 rotation)
         {
+            ref var pawnTexture = ref pawnTextures[rotation.AsInt];
             if (pawnTexture is null)
             {
                 pawnTexture = new RenderTexture((int)size.x, (int)size.y, 24)
@@ -260,7 +262,7 @@ namespace VFEPirates.Buildings
                     filterMode = FilterMode.Bilinear
                 };
             }
-            return pawnTexture; 
+            return pawnTexture;
         }
     }
 }
