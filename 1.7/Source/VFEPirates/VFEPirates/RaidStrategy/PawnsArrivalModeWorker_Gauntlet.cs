@@ -63,18 +63,15 @@ namespace VFEPirates
 
                 Building_CrashedShip innerThing = (Building_CrashedShip)ThingMaker.MakeThing(randShip.Value);
                 innerThing.SetFactionDirect(pawns[0].Faction);
-                for (int pN = 0; pN < PawnsPerShip; pN++)
+                for (int pN = i * PawnsPerShip; pN < (i + 1) * PawnsPerShip && pN < pawns.Count; pN++)
                 {
-                    if (pawns.Count > 0)
+                    Pawn pawn = pawns[pN];
+                    if (pawn.IsWorldPawn())
                     {
-                        if (pawns[0].IsWorldPawn())
-                        {
-                            Find.WorldPawns.RemovePawn(pawns[0]);
-                            pawns[0].psychicEntropy?.SetInitialPsyfocusLevel();
-                        }
-                        innerThing.AddPawnToShip(pawns[0]);
-                        pawns.RemoveAt(0);
+                        Find.WorldPawns.RemovePawn(pawn);
+                        pawn.psychicEntropy?.SetInitialPsyfocusLevel();
                     }
+                    innerThing.AddPawnToShip(pawn);
                 }
                 DropCellFinder.TryFindDropSpotNear(nextShipPos, target, out IntVec3 cell, false, true, true, VFEP_DefOf.VFEP_Ship_Black.Size, true);
                 RCellFinder.TryFindRandomCellNearWith(cell, c => c.Walkable(target) && !c.Roofed(target), target, out nextShipPos);
