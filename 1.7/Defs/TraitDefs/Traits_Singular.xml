@@ -16,11 +16,14 @@
       <li>
         <label>warcasket</label>
         <description>{PAWN_nameDef} is entombed in a warcasket. No amount of pain will have an effect on them, and they can never go into a pain shock or drop unconscious due to pain. Because of how bulky the armor is and how much energy it takes to use it, {PAWN_nameDef} is not capable of doing any work.</description>
+        <painFactor>0</painFactor>
+        <statFactors>
+          <RestFallRateFactor>1.3</RestFallRateFactor>
+        </statFactors>
       </li>
     </degreeDatas>
     <modExtensions>
         <li Class="VEF.Pawns.TraitExtension">
-            <painFactor>0</painFactor>
 			<apparelExclusiveTrait>true</apparelExclusiveTrait>
         </li>
     </modExtensions>
