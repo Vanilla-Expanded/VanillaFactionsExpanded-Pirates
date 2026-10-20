@@ -59,6 +59,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/Warcasket/WarcasketHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -104,6 +105,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketMarine/WarcasketMarineHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -147,6 +149,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketRecon/WarcasketReconHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -191,6 +194,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketCataphract/WarcasketCataphractHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -238,6 +242,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketAerial/WarcasketAerialHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -283,6 +288,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBarrage/WarcasketBarrageHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -330,6 +336,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketHazard/WarcasketHazardHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -383,6 +390,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketShock/WarcasketShockHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -440,6 +448,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketSiegebreaker/WarcasketSiegebreakerHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -486,6 +495,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketGuardian/WarcasketGuardianHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -532,6 +542,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketController/WarcasketControllerHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -605,6 +616,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketSarcophagus/WarcasketSarcophagusHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
@@ -675,6 +687,7 @@
 				<li>FullHead</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Pawn/Warcasketlike/WarcasketBrute/WarcasketBruteHelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
 			</layers>
