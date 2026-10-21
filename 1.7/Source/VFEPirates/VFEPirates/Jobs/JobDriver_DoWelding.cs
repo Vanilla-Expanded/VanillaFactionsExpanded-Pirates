@@ -31,7 +31,7 @@ namespace VFEPirates
 			AddEndCondition(delegate
 			{
 				Thing thing = GetActor().jobs.curJob.GetTarget(TargetIndex.A).Thing;
-				return thing.Spawned && thing is Building_WarcasketFoundry foundry && foundry.ReadyForWelding(pawn, out _) ? JobCondition.Ongoing : JobCondition.Incompletable;
+				return thing != null && thing.Spawned && thing is Building_WarcasketFoundry foundry && foundry.ReadyForWelding(pawn, out _) ? JobCondition.Ongoing : JobCondition.Incompletable;
 			});
 			this.FailOnBurningImmobile(TargetIndex.A);
 			Toil gotoFoundry = Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.ClosestTouch);
