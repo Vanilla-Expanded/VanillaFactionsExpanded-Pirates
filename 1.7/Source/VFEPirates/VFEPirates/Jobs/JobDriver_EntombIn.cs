@@ -29,6 +29,7 @@ namespace VFEPirates
     {
         public Building_WarcasketFoundry Foundry => TargetA.Thing as Building_WarcasketFoundry;
         public override Vector3 ForcedBodyOffset => new Vector3(0, 0, 0.67f);
+        private bool cancelled;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -46,6 +47,15 @@ namespace VFEPirates
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
+            this.FailOnDespawnedOrNull(TargetIndex.A);
+            AddFinishAction(_ =>
+            {
+                // Foundry is null if it was destroyed before a reload, assume welding had started
+                var project = Foundry?.curWarcasketProject;
+                var weldingStarted = project == null || project.currentWorkAmountDone > 0;
+                if (!cancelled && weldingStarted && !pawn.Dead && !pawn.IsWearingWarcasket() && pawn.story?.traits != null && !pawn.story.traits.HasTrait(VFEP_DefOf.VFEP_Shellcasket))
+                    pawn.story.traits.GainTrait(new Trait(VFEP_DefOf.VFEP_Shellcasket));
+            });
             var toil = new Toil();
             toil.initAction = delegate
             {
@@ -77,6 +87,7 @@ namespace VFEPirates
                     DestroyPreviewApparel();
                     foreach (var apparel in previousApparels)
                         pawn.apparel.Wear(apparel);
+                    cancelled = true;
                     EndJobWith(JobCondition.Incompletable);
                 }));
             };
